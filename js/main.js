@@ -7,7 +7,6 @@ document.addEventListener('DOMContentLoaded', () => {
   initNavigation();
   initScheduleTabs();
   initFaqAccordion();
-  initEntryModal();
   initImageLightbox();
   initScrollAnimations();
   initHeroParticles();

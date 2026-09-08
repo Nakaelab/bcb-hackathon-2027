@@ -39,7 +39,7 @@
 
       <!-- CTA Button -->
       <div class="header-cta-group">
-        <a href="#entry" class="btn btn-primary" data-open-modal="entry">参加登録</a>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSc7IbZWw1OOKyFQO5wRhYY0eBot87R7iCw_VYpoqSRFM22U4A/viewform" target="_blank" rel="noopener noreferrer" class="btn btn-primary">参加登録 ↗</a>
         <button class="mobile-nav-toggle" aria-label="メニュー開閉" aria-expanded="false">
           <span></span>
           <span></span>
@@ -71,8 +71,8 @@
           </p>
 
           <div class="hero-actions">
-            <a href="#entry" class="btn btn-teal" data-open-modal="entry">
-              <span>参加登録フォームを開く</span>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSc7IbZWw1OOKyFQO5wRhYY0eBot87R7iCw_VYpoqSRFM22U4A/viewform" target="_blank" rel="noopener noreferrer" class="btn btn-teal">
+              <span>参加登録フォーム（Googleフォーム） ↗</span>
             </a>
             <a href="#schedule" class="btn btn-outline">
               <span>日程・タイムテーブル</span>
@@ -741,14 +741,11 @@
         <div class="cta-banner">
           <h2 class="cta-title">参加申し込み（現地開催）</h2>
           <p class="cta-subtitle">
-            定員40名程度。参加登録フォームよりお申し込みください。
+            定員40名程度。以下のGoogleフォームよりお申し込みください。
           </p>
-          <div class="cta-buttons" style="display: flex; gap: 0.875rem; justify-content: center; flex-wrap: wrap;">
-            <button class="btn btn-teal" data-open-modal="entry">
-              <span>参加登録フォームを開く</span>
-            </button>
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLSc7IbZWw1OOKyFQO5wRhYY0eBot87R7iCw_VYpoqSRFM22U4A/viewform" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="color: #FFF; border-color: rgba(255,255,255,0.3);">
-              <span>Googleフォームで直接開く ↗</span>
+          <div class="cta-buttons">
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSc7IbZWw1OOKyFQO5wRhYY0eBot87R7iCw_VYpoqSRFM22U4A/viewform" target="_blank" rel="noopener noreferrer" class="btn btn-teal" style="font-size: 1rem; padding: 0.875rem 2rem;">
+              <span>参加登録フォームを開く（Googleフォーム） ↗</span>
             </a>
           </div>
         </div>
@@ -804,41 +801,7 @@
     </div>
   </div>
 
-  <!-- Entry Modal with Embedded Google Form -->
-  <div class="modal-backdrop" id="entry-modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modal-title">
-    <div class="modal-card">
-      <button class="modal-close-btn" aria-label="閉じる">×</button>
-      <h3 class="modal-title" id="modal-title">参加登録（現地開催）</h3>
-      <p class="modal-desc">
-        以下のGoogleフォームより参加登録をお願いいたします。
-      </p>
 
-      <div class="form-iframe-container">
-        <iframe 
-          src="https://docs.google.com/forms/d/e/1FAIpQLSc7IbZWw1OOKyFQO5wRhYY0eBot87R7iCw_VYpoqSRFM22U4A/viewform?embedded=true" 
-          class="form-iframe"
-          title="学術変革領域A・行動変容生物学ハッカソン2027 参加登録フォーム"
-          loading="lazy">
-          読み込んでいます…
-        </iframe>
-      </div>
-
-      <div style="margin-top: 1rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.5rem;">
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLSc7IbZWw1OOKyFQO5wRhYY0eBot87R7iCw_VYpoqSRFM22U4A/viewform" target="_blank" rel="noopener noreferrer" class="form-external-link">
-          <span>別ウィンドウでGoogleフォームを開く ↗</span>
-        </a>
-        <button type="button" class="btn btn-outline" style="padding: 0.375rem 0.875rem; font-size: 0.8125rem;" onclick="document.getElementById('entry-modal').classList.remove('active'); document.body.style.overflow = '';">
-          閉じる
-        </button>
-      </div>
-    </div>
-  </div>
-
-  <!-- Toast -->
-  <div class="toast-msg" id="toast-msg" role="status" aria-live="polite">
-    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-    <span class="toast-text">登録を受け付けました</span>
-  </div>
 
   <!-- Scripts -->
   <script src="js/main.js"></script>
