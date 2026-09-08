@@ -1,0 +1,845 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>学術変革領域A・行動変容生物学ハッカソン 2027</title>
+  <meta name="description" content="学術変革領域A「行動変容生物学」ハッカソン。BraiDyn-BCデータベースを活用し、マウスの行動と神経活動の関連性を探る解析手法の開発に取り組みます。2027年2月20日〜22日 東京・日本橋にて開催。">
+  
+  <!-- Google Fonts: Outfit (Sans), Noto Sans JP, JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=Noto+Sans+JP:wght@400;500;700&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Site Header -->
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a href="#" class="brand-wrapper" aria-label="トップページへ">
+        <div class="brand-mark">BCB</div>
+        <div class="brand-text">
+          <span class="brand-sub">文部科学省 学術変革領域研究(A)</span>
+          <span class="brand-main">行動変容生物学ハッカソン 2027</span>
+        </div>
+      </a>
+
+      <!-- Navigation -->
+      <nav class="site-nav" role="navigation" aria-label="メインメニュー">
+        <a href="#about" class="nav-link">開催趣旨</a>
+        <a href="#data-tech" class="nav-link">データ・ツール</a>
+        <a href="#schedule" class="nav-link">日程</a>
+        <a href="#guidelines" class="nav-link">参加案内</a>
+        <a href="#venue" class="nav-link">会場</a>
+        <a href="#committee" class="nav-link">運営・FAQ</a>
+      </nav>
+
+      <!-- CTA Button -->
+      <div class="header-cta-group">
+        <a href="#entry" class="btn btn-primary" data-open-modal="entry">参加登録</a>
+        <button class="mobile-nav-toggle" aria-label="メニュー開閉" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero" id="top">
+      <div class="container hero-grid">
+        <!-- Left: Basic Info -->
+        <div class="hero-left">
+          <div class="hero-meta-bar">
+            <span class="badge-tag highlight">学術変革領域A「行動変容生物学」</span>
+            <span class="badge-tag">第2回ハッカソン</span>
+          </div>
+
+          <h1 class="hero-heading">
+            学術変革領域A・行動変容生物学<br>
+            ハッカソン 2027
+          </h1>
+
+          <p class="hero-subhead">
+            マウスの大規模神経活動・行動データベース「BraiDyn-BC」を活用し、行動と神経活動の関連性を探る解析手法やツールの開発に取り組む3日間のイベントです。初学者歓迎・チューターがサポートします。
+          </p>
+
+          <div class="hero-actions">
+            <a href="#entry" class="btn btn-teal" data-open-modal="entry">
+              <span>参加登録フォームを開く</span>
+            </a>
+            <a href="#schedule" class="btn btn-outline">
+              <span>日程・タイムテーブル</span>
+            </a>
+          </div>
+
+          <div class="hero-key-facts">
+            <div class="fact-item">
+              <span class="fact-label">日程</span>
+              <span class="fact-val">2027年2月20日(土) - 22日(月)</span>
+            </div>
+            <div class="fact-item">
+              <span class="fact-label">場所</span>
+              <span class="fact-val">東京・日本橋ライフサイエンスハブ</span>
+            </div>
+            <div class="fact-item">
+              <span class="fact-label">対象</span>
+              <span class="fact-val">若手・大学院生・学部生（定員40名）</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Photo & Quick Schedule Card -->
+        <div class="hero-card">
+          <div class="hero-image-wrap" title="クリックで拡大">
+            <img src="image/previous_hackathon.webp" alt="第1回 行動変容生物学ハッカソンの集合写真" class="hero-img" loading="eager">
+          </div>
+
+
+          <!-- Schedule Dates -->
+          <div class="card-dates-box">
+            <div class="card-date-row">
+              <span class="card-date-label">事前Zoomチュートリアル</span>
+              <span class="card-date-val">2/6 (土) 13:00 - 16:00</span>
+            </div>
+            <div class="card-date-row">
+              <span class="card-date-label">組分けアンケート提出締切</span>
+              <span class="card-date-val">2/17 (水)</span>
+            </div>
+            <div class="card-date-row">
+              <span class="card-date-label">ハッカソン本番（3日間）</span>
+              <span class="card-date-val">2/20 (土) - 2/22 (月)</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section: About -->
+    <section class="section" id="about">
+      <div class="container">
+        <div class="section-head">
+          <div class="section-tag">01 / Overview</div>
+          <h2 class="section-title">開催趣旨</h2>
+        </div>
+
+        <div class="about-grid">
+          <div class="text-prose">
+            <p>
+              本ハッカソンは、文部科学省 学術変革領域研究(A)「行動変容生物学」の取り組みとして、研究者を目指す若手（大学院生・学部生・ポスドク等）を対象に開催します。
+            </p>
+            <p>
+              3日間のイベントでは、マウスの行動実験データと対応する神経活動データを包括した「<strong>BraiDyn-BCデータベース</strong>」を用い、行動変容のメカニズムに関する新たな解析手法やツールの利用・開発に取り組みます。
+            </p>
+            <p>
+              チーム（2〜5名）ごとに専門のチューターがつきますので、プログラミングや神経科学の初学者も歓迎します。最終日にはチームで作業した内容の発表と質疑応答を行い、主に学術的な視点からフィードバックを行います。
+            </p>
+
+            <div class="quick-summary-box">
+              <div class="summary-item">
+                <strong>主催：</strong>学術変革領域A「行動変容生物学」総括班
+              </div>
+              <div class="summary-item">
+                <strong>日程：</strong>2027年2月20日(土) 12:00 〜 2月22日(月) 18:20
+              </div>
+              <div class="summary-item">
+                <strong>場所：</strong>東京・日本橋ライフサイエンスハブ 8階 LSH-D会議室
+              </div>
+              <div class="summary-item">
+                <strong>定員：</strong>40人程度
+              </div>
+            </div>
+          </div>
+
+          <!-- Feature Cards -->
+          <div class="about-pillars">
+            <div class="pillar-card">
+              <div class="pillar-num">POINT 01</div>
+              <h3 class="pillar-title">初学者歓迎・チューター配置</h3>
+              <p class="pillar-desc">
+                Google Colabのチュートリアルコードを提供。各チームにチューターがつき、テーマ設定から解析実装までサポートします。
+              </p>
+            </div>
+
+            <div class="pillar-card">
+              <div class="pillar-num">POINT 02</div>
+              <h3 class="pillar-title">チーム編成のサポート</h3>
+              <p class="pillar-desc">
+                事前にチームを組んでおく必要はありません。事前アンケートの興味関心をもとに、運営側でチーム（2〜5名）を提案します。
+              </p>
+            </div>
+
+            <div class="pillar-card">
+              <div class="pillar-num">POINT 03</div>
+              <h3 class="pillar-title">研究者との交流・座談会</h3>
+              <p class="pillar-desc">
+                解析作業だけでなく、山川宏氏によるランチセミナー＆ハンズオンや、現場研究者との交流機会を設けています。
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section: Data & Tech -->
+    <section class="section tech-section" id="data-tech">
+      <div class="container">
+        <div class="section-head">
+          <div class="section-tag">02 / Data & Tools</div>
+          <h2 class="section-title">利用するデータベースとツール</h2>
+        </div>
+
+
+        <div class="tech-grid">
+          <!-- BraiDyn-BC -->
+          <div class="tech-card">
+            <div class="tech-card-img-wrap">
+              <img src="image/tool_braidyn_bc.jpg" alt="BraiDyn-BC データベース" class="tech-card-img" loading="lazy">
+            </div>
+            <div class="tech-header">
+              <div>
+                <h3 class="tech-name">BraiDyn-BC データベース</h3>
+                <div class="tech-sub">行動変容生物学 包括データベース</div>
+              </div>
+              <div class="tech-icon">DB</div>
+            </div>
+            <p class="tech-desc">
+              マウスの大規模な神経活動データと行動実験データを包括したリソースです。AWSクラウド連携を通じてデータをスムーズに提供します。
+            </p>
+          </div>
+
+          <!-- DeepLabCut -->
+          <div class="tech-card">
+            <div class="tech-card-img-wrap">
+              <img src="image/tool_deeplabcut.jpg" alt="DeepLabCut マーカーレス姿勢推定" class="tech-card-img" loading="lazy">
+            </div>
+            <div class="tech-header">
+              <div>
+                <h3 class="tech-name">DeepLabCut</h3>
+                <div class="tech-sub">マーカーレス姿勢推定</div>
+              </div>
+              <div class="tech-icon">DLC</div>
+            </div>
+            <p class="tech-desc">
+              行動実験動画からマウスの身体キーポイント（鼻先、耳、四肢など）の座標を自動抽出する深層学習ツールです。
+            </p>
+          </div>
+
+          <!-- MesoNet -->
+          <div class="tech-card">
+            <div class="tech-card-img-wrap">
+              <img src="image/tool_mesonet.jpg" alt="MesoNet 動画像位置合わせ" class="tech-card-img" loading="lazy">
+            </div>
+            <div class="tech-header">
+              <div>
+                <h3 class="tech-name">MesoNet</h3>
+                <div class="tech-sub">動画像の位置合わせ</div>
+              </div>
+              <div class="tech-icon">MN</div>
+            </div>
+            <p class="tech-desc">
+              1光子Ca2+イメージング動画像の位置合わせ（レジストレーション）を行い、皮質領域の特定を支援するツールです。
+            </p>
+          </div>
+
+          <!-- NWB -->
+          <div class="tech-card">
+            <div class="tech-card-img-wrap">
+              <img src="image/tool_nwb.jpg" alt="NWB 標準データフォーマット" class="tech-card-img" loading="lazy">
+            </div>
+            <div class="tech-header">
+              <div>
+                <h3 class="tech-name">NWB (Neurodata Without Borders)</h3>
+                <div class="tech-sub">標準データフォーマット</div>
+              </div>
+              <div class="tech-icon">NWB</div>
+            </div>
+            <p class="tech-desc">
+              神経活動データとメタデータを包括的に扱う国際標準フォーマットです。Python（PyNWB）で操作します。
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section: Schedule -->
+    <section class="section" id="schedule">
+      <div class="container">
+        <div class="section-head">
+          <div class="section-tag">03 / Schedule</div>
+          <h2 class="section-title">タイムテーブル</h2>
+
+        </div>
+
+        <!-- Schedule Tabs -->
+        <div class="schedule-tabs-nav" role="tablist">
+          <button class="tab-btn active" role="tab" aria-selected="true" data-tab="tab-day0">
+            <span>事前Zoom</span>
+            <span class="tab-date">2/6 (土)</span>
+          </button>
+          <button class="tab-btn" role="tab" aria-selected="false" data-tab="tab-day1">
+            <span>Day 1</span>
+            <span class="tab-date">2/20 (土)</span>
+          </button>
+          <button class="tab-btn" role="tab" aria-selected="false" data-tab="tab-day2">
+            <span>Day 2</span>
+            <span class="tab-date">2/21 (日)</span>
+          </button>
+          <button class="tab-btn" role="tab" aria-selected="false" data-tab="tab-day3">
+            <span>Day 3</span>
+            <span class="tab-date">2/22 (月)</span>
+          </button>
+        </div>
+
+        <!-- Tab 0: 事前Zoom -->
+        <div class="tab-panel active" id="tab-day0" role="tabpanel">
+          <div class="day-banner">
+            <div>
+              <div class="day-banner-title">事前オンラインチュートリアル</div>
+              <div class="day-banner-desc">オンライン（Zoom配信・後日YouTube公開あり）</div>
+            </div>
+            <span class="badge-tag highlight">2027年2月6日(土)</span>
+          </div>
+
+          <div class="timeline-list">
+            <div class="timeline-row">
+              <div class="time-slot">13:00 - 16:00</div>
+              <div class="timeline-content">
+                <div class="event-title">チュートリアル, Question Grammar</div>
+                <div class="event-detail">データベースの構造、Colabでのチュートリアルコード解説、問いの立て方。※参加できない方向けに後日YouTube公開。</div>
+              </div>
+              <span class="event-type-badge keynote">Zoom</span>
+            </div>
+
+            <div class="timeline-row break-row">
+              <div class="time-slot">〜 2/17 (水)</div>
+              <div class="timeline-content">
+                <div class="event-title">Google Formでの提出・組分け提案</div>
+                <div class="event-detail">興味関心をフォームで回答いただき、運営側でチーム編成を提案します。</div>
+              </div>
+              <span class="event-type-badge session">締切</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tab 1: Day 1 -->
+        <div class="tab-panel" id="tab-day1" role="tabpanel" hidden>
+          <div class="day-banner">
+            <div>
+              <div class="day-banner-title">Day 1：受付・導入・作業開始・懇親会</div>
+              <div class="day-banner-desc">会場：日本橋ライフサイエンスハブ 8階 LSH-D</div>
+            </div>
+            <span class="badge-tag highlight">2027年2月20日(土)</span>
+          </div>
+
+          <div class="timeline-list">
+            <div class="timeline-row">
+              <div class="time-slot">12:00 - 13:00</div>
+              <div class="timeline-content">
+                <div class="event-title">参加登録開始・受付</div>
+              </div>
+              <span class="event-type-badge">受付</span>
+            </div>
+
+            <div class="timeline-row">
+              <div class="time-slot">13:00 - 13:10</div>
+              <div class="timeline-content">
+                <div class="event-title">開催にあたって</div>
+                <div class="event-speaker">中江 健</div>
+              </div>
+              <span class="event-type-badge keynote">挨拶</span>
+            </div>
+
+            <div class="timeline-row">
+              <div class="time-slot">13:10 - 14:00</div>
+              <div class="timeline-content">
+                <div class="event-title">行動変容生物学 Introduction</div>
+                <div class="event-speaker">近藤 将史 ＆ 瀬原 慧祐</div>
+              </div>
+              <span class="event-type-badge session">講義</span>
+            </div>
+
+            <div class="timeline-row">
+              <div class="time-slot">14:00 - 16:00</div>
+              <div class="timeline-content">
+                <div class="event-title">テーマ相談会 ＋ 作業</div>
+                <div class="event-detail">チームごとにチューターと相談し、解析テーマを決定</div>
+              </div>
+              <span class="event-type-badge session">チーム作業</span>
+            </div>
+
+            <div class="timeline-row">
+              <div class="time-slot">16:00 - 18:00</div>
+              <div class="timeline-content">
+                <div class="event-title">作業</div>
+              </div>
+              <span class="event-type-badge">作業</span>
+            </div>
+
+            <div class="timeline-row">
+              <div class="time-slot">18:30 - 20:00</div>
+              <div class="timeline-content">
+                <div class="event-title">懇親会（ケータリング、事務局側）</div>
+                <div class="event-detail">会場内での交流会（ソフトドリンク付、お酒は別途orカンパ）</div>
+              </div>
+              <span class="event-type-badge social">懇親会</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tab 2: Day 2 -->
+        <div class="tab-panel" id="tab-day2" role="tabpanel" hidden>
+          <div class="day-banner">
+            <div>
+              <div class="day-banner-title">Day 2：作業・特別企画</div>
+              <div class="day-banner-desc">会場：日本橋ライフサイエンスハブ 8階 LSH-D</div>
+            </div>
+            <span class="badge-tag highlight">2027年2月21日(日)</span>
+          </div>
+
+          <div class="timeline-list">
+            <div class="timeline-row">
+              <div class="time-slot">09:00 - 12:00</div>
+              <div class="timeline-content">
+                <div class="event-title">作業</div>
+              </div>
+              <span class="event-type-badge">作業</span>
+            </div>
+
+            <div class="timeline-row">
+              <div class="time-slot">12:00 - 13:00</div>
+              <div class="timeline-content">
+                <div class="event-title">昼食会（山川 Lunch on Seminar）</div>
+                <div class="event-speaker">山川 宏（WBAI）</div>
+              </div>
+              <span class="event-type-badge keynote">セミナー</span>
+            </div>
+
+            <div class="timeline-row">
+              <div class="time-slot">13:00 - 14:30</div>
+              <div class="timeline-content">
+                <div class="event-title">山川企画 hands-on（約2時間）</div>
+                <div class="event-speaker">山川 宏 ほか</div>
+              </div>
+              <span class="event-type-badge session">ハンズオン</span>
+            </div>
+
+            <div class="timeline-row">
+              <div class="time-slot">15:00 - 18:00</div>
+              <div class="timeline-content">
+                <div class="event-title">作業</div>
+              </div>
+              <span class="event-type-badge">作業</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tab 3: Day 3 -->
+        <div class="tab-panel" id="tab-day3" role="tabpanel" hidden>
+          <div class="day-banner">
+            <div>
+              <div class="day-banner-title">Day 3：仕上げ・発表会・フィードバック</div>
+              <div class="day-banner-desc">会場：日本橋ライフサイエンスハブ 8階 LSH-D</div>
+            </div>
+            <span class="badge-tag highlight">2027年2月22日(月)</span>
+          </div>
+
+          <div class="timeline-list">
+            <div class="timeline-row">
+              <div class="time-slot">09:00 - 12:00</div>
+              <div class="timeline-content">
+                <div class="event-title">作業</div>
+              </div>
+              <span class="event-type-badge">作業</span>
+            </div>
+
+            <div class="timeline-row break-row">
+              <div class="time-slot">12:00 - 13:45</div>
+              <div class="timeline-content">
+                <div class="event-title">昼食会</div>
+              </div>
+              <span class="event-type-badge">昼食</span>
+            </div>
+
+            <div class="timeline-row">
+              <div class="time-slot">13:45 - 15:40</div>
+              <div class="timeline-content">
+                <div class="event-title">発表のための準備相談</div>
+              </div>
+              <span class="event-type-badge session">発表準備</span>
+            </div>
+
+            <div class="timeline-row break-row">
+              <div class="time-slot">15:40 - 15:45</div>
+              <div class="timeline-content">
+                <div class="event-title">休憩</div>
+              </div>
+              <span class="event-type-badge">休憩</span>
+            </div>
+
+            <div class="timeline-row">
+              <div class="time-slot">15:45 - 18:15</div>
+              <div class="timeline-content">
+                <div class="event-title">ハッカソン発表会</div>
+                <div class="event-detail">各チーム10〜15分程度の発表と質疑応答。点数評価ではなく、学術的な視点からフィードバックを行います。</div>
+              </div>
+              <span class="event-type-badge keynote">成果発表</span>
+            </div>
+
+            <div class="timeline-row">
+              <div class="time-slot">18:15 - 18:20</div>
+              <div class="timeline-content">
+                <div class="event-title">おわりに</div>
+                <div class="event-speaker">松崎 政紀（東京大学）</div>
+              </div>
+              <span class="event-type-badge keynote">閉会</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section: Guidelines -->
+    <section class="section" id="guidelines">
+      <div class="container">
+        <div class="section-head">
+          <div class="section-tag">04 / Guidelines</div>
+          <h2 class="section-title">参加案内</h2>
+        </div>
+
+        <div class="guide-grid">
+          <div class="guide-box">
+            <h3 class="guide-title">対象者</h3>
+            <p class="guide-text">
+              神経活動や行動データ解析に興味のある若手（大学院生・学部生を含む）やポスドク。定員40名程度。初学者も歓迎します。
+            </p>
+          </div>
+
+          <div class="guide-box">
+            <h3 class="guide-title">環境・持参物</h3>
+            <p class="guide-text">
+              WiFiでGoogle Colaboratoryが動くノートPCをご持参ください。使用言語はPythonです。
+            </p>
+          </div>
+
+          <div class="guide-box">
+            <h3 class="guide-title">参加費・実費</h3>
+            <p class="guide-text">
+              ・参加費：無料（旅費等は各自負担）<br>
+              ・懇親会実費：4,000円（ケータリング・ソフトドリンク / 一律）<br>
+              <span style="font-size: 0.8125rem; color: var(--text-light); display: inline-block; margin-top: 0.25rem;">※アルコール飲料は別途・カンパ制</span>
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Section: Venue -->
+    <section class="section venue-section" id="venue">
+      <div class="container">
+        <div class="section-head">
+          <div class="section-tag">05 / Venue</div>
+          <h2 class="section-title">会場アクセス</h2>
+        </div>
+
+        <div class="venue-grid">
+          <div class="venue-details">
+            <h3 class="venue-name">日本橋ライフサイエンスハブ</h3>
+            <div class="venue-room">8階 LSH-D会議室</div>
+            
+            <p class="venue-address">
+              〒103-0022 東京都中央区日本橋室町1-5-5 室町ちばぎんビル8階
+            </p>
+
+            <div class="access-list">
+              <div class="access-item">
+                <span class="access-line">東京メトロ銀座線・半蔵門線</span>
+                <span>「三越前」駅 A4出口直結</span>
+              </div>
+              <div class="access-item">
+                <span class="access-line">JR総武快速線</span>
+                <span>「新日本橋」駅 地下道直結</span>
+              </div>
+              <div class="access-item">
+                <span class="access-line">JR各線</span>
+                <span>「神田」駅 南口徒歩6分 / 「東京」駅 日本橋口徒歩10分</span>
+              </div>
+            </div>
+
+            <div class="venue-action">
+              <a href="https://maps.google.com/?q=%E6%9D%B1%E4%BA%AC%E9%83%BD%E4%B8%AD%E5%A4%AE%E5%8C%BA%E6%97%A5%E6%9C%AC%E6%A9%8B%E5%AE%A4%E7%94%BA1-5-5+%E5%AE%A4%E7%94%BA%E3%81%A1%E3%81%B0%E3%81%8E%E3%82%93%E3%83%93%E3%83%AB8%E9%9A%8E" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
+                <span>Google Maps で開く</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="venue-card-visual">
+            <div class="venue-photo-wrap" title="クリックで拡大">
+              <img src="image/map_img10.webp" alt="室町ちばぎんビル（日本橋ライフサイエンスハブ）外観" class="venue-photo-img" loading="lazy">
+              <span class="venue-photo-tag">会場：室町ちばぎんビル 8階</span>
+            </div>
+            <div class="venue-amenities">
+              <div class="amenity-chip">高速Wi-Fi完備</div>
+              <div class="amenity-chip">全席電源完備</div>
+              <div class="amenity-chip">プロジェクター・スクリーン</div>
+            </div>
+            <div style="margin-top: 1.25rem; font-size: 0.875rem; color: var(--text-muted); line-height: 1.6;">
+              ※会場内は飲食可能です。1日目の夜には同会場にて懇親会（ケータリング＋ソフトドリンク）を行います。
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section: Committee -->
+    <section class="section" id="committee">
+      <div class="container">
+        <div class="section-head">
+          <div class="section-tag">06 / Committee</div>
+          <h2 class="section-title">主催・運営体制</h2>
+        </div>
+
+        <div class="committee-wrapper">
+          <div class="host-banners" style="grid-template-columns: 1fr;">
+            <div class="host-box">
+              <div class="host-role">主催</div>
+              <div class="host-name">文部科学省 学術変革領域研究(A)「行動変容生物学」総括班</div>
+            </div>
+          </div>
+
+          <div class="members-grid">
+            <div class="member-card">
+              <div class="member-role">運営委員長</div>
+              <div class="member-name">中江 健</div>
+              <div class="member-affil">ExCELLS / 生理学研究所</div>
+            </div>
+
+            <div class="member-card">
+              <div class="member-role">運営委員</div>
+              <div class="member-name">松崎 政紀</div>
+              <div class="member-affil">東京大学</div>
+            </div>
+
+            <div class="member-card">
+              <div class="member-role">運営委員</div>
+              <div class="member-name">田中 康裕</div>
+              <div class="member-affil">玉川大学</div>
+            </div>
+
+            <div class="member-card">
+              <div class="member-role">運営委員</div>
+              <div class="member-name">瀬原 慧祐</div>
+              <div class="member-affil">東京大学</div>
+            </div>
+
+            <div class="member-card">
+              <div class="member-role">運営委員</div>
+              <div class="member-name">近藤 将史</div>
+              <div class="member-affil">東京大学</div>
+            </div>
+
+            <div class="member-card">
+              <div class="member-role">運営委員</div>
+              <div class="member-name">青木 亮</div>
+              <div class="member-affil">玉川大学</div>
+            </div>
+
+            <div class="member-card">
+              <div class="member-role">運営委員</div>
+              <div class="member-name">杉本 翔哉</div>
+              <div class="member-affil">玉川大学</div>
+            </div>
+
+            <div class="member-card">
+              <div class="member-role">運営委員</div>
+              <div class="member-name">田和辻 可昌</div>
+              <div class="member-affil">東京大学</div>
+            </div>
+
+            <div class="member-card">
+              <div class="member-role">運営委員</div>
+              <div class="member-name">山川 宏</div>
+              <div class="member-affil">全脳アーキテクチャ・イニシアティブ</div>
+            </div>
+          </div>
+
+          <div class="contact-card">
+            <div class="contact-info">
+              <h4>お問い合わせ先</h4>
+              <p>ハッカソンに関するご連絡・ご質問は下記までお願いいたします。</p>
+            </div>
+            <div class="contact-email-badge">
+              nakae at nips.ac.jp（atを@に変更してください）
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section: FAQ -->
+    <section class="section" id="faq">
+      <div class="container">
+        <div class="section-head">
+          <div class="section-tag">07 / FAQ</div>
+          <h2 class="section-title">よくある質問</h2>
+        </div>
+
+        <div class="faq-grid">
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>初学者ですが、参加しても大丈夫でしょうか？</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              歓迎します。チュートリアルやチームごとのチューターがつきますので、神経科学やデータ解析の初学者の方も安心してご参加ください。
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>1人での参加や、あらかじめ決まった共同作業者との参加はできますか？</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              どちらも可能です。事前アンケートの興味関心をもとに2〜5名程度のチームをこちらで編成します。あらかじめ共同作業者がいる場合は、参加登録時に記入をお願いします。
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>事前Zoom（2月6日）に参加できない場合は？</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              事前チュートリアルの内容は後日YouTubeで公開します。動画をご覧いただいた上で、2月17日(水)までに組分けアンケートをご提出いただければ本番に参加いただけます。
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>発表会での審査や評価はありますか？</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              点数的な評価は行いません。主に学術的な視点からフィードバックを行う予定です。
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section" style="padding-top: 0;">
+      <div class="container">
+        <div class="cta-banner">
+          <h2 class="cta-title">参加申し込み（現地開催）</h2>
+          <p class="cta-subtitle">
+            定員40名程度。参加登録フォームよりお申し込みください。
+          </p>
+          <div class="cta-buttons" style="display: flex; gap: 0.875rem; justify-content: center; flex-wrap: wrap;">
+            <button class="btn btn-teal" data-open-modal="entry">
+              <span>参加登録フォームを開く</span>
+            </button>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSc7IbZWw1OOKyFQO5wRhYY0eBot87R7iCw_VYpoqSRFM22U4A/viewform" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="color: #FFF; border-color: rgba(255,255,255,0.3);">
+              <span>Googleフォームで直接開く ↗</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h3>学術変革領域A・行動変容生物学ハッカソン 2027</h3>
+          <p>
+            文部科学省 学術変革領域研究(A)「行動変容生物学」総括班 主催
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4>メニュー</h4>
+          <div class="footer-links">
+            <a href="#about">開催趣旨</a>
+            <a href="#data-tech">データ・ツール</a>
+            <a href="#schedule">日程</a>
+            <a href="#guidelines">参加案内</a>
+            <a href="#venue">会場アクセス</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>リンク</h4>
+          <div class="footer-links">
+            <a href="https://wbai.jp/" target="_blank" rel="noopener noreferrer">WBAI 公式サイト</a>
+            <a href="#committee">運営体制</a>
+            <a href="#faq">よくある質問</a>
+            <a href="#top">先頭へ</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>© 2027 学術変革領域A「行動変容生物学」総括班. All Rights Reserved.</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Image Lightbox Modal -->
+  <div class="image-lightbox" id="image-lightbox" aria-hidden="true" role="dialog">
+    <div class="lightbox-content">
+      <button class="lightbox-close" aria-label="閉じる">×</button>
+      <img src="image/previous_hackathon.webp" alt="第1回 行動変容生物学ハッカソンの集合写真" class="lightbox-img">
+      <div class="lightbox-caption">前回の様子：第1回 行動変容生物学ハッカソン集合写真（日本橋ライフサイエンスハブ）</div>
+    </div>
+  </div>
+
+  <!-- Entry Modal with Embedded Google Form -->
+  <div class="modal-backdrop" id="entry-modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal-card">
+      <button class="modal-close-btn" aria-label="閉じる">×</button>
+      <h3 class="modal-title" id="modal-title">参加登録（現地開催）</h3>
+      <p class="modal-desc">
+        以下のGoogleフォームより参加登録をお願いいたします。
+      </p>
+
+      <div class="form-iframe-container">
+        <iframe 
+          src="https://docs.google.com/forms/d/e/1FAIpQLSc7IbZWw1OOKyFQO5wRhYY0eBot87R7iCw_VYpoqSRFM22U4A/viewform?embedded=true" 
+          class="form-iframe"
+          title="学術変革領域A・行動変容生物学ハッカソン2027 参加登録フォーム"
+          loading="lazy">
+          読み込んでいます…
+        </iframe>
+      </div>
+
+      <div style="margin-top: 1rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.5rem;">
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSc7IbZWw1OOKyFQO5wRhYY0eBot87R7iCw_VYpoqSRFM22U4A/viewform" target="_blank" rel="noopener noreferrer" class="form-external-link">
+          <span>別ウィンドウでGoogleフォームを開く ↗</span>
+        </a>
+        <button type="button" class="btn btn-outline" style="padding: 0.375rem 0.875rem; font-size: 0.8125rem;" onclick="document.getElementById('entry-modal').classList.remove('active'); document.body.style.overflow = '';">
+          閉じる
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast -->
+  <div class="toast-msg" id="toast-msg" role="status" aria-live="polite">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+    <span class="toast-text">登録を受け付けました</span>
+  </div>
+
+  <!-- Scripts -->
+  <script src="js/main.js"></script>
+</body>
+</html>
