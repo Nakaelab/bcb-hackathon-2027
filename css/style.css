@@ -354,6 +354,9 @@ ul, ol {
   height: 100%;
   pointer-events: none;
   z-index: 1;
+  filter: blur(28px);
+  -webkit-filter: blur(28px);
+  opacity: 0.85;
 }
 
 .hero-grid {
