@@ -10,6 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initEntryModal();
   initImageLightbox();
   initScrollAnimations();
+  initHeroParticles();
 });
 
 /**
@@ -303,5 +304,157 @@ function initImageLightbox() {
       closeLightbox();
     }
   });
+}
+
+/**
+ * 8. Antigravity-Style Subtle Neural Particle Motion (Hero Section Only)
+ * Elegant, floating nodes with gentle connective neural lines.
+ * Reacts softly to mouse movements on desktop without being distracting.
+ */
+function initHeroParticles() {
+  const canvas = document.getElementById('hero-particles-canvas');
+  if (!canvas) return;
+
+  const ctx = canvas.getContext('2d');
+  const heroSection = canvas.closest('.hero') || canvas.parentElement;
+
+  let width = 0;
+  let height = 0;
+  let animationFrameId = null;
+  let particles = [];
+
+  // Mouse interaction point
+  const mouse = {
+    x: null,
+    y: null,
+    radius: 120
+  };
+
+  function resize() {
+    if (!heroSection) return;
+    const rect = heroSection.getBoundingClientRect();
+    width = canvas.width = rect.width;
+    height = canvas.height = rect.height;
+    createParticles();
+  }
+
+  function createParticles() {
+    particles = [];
+    // Adjust density based on screen width (less on mobile for performance)
+    const count = width < 768 ? 24 : 48;
+
+    for (let i = 0; i < count; i++) {
+      particles.push({
+        x: Math.random() * width,
+        y: Math.random() * height,
+        vx: (Math.random() - 0.5) * 0.45,
+        vy: (Math.random() - 0.5) * 0.45,
+        radius: Math.random() * 2 + 1.2,
+        // Neural teal and slate colors with gentle alpha
+        color: Math.random() > 0.4 ? 'rgba(13, 148, 136, ' : 'rgba(30, 58, 138, ',
+        baseAlpha: Math.random() * 0.35 + 0.2
+      });
+    }
+  }
+
+  function draw() {
+    ctx.clearRect(0, 0, width, height);
+
+    const connectionDist = width < 768 ? 85 : 130;
+
+    // Draw connecting lines between close particles
+    for (let i = 0; i < particles.length; i++) {
+      for (let j = i + 1; j < particles.length; j++) {
+        const dx = particles[i].x - particles[j].x;
+        const dy = particles[i].y - particles[j].y;
+        const dist = Math.sqrt(dx * dx + dy * dy);
+
+        if (dist < connectionDist) {
+          const alpha = (1 - dist / connectionDist) * 0.15;
+          ctx.strokeStyle = `rgba(13, 148, 136, ${alpha})`;
+          ctx.lineWidth = 0.8;
+          ctx.beginPath();
+          ctx.moveTo(particles[i].x, particles[i].y);
+          ctx.lineTo(particles[j].x, particles[j].y);
+          ctx.stroke();
+        }
+      }
+    }
+
+    // Update and draw particles
+    for (let i = 0; i < particles.length; i++) {
+      const p = particles[i];
+
+      // Move
+      p.x += p.vx;
+      p.y += p.vy;
+
+      // Soft bounce on edges
+      if (p.x < 0 || p.x > width) p.vx *= -1;
+      if (p.y < 0 || p.y > height) p.vy *= -1;
+
+      // Gentle mouse interaction
+      if (mouse.x !== null && mouse.y !== null) {
+        const dx = mouse.x - p.x;
+        const dy = mouse.y - p.y;
+        const dist = Math.sqrt(dx * dx + dy * dy);
+        if (dist < mouse.radius) {
+          const force = (mouse.radius - dist) / mouse.radius;
+          const angle = Math.atan2(dy, dx);
+          p.x -= Math.cos(angle) * force * 0.8;
+          p.y -= Math.sin(angle) * force * 0.8;
+        }
+      }
+
+      // Draw particle dot
+      ctx.fillStyle = `${p.color}${p.baseAlpha})`;
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
+      ctx.fill();
+    }
+
+    animationFrameId = requestAnimationFrame(draw);
+  }
+
+  // Mouse tracking inside hero section
+  heroSection.addEventListener('mousemove', (e) => {
+    const rect = canvas.getBoundingClientRect();
+    mouse.x = e.clientX - rect.left;
+    mouse.y = e.clientY - rect.top;
+  });
+
+  heroSection.addEventListener('mouseleave', () => {
+    mouse.x = null;
+    mouse.y = null;
+  });
+
+  // Resize listener with debounce
+  let resizeTimeout;
+  window.addEventListener('resize', () => {
+    clearTimeout(resizeTimeout);
+    resizeTimeout = setTimeout(resize, 150);
+  });
+
+  // Pause when off-screen for battery/performance
+  if ('IntersectionObserver' in window) {
+    const heroObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          if (!animationFrameId) draw();
+        } else {
+          if (animationFrameId) {
+            cancelAnimationFrame(animationFrameId);
+            animationFrameId = null;
+          }
+        }
+      });
+    }, { threshold: 0.05 });
+
+    heroObserver.observe(heroSection);
+  } else {
+    draw();
+  }
+
+  resize();
 }
 
