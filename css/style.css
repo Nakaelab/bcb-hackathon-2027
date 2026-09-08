@@ -270,14 +270,42 @@ ul, ol {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 0.625rem;
+  gap: 0.5rem;
   font-size: 0.875rem;
   font-weight: 600;
   letter-spacing: 0.02em;
   padding: 0.6875rem 1.375rem;
   border-radius: var(--radius-sm);
   transition: all var(--transition-fast);
+  text-align: center;
+  line-height: 1.4;
+  box-sizing: border-box;
+}
+
+.btn-cta-main {
+  font-size: 1.0625rem;
+  padding: 0.875rem 2rem;
+  border-radius: var(--radius-md);
+  flex-wrap: wrap;
+}
+
+.btn-hero-cta {
+  font-size: 0.9375rem;
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--radius-md);
+  flex-wrap: wrap;
+}
+
+.btn-main-text {
+  display: inline-block;
   white-space: nowrap;
+}
+
+.btn-sub-text {
+  display: inline-block;
+  white-space: nowrap;
+  font-size: 0.9em;
+  opacity: 0.95;
 }
 
 .btn-primary {
@@ -2030,8 +2058,18 @@ ul, ol {
   .cta-subtitle {
     font-size: 0.9375rem;
   }
-  .cta-buttons .btn {
+  .cta-buttons {
     width: 100%;
+    max-width: 440px;
+    margin: 0 auto;
+  }
+  .cta-buttons .btn,
+  .hero-actions .btn {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    padding: 0.8125rem 1rem;
+    font-size: 0.9375rem;
   }
 
   /* Modal & Lightbox */
@@ -2154,6 +2192,18 @@ ul, ol {
   }
   .cta-subtitle {
     font-size: 0.875rem;
+  }
+  .cta-buttons .btn,
+  .hero-actions .btn {
+    padding: 0.75rem 0.625rem;
+    font-size: 0.875rem;
+    gap: 0.25rem;
+  }
+  .btn-cta-main {
+    font-size: 0.9375rem;
+  }
+  .btn-sub-text {
+    font-size: 0.8125rem;
   }
   .modal-card {
     padding: 1.25rem 1rem;
