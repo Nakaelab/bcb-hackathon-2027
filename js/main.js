@@ -224,7 +224,7 @@ function initScrollAnimations() {
  * 7. Photo Lightbox (Hero & Venue photos)
  */
 function initImageLightbox() {
-  const triggers = document.querySelectorAll('.hero-image-wrap, .venue-photo-wrap');
+  const triggers = document.querySelectorAll('.hero-image-wrap, .venue-photo-wrap, .past-photo-wrap');
   const lightbox = document.getElementById('image-lightbox');
   if (!triggers.length || !lightbox) return;
 
