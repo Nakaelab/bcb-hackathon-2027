@@ -30,7 +30,7 @@
       <!-- Navigation -->
       <nav class="site-nav" role="navigation" aria-label="メインメニュー">
         <a href="#about" class="nav-link">開催趣旨</a>
-        <a href="#data-tech" class="nav-link">データ・ツール</a>
+        <a href="#data-tech" class="nav-link">データベース・リソース</a>
         <a href="#schedule" class="nav-link">日程</a>
         <a href="#guidelines" class="nav-link">参加案内</a>
         <a href="#venue" class="nav-link">会場</a>
@@ -195,78 +195,75 @@
     <section class="section tech-section" id="data-tech">
       <div class="container">
         <div class="section-head">
-          <div class="section-tag">02 / Data & Tools</div>
-          <h2 class="section-title">利用するデータベースとツール</h2>
+          <div class="section-tag">02 / Resources</div>
+          <h2 class="section-title">データベース・リソース</h2>
         </div>
 
-
         <div class="tech-grid">
-          <!-- BraiDyn-BC -->
+          <!-- BraiDyn-BC Database -->
           <div class="tech-card">
             <div class="tech-card-img-wrap">
               <img src="image/tool_braidyn_bc.jpg" alt="BraiDyn-BC データベース" class="tech-card-img" loading="lazy">
             </div>
             <div class="tech-header">
               <div>
-                <h3 class="tech-name">BraiDyn-BC データベース</h3>
-                <div class="tech-sub">行動変容生物学 包括データベース</div>
+                <h3 class="tech-name">BraiDyn-BC Database</h3>
+                <div class="tech-sub">行動変容生物学 公式データベース</div>
               </div>
               <div class="tech-icon">DB</div>
             </div>
             <p class="tech-desc">
-              マウスの大規模な神経活動データと行動実験データを包括したリソースです。AWSクラウド連携を通じてデータをスムーズに提供します。
+              マウスの学習行動と全脳神経活動を包括した大規模マルチモーダルデータセットです。仕様やデータ構造の詳細をご確認いただけます。
             </p>
+            <div class="tech-action">
+              <a href="https://nakaelab.github.io/braidyn-bc-database/index.html" target="_blank" rel="noopener noreferrer" class="tech-link">
+                <span>データベースを開く ↗</span>
+              </a>
+            </div>
           </div>
 
-          <!-- DeepLabCut -->
+          <!-- BraiDyn-BC GitHub -->
           <div class="tech-card">
             <div class="tech-card-img-wrap">
-              <img src="image/tool_deeplabcut.jpg" alt="DeepLabCut マーカーレス姿勢推定" class="tech-card-img" loading="lazy">
+              <img src="image/resource_github.jpg" alt="BraiDyn-BC GitHub" class="tech-card-img" loading="lazy">
             </div>
             <div class="tech-header">
               <div>
-                <h3 class="tech-name">DeepLabCut</h3>
-                <div class="tech-sub">マーカーレス姿勢推定</div>
+                <h3 class="tech-name">BraiDyn-BC GitHub</h3>
+                <div class="tech-sub">解析コード・公式リポジトリ</div>
               </div>
-              <div class="tech-icon">DLC</div>
+              <div class="tech-icon">Git</div>
             </div>
             <p class="tech-desc">
-              行動実験動画からマウスの身体キーポイント（鼻先、耳、四肢など）の座標を自動抽出する深層学習ツールです。
+              行動変容生物学ハッカソンおよび関連解析パイプライン、各種オープンソースツール群が公開されている公式GitHubオーガニゼーションです。
             </p>
+            <div class="tech-action">
+              <a href="https://github.com/BraiDyn-BC" target="_blank" rel="noopener noreferrer" class="tech-link">
+                <span>GitHub を開く ↗</span>
+              </a>
+            </div>
           </div>
 
-          <!-- MesoNet -->
+          <!-- Tutorials Google Drive -->
           <div class="tech-card">
             <div class="tech-card-img-wrap">
-              <img src="image/tool_mesonet.jpg" alt="MesoNet 動画像位置合わせ" class="tech-card-img" loading="lazy">
+              <img src="image/resource_tutorial.jpg" alt="ハッカソン チュートリアル資料" class="tech-card-img" loading="lazy">
             </div>
             <div class="tech-header">
               <div>
-                <h3 class="tech-name">MesoNet</h3>
-                <div class="tech-sub">動画像の位置合わせ</div>
+                <h3 class="tech-name">チュートリアル資料</h3>
+                <div class="tech-sub">Google Drive 共有フォルダ</div>
               </div>
-              <div class="tech-icon">MN</div>
+              <div class="tech-icon">Docs</div>
             </div>
             <p class="tech-desc">
-              1光子Ca2+イメージング動画像の位置合わせ（レジストレーション）を行い、皮質領域の特定を支援するツールです。
+              事前学習用チュートリアルコード、Google Colaboratoryノートブック、解説スライド、サンプルデータなどの配布資料一式を格納しています。
             </p>
-          </div>
-
-          <!-- NWB -->
-          <div class="tech-card">
-            <div class="tech-card-img-wrap">
-              <img src="image/tool_nwb.jpg" alt="NWB 標準データフォーマット" class="tech-card-img" loading="lazy">
+            <div class="tech-action">
+              <a href="https://drive.google.com/drive/folders/1f5MBwx0tfmJQgbwJ24MVGnka4QZQzfJI" target="_blank" rel="noopener noreferrer" class="tech-link">
+                <span>チュートリアルを開く ↗</span>
+              </a>
             </div>
-            <div class="tech-header">
-              <div>
-                <h3 class="tech-name">NWB (Neurodata Without Borders)</h3>
-                <div class="tech-sub">標準データフォーマット</div>
-              </div>
-              <div class="tech-icon">NWB</div>
-            </div>
-            <p class="tech-desc">
-              神経活動データとメタデータを包括的に扱う国際標準フォーマットです。Python（PyNWB）で操作します。
-            </p>
           </div>
         </div>
       </div>
@@ -777,7 +774,7 @@
           <h4>メニュー</h4>
           <div class="footer-links">
             <a href="#about">開催趣旨</a>
-            <a href="#data-tech">データ・ツール</a>
+            <a href="#data-tech">データベース・リソース</a>
             <a href="#schedule">日程</a>
             <a href="#guidelines">参加案内</a>
             <a href="#venue">会場アクセス</a>
@@ -787,10 +784,12 @@
         <div class="footer-col">
           <h4>リンク・お問い合わせ</h4>
           <div class="footer-links">
+            <a href="https://nakaelab.github.io/braidyn-bc-database/index.html" target="_blank" rel="noopener noreferrer">BraiDyn-BC Database ↗</a>
+            <a href="https://github.com/BraiDyn-BC" target="_blank" rel="noopener noreferrer">GitHub (BraiDyn-BC) ↗</a>
+            <a href="https://drive.google.com/drive/folders/1f5MBwx0tfmJQgbwJ24MVGnka4QZQzfJI" target="_blank" rel="noopener noreferrer">チュートリアル ↗</a>
             <a href="mailto:ken.nakae@gmail.com">お問い合わせ（メール）</a>
             <a href="#committee">運営体制</a>
             <a href="#faq">よくある質問</a>
-            <a href="#top">先頭へ</a>
           </div>
         </div>
       </div>
