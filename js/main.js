@@ -5,7 +5,7 @@
 
 document.addEventListener('DOMContentLoaded', () => {
   initNavigation();
-  initScheduleTabs();
+  initScheduleNav();
   initFaqAccordion();
   initImageLightbox();
   initScrollAnimations();
@@ -72,37 +72,55 @@ function initNavigation() {
 
 
 /**
- * 3. Schedule Tab Switching
+ * 3. Schedule Quick Navigation & Scrollspy
  */
-function initScheduleTabs() {
-  const tabButtons = document.querySelectorAll('.tab-btn');
-  const tabPanels = document.querySelectorAll('.tab-panel');
+function initScheduleNav() {
+  const navLinks = document.querySelectorAll('.schedule-nav-link');
+  const dayBlocks = document.querySelectorAll('.schedule-day-block');
 
-  tabButtons.forEach(button => {
-    button.addEventListener('click', () => {
-      const targetTab = button.getAttribute('data-tab');
+  if (!navLinks.length || !dayBlocks.length) return;
 
-      // Remove active states
-      tabButtons.forEach(btn => {
-        btn.classList.remove('active');
-        btn.setAttribute('aria-selected', 'false');
-      });
-      tabPanels.forEach(panel => {
-        panel.classList.remove('active');
-        panel.setAttribute('hidden', 'true');
-      });
-
-      // Activate clicked tab
-      button.classList.add('active');
-      button.setAttribute('aria-selected', 'true');
-
-      const activePanel = document.getElementById(targetTab);
-      if (activePanel) {
-        activePanel.classList.add('active');
-        activePanel.removeAttribute('hidden');
+  // Smooth scroll on click
+  navLinks.forEach(link => {
+    link.addEventListener('click', (e) => {
+      const targetId = link.getAttribute('href');
+      if (targetId && targetId.startsWith('#')) {
+        const targetEl = document.querySelector(targetId);
+        if (targetEl) {
+          e.preventDefault();
+          targetEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          navLinks.forEach(l => l.classList.remove('active'));
+          link.classList.add('active');
+        }
       }
     });
   });
+
+  // Highlight current day on scroll
+  const onScheduleScroll = () => {
+    const scrollY = window.pageYOffset;
+    let currentId = null;
+
+    dayBlocks.forEach(block => {
+      const top = block.offsetTop - 220;
+      const height = block.offsetHeight;
+      if (scrollY >= top && scrollY < top + height) {
+        currentId = block.getAttribute('id');
+      }
+    });
+
+    if (currentId) {
+      navLinks.forEach(link => {
+        if (link.getAttribute('href') === `#${currentId}`) {
+          link.classList.add('active');
+        } else {
+          link.classList.remove('active');
+        }
+      });
+    }
+  };
+
+  window.addEventListener('scroll', onScheduleScroll, { passive: true });
 }
 
 /**

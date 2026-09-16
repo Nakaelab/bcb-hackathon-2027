@@ -276,228 +276,243 @@
 
         </div>
 
-        <!-- Schedule Tabs -->
-        <div class="schedule-tabs-nav" role="tablist">
-          <button class="tab-btn active" role="tab" aria-selected="true" data-tab="tab-day0">
-            <span>事前Zoom</span>
-            <span class="tab-date">2/6 (土)</span>
-          </button>
-          <button class="tab-btn" role="tab" aria-selected="false" data-tab="tab-day1">
-            <span>Day 1</span>
-            <span class="tab-date">2/20 (土)</span>
-          </button>
-          <button class="tab-btn" role="tab" aria-selected="false" data-tab="tab-day2">
-            <span>Day 2</span>
-            <span class="tab-date">2/21 (日)</span>
-          </button>
-          <button class="tab-btn" role="tab" aria-selected="false" data-tab="tab-day3">
-            <span>Day 3</span>
-            <span class="tab-date">2/22 (月)</span>
-          </button>
+        <!-- Schedule Quick Navigation -->
+        <div class="schedule-quick-nav" aria-label="日程クイックナビ">
+          <a href="#day-pre" class="schedule-nav-link active">
+            <span class="nav-day-label">事前Zoom</span>
+            <span class="nav-day-date">2/6 (土)</span>
+          </a>
+          <a href="#day-1" class="schedule-nav-link">
+            <span class="nav-day-label">Day 1</span>
+            <span class="nav-day-date">2/20 (土)</span>
+          </a>
+          <a href="#day-2" class="schedule-nav-link">
+            <span class="nav-day-label">Day 2</span>
+            <span class="nav-day-date">2/21 (日)</span>
+          </a>
+          <a href="#day-3" class="schedule-nav-link">
+            <span class="nav-day-label">Day 3</span>
+            <span class="nav-day-date">2/22 (月)</span>
+          </a>
         </div>
 
-        <!-- Tab 0: 事前Zoom -->
-        <div class="tab-panel active" id="tab-day0" role="tabpanel">
-          <div class="day-banner">
-            <div>
-              <div class="day-banner-title">事前オンラインチュートリアル</div>
-              <div class="day-banner-desc">オンライン（Zoom配信・後日YouTube公開あり）</div>
+        <!-- Schedule Stream (All days visible on 1 page) -->
+        <div class="schedule-stream">
+          <!-- Day 0: 事前Zoom -->
+          <div class="schedule-day-block" id="day-pre">
+            <div class="day-banner">
+              <div class="day-banner-header">
+                <div class="day-banner-badge-group">
+                  <span class="day-chip">事前準備</span>
+                  <span class="badge-tag highlight">2027年2月6日(土)</span>
+                </div>
+                <div class="day-banner-title">事前オンラインチュートリアル</div>
+                <div class="day-banner-desc">オンライン（Zoom配信・後日YouTube公開あり）</div>
+              </div>
             </div>
-            <span class="badge-tag highlight">2027年2月6日(土)</span>
+
+            <div class="timeline-list">
+              <div class="timeline-row">
+                <div class="time-slot">13:00 - 16:00</div>
+                <div class="timeline-content">
+                  <div class="event-title">チュートリアル, Question Grammar</div>
+                  <div class="event-detail">データベースの構造、Colabでのチュートリアルコード解説、問いの立て方。※参加できない方向けに後日YouTube公開。</div>
+                </div>
+                <span class="event-type-badge keynote">Zoom</span>
+              </div>
+
+              <div class="timeline-row break-row">
+                <div class="time-slot">〜 2/17 (水)</div>
+                <div class="timeline-content">
+                  <div class="event-title">Google Formでの提出・組分け提案</div>
+                  <div class="event-detail">興味関心をフォームで回答いただき、運営側でチーム編成を提案します。</div>
+                </div>
+                <span class="event-type-badge session">締切</span>
+              </div>
+            </div>
           </div>
 
-          <div class="timeline-list">
-            <div class="timeline-row">
-              <div class="time-slot">13:00 - 16:00</div>
-              <div class="timeline-content">
-                <div class="event-title">チュートリアル, Question Grammar</div>
-                <div class="event-detail">データベースの構造、Colabでのチュートリアルコード解説、問いの立て方。※参加できない方向けに後日YouTube公開。</div>
+          <!-- Day 1: 2/20 (土) -->
+          <div class="schedule-day-block" id="day-1">
+            <div class="day-banner">
+              <div class="day-banner-header">
+                <div class="day-banner-badge-group">
+                  <span class="day-chip">Day 1</span>
+                  <span class="badge-tag highlight">2027年2月20日(土)</span>
+                </div>
+                <div class="day-banner-title">Day 1：受付・導入・作業開始・懇親会</div>
+                <div class="day-banner-desc">会場：日本橋ライフサイエンスハブ 8階 LSH-D</div>
               </div>
-              <span class="event-type-badge keynote">Zoom</span>
             </div>
 
-            <div class="timeline-row break-row">
-              <div class="time-slot">〜 2/17 (水)</div>
-              <div class="timeline-content">
-                <div class="event-title">Google Formでの提出・組分け提案</div>
-                <div class="event-detail">興味関心をフォームで回答いただき、運営側でチーム編成を提案します。</div>
+            <div class="timeline-list">
+              <div class="timeline-row">
+                <div class="time-slot">12:00 - 13:00</div>
+                <div class="timeline-content">
+                  <div class="event-title">参加登録開始・受付</div>
+                </div>
+                <span class="event-type-badge">受付</span>
               </div>
-              <span class="event-type-badge session">締切</span>
+
+              <div class="timeline-row">
+                <div class="time-slot">13:00 - 13:10</div>
+                <div class="timeline-content">
+                  <div class="event-title">開催にあたって</div>
+                  <div class="event-speaker">中江 健（福井大学）</div>
+                </div>
+                <span class="event-type-badge keynote">挨拶</span>
+              </div>
+
+              <div class="timeline-row">
+                <div class="time-slot">13:10 - 14:00</div>
+                <div class="timeline-content">
+                  <div class="event-title">行動変容生物学 Introduction</div>
+                  <div class="event-speaker">近藤 将史 ＆ 瀬原 慧祐（東京大学）</div>
+                </div>
+                <span class="event-type-badge session">講義</span>
+              </div>
+
+              <div class="timeline-row">
+                <div class="time-slot">14:00 - 16:00</div>
+                <div class="timeline-content">
+                  <div class="event-title">テーマ相談会 ＋ 作業</div>
+                  <div class="event-detail">チームごとにチューターと相談し、解析テーマを決定</div>
+                </div>
+                <span class="event-type-badge session">チーム作業</span>
+              </div>
+
+              <div class="timeline-row">
+                <div class="time-slot">16:00 - 18:00</div>
+                <div class="timeline-content">
+                  <div class="event-title">作業</div>
+                </div>
+                <span class="event-type-badge">作業</span>
+              </div>
+
+              <div class="timeline-row">
+                <div class="time-slot">18:30 - 20:00</div>
+                <div class="timeline-content">
+                  <div class="event-title">懇親会（ケータリング、事務局側）</div>
+                  <div class="event-detail">会場内での交流会（ソフトドリンク付、アルコール類は実費負担）</div>
+                </div>
+                <span class="event-type-badge social">懇親会</span>
+              </div>
             </div>
           </div>
-        </div>
 
-        <!-- Tab 1: Day 1 -->
-        <div class="tab-panel" id="tab-day1" role="tabpanel" hidden>
-          <div class="day-banner">
-            <div>
-              <div class="day-banner-title">Day 1：受付・導入・作業開始・懇親会</div>
-              <div class="day-banner-desc">会場：日本橋ライフサイエンスハブ 8階 LSH-D</div>
+          <!-- Day 2: 2/21 (日) -->
+          <div class="schedule-day-block" id="day-2">
+            <div class="day-banner">
+              <div class="day-banner-header">
+                <div class="day-banner-badge-group">
+                  <span class="day-chip">Day 2</span>
+                  <span class="badge-tag highlight">2027年2月21日(日)</span>
+                </div>
+                <div class="day-banner-title">Day 2：作業・特別企画</div>
+                <div class="day-banner-desc">会場：日本橋ライフサイエンスハブ 8階 LSH-D</div>
+              </div>
             </div>
-            <span class="badge-tag highlight">2027年2月20日(土)</span>
+
+            <div class="timeline-list">
+              <div class="timeline-row">
+                <div class="time-slot">09:00 - 12:00</div>
+                <div class="timeline-content">
+                  <div class="event-title">作業</div>
+                </div>
+                <span class="event-type-badge">作業</span>
+              </div>
+
+              <div class="timeline-row">
+                <div class="time-slot">12:00 - 13:00</div>
+                <div class="timeline-content">
+                  <div class="event-title">昼食会（田和辻 Lunch on Seminar）</div>
+                  <div class="event-speaker">田和辻 可昌（全脳アーキテクチャ・イニシアティブ）</div>
+                </div>
+                <span class="event-type-badge keynote">セミナー</span>
+              </div>
+
+              <div class="timeline-row">
+                <div class="time-slot">13:00 - 14:30</div>
+                <div class="timeline-content">
+                  <div class="event-title">田和辻企画 hands-on</div>
+                  <div class="event-speaker">田和辻 可昌 ほか</div>
+                </div>
+                <span class="event-type-badge session">ハンズオン</span>
+              </div>
+
+              <div class="timeline-row">
+                <div class="time-slot">15:00 - 18:00</div>
+                <div class="timeline-content">
+                  <div class="event-title">作業</div>
+                </div>
+                <span class="event-type-badge">作業</span>
+              </div>
+            </div>
           </div>
 
-          <div class="timeline-list">
-            <div class="timeline-row">
-              <div class="time-slot">12:00 - 13:00</div>
-              <div class="timeline-content">
-                <div class="event-title">参加登録開始・受付</div>
+          <!-- Day 3: 2/22 (月) -->
+          <div class="schedule-day-block" id="day-3">
+            <div class="day-banner">
+              <div class="day-banner-header">
+                <div class="day-banner-badge-group">
+                  <span class="day-chip">Day 3</span>
+                  <span class="badge-tag highlight">2027年2月22日(月)</span>
+                </div>
+                <div class="day-banner-title">Day 3：仕上げ・発表会・フィードバック</div>
+                <div class="day-banner-desc">会場：日本橋ライフサイエンスハブ 8階 LSH-D</div>
               </div>
-              <span class="event-type-badge">受付</span>
             </div>
 
-            <div class="timeline-row">
-              <div class="time-slot">13:00 - 13:10</div>
-              <div class="timeline-content">
-                <div class="event-title">開催にあたって</div>
-                <div class="event-speaker">中江 健</div>
+            <div class="timeline-list">
+              <div class="timeline-row">
+                <div class="time-slot">09:00 - 12:00</div>
+                <div class="timeline-content">
+                  <div class="event-title">作業</div>
+                </div>
+                <span class="event-type-badge">作業</span>
               </div>
-              <span class="event-type-badge keynote">挨拶</span>
-            </div>
 
-            <div class="timeline-row">
-              <div class="time-slot">13:10 - 14:00</div>
-              <div class="timeline-content">
-                <div class="event-title">行動変容生物学 Introduction</div>
-                <div class="event-speaker">近藤 将史 ＆ 瀬原 慧祐</div>
+              <div class="timeline-row break-row">
+                <div class="time-slot">12:00 - 13:45</div>
+                <div class="timeline-content">
+                  <div class="event-title">昼食会</div>
+                </div>
+                <span class="event-type-badge">昼食</span>
               </div>
-              <span class="event-type-badge session">講義</span>
-            </div>
 
-            <div class="timeline-row">
-              <div class="time-slot">14:00 - 16:00</div>
-              <div class="timeline-content">
-                <div class="event-title">テーマ相談会 ＋ 作業</div>
-                <div class="event-detail">チームごとにチューターと相談し、解析テーマを決定</div>
+              <div class="timeline-row">
+                <div class="time-slot">13:45 - 15:40</div>
+                <div class="timeline-content">
+                  <div class="event-title">発表のための準備相談</div>
+                </div>
+                <span class="event-type-badge session">発表準備</span>
               </div>
-              <span class="event-type-badge session">チーム作業</span>
-            </div>
 
-            <div class="timeline-row">
-              <div class="time-slot">16:00 - 18:00</div>
-              <div class="timeline-content">
-                <div class="event-title">作業</div>
+              <div class="timeline-row break-row">
+                <div class="time-slot">15:40 - 15:45</div>
+                <div class="timeline-content">
+                  <div class="event-title">休憩</div>
+                </div>
+                <span class="event-type-badge">休憩</span>
               </div>
-              <span class="event-type-badge">作業</span>
-            </div>
 
-            <div class="timeline-row">
-              <div class="time-slot">18:30 - 20:00</div>
-              <div class="timeline-content">
-                <div class="event-title">懇親会（ケータリング、事務局側）</div>
-                <div class="event-detail">会場内での交流会（ソフトドリンク付、アルコール類は実費負担）</div>
+              <div class="timeline-row">
+                <div class="time-slot">15:45 - 18:15</div>
+                <div class="timeline-content">
+                  <div class="event-title">ハッカソン発表会</div>
+                  <div class="event-detail">各チーム10〜15分程度の発表と質疑応答。点数評価ではなく、学術的な視点からフィードバックを行います。</div>
+                </div>
+                <span class="event-type-badge keynote">成果発表</span>
               </div>
-              <span class="event-type-badge social">懇親会</span>
-            </div>
-          </div>
-        </div>
 
-        <!-- Tab 2: Day 2 -->
-        <div class="tab-panel" id="tab-day2" role="tabpanel" hidden>
-          <div class="day-banner">
-            <div>
-              <div class="day-banner-title">Day 2：作業・特別企画</div>
-              <div class="day-banner-desc">会場：日本橋ライフサイエンスハブ 8階 LSH-D</div>
-            </div>
-            <span class="badge-tag highlight">2027年2月21日(日)</span>
-          </div>
-
-          <div class="timeline-list">
-            <div class="timeline-row">
-              <div class="time-slot">09:00 - 12:00</div>
-              <div class="timeline-content">
-                <div class="event-title">作業</div>
+              <div class="timeline-row">
+                <div class="time-slot">18:15 - 18:20</div>
+                <div class="timeline-content">
+                  <div class="event-title">おわりに</div>
+                  <div class="event-speaker">松崎 政紀（東京大学）</div>
+                </div>
+                <span class="event-type-badge keynote">閉会</span>
               </div>
-              <span class="event-type-badge">作業</span>
-            </div>
-
-            <div class="timeline-row">
-              <div class="time-slot">12:00 - 13:00</div>
-              <div class="timeline-content">
-                <div class="event-title">昼食会（田和辻 Lunch on Seminar）</div>
-                <div class="event-speaker">田和辻 可昌（全脳アーキテクチャ・イニシアティブ）</div>
-              </div>
-              <span class="event-type-badge keynote">セミナー</span>
-            </div>
-
-            <div class="timeline-row">
-              <div class="time-slot">13:00 - 14:30</div>
-              <div class="timeline-content">
-                <div class="event-title">田和辻企画 hands-on</div>
-                <div class="event-speaker">田和辻 可昌 ほか</div>
-              </div>
-              <span class="event-type-badge session">ハンズオン</span>
-            </div>
-
-            <div class="timeline-row">
-              <div class="time-slot">15:00 - 18:00</div>
-              <div class="timeline-content">
-                <div class="event-title">作業</div>
-              </div>
-              <span class="event-type-badge">作業</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Tab 3: Day 3 -->
-        <div class="tab-panel" id="tab-day3" role="tabpanel" hidden>
-          <div class="day-banner">
-            <div>
-              <div class="day-banner-title">Day 3：仕上げ・発表会・フィードバック</div>
-              <div class="day-banner-desc">会場：日本橋ライフサイエンスハブ 8階 LSH-D</div>
-            </div>
-            <span class="badge-tag highlight">2027年2月22日(月)</span>
-          </div>
-
-          <div class="timeline-list">
-            <div class="timeline-row">
-              <div class="time-slot">09:00 - 12:00</div>
-              <div class="timeline-content">
-                <div class="event-title">作業</div>
-              </div>
-              <span class="event-type-badge">作業</span>
-            </div>
-
-            <div class="timeline-row break-row">
-              <div class="time-slot">12:00 - 13:45</div>
-              <div class="timeline-content">
-                <div class="event-title">昼食会</div>
-              </div>
-              <span class="event-type-badge">昼食</span>
-            </div>
-
-            <div class="timeline-row">
-              <div class="time-slot">13:45 - 15:40</div>
-              <div class="timeline-content">
-                <div class="event-title">発表のための準備相談</div>
-              </div>
-              <span class="event-type-badge session">発表準備</span>
-            </div>
-
-            <div class="timeline-row break-row">
-              <div class="time-slot">15:40 - 15:45</div>
-              <div class="timeline-content">
-                <div class="event-title">休憩</div>
-              </div>
-              <span class="event-type-badge">休憩</span>
-            </div>
-
-            <div class="timeline-row">
-              <div class="time-slot">15:45 - 18:15</div>
-              <div class="timeline-content">
-                <div class="event-title">ハッカソン発表会</div>
-                <div class="event-detail">各チーム10〜15分程度の発表と質疑応答。点数評価ではなく、学術的な視点からフィードバックを行います。</div>
-              </div>
-              <span class="event-type-badge keynote">成果発表</span>
-            </div>
-
-            <div class="timeline-row">
-              <div class="time-slot">18:15 - 18:20</div>
-              <div class="timeline-content">
-                <div class="event-title">おわりに</div>
-                <div class="event-speaker">松崎 政紀（東京大学）</div>
-              </div>
-              <span class="event-type-badge keynote">閉会</span>
             </div>
           </div>
         </div>
