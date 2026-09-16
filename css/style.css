@@ -808,158 +808,280 @@ ul, ol {
 .schedule-stream {
   display: flex;
   flex-direction: column;
-  gap: 3.25rem;
+  gap: 3rem;
 }
 
-.schedule-day-block {
-  scroll-margin-top: 150px;
+.schedule-day-card {
+  background: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  border-radius: 18px;
+  box-shadow: 0 4px 20px -2px rgba(15, 23, 42, 0.05), 0 1px 3px rgba(15, 23, 42, 0.03);
+  overflow: hidden;
+  transition: box-shadow 0.2s ease;
 }
 
-.day-banner {
-  background-color: var(--bg-surface);
-  border: 1px solid var(--border-light);
-  border-left: 5px solid var(--accent-teal);
-  border-radius: var(--radius-md);
-  padding: 1.5rem 2rem;
-  margin-bottom: 1.25rem;
-  box-shadow: var(--shadow-subtle);
+.schedule-day-card:hover {
+  box-shadow: 0 10px 30px -4px rgba(15, 23, 42, 0.08);
 }
 
-.day-banner-header {
-  display: flex;
-  flex-direction: column;
-  gap: 0.4rem;
+.day-card-header {
+  padding: 1.75rem 2.25rem;
+  background: linear-gradient(180deg, #F8FAFC 0%, #FFFFFF 100%);
+  border-bottom: 1px solid #EDF2F7;
 }
 
-.day-banner-badge-group {
+.day-card-meta {
   display: flex;
   align-items: center;
-  gap: 0.6rem;
+  flex-wrap: wrap;
+  gap: 0.75rem 1.25rem;
+  margin-bottom: 0.5rem;
 }
 
-.day-chip {
+.day-tag {
   font-family: var(--font-mono);
   font-size: 0.75rem;
   font-weight: 700;
-  padding: 0.2rem 0.65rem;
-  border-radius: 9999px;
-  background-color: rgba(13, 148, 136, 0.08);
-  color: var(--accent-teal);
-  border: 1px solid rgba(13, 148, 136, 0.25);
-  letter-spacing: 0.03em;
+  letter-spacing: 0.06em;
+  color: #FFFFFF;
+  background: var(--accent-teal);
+  padding: 0.25rem 0.65rem;
+  border-radius: 6px;
+  display: inline-flex;
+  align-items: center;
 }
 
-.day-banner-title {
-  font-size: 1.25rem;
+.day-tag.online {
+  background: #475569;
+}
+
+.day-date {
+  font-family: var(--font-mono);
+  font-size: 0.9375rem;
   font-weight: 700;
-  color: var(--text-main);
+  color: #1E293B;
   letter-spacing: -0.01em;
 }
 
-.day-banner-desc {
-  font-size: 0.875rem;
-  color: var(--text-muted);
+.day-venue {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.8125rem;
+  color: #64748B;
+  margin-left: auto;
 }
 
-.timeline-list {
+.day-venue svg {
+  color: var(--accent-teal);
+  flex-shrink: 0;
+}
+
+.day-card-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #0F172A;
+  margin: 0;
+  letter-spacing: -0.01em;
+  line-height: 1.4;
+}
+
+/* Events List */
+.day-events-list {
   display: flex;
   flex-direction: column;
-  gap: 1px;
-  background-color: var(--border-light);
-  border: 1px solid var(--border-light);
-  border-radius: var(--radius-md);
-  overflow: hidden;
 }
 
-.timeline-row {
+.event-item {
   display: grid;
-  grid-template-columns: 180px 1fr auto;
-  gap: 1.5rem;
-  align-items: center;
-  background-color: var(--bg-surface);
-  padding: 1.25rem 2rem;
-  transition: background-color var(--transition-fast);
+  grid-template-columns: 160px 1fr;
+  gap: 2rem;
+  padding: 1.35rem 2.25rem;
+  border-bottom: 1px solid #F1F5F9;
+  align-items: flex-start;
+  transition: background-color 0.15s ease;
 }
 
-.timeline-row:hover {
-  background-color: #FAFBF9;
+.event-item:last-child {
+  border-bottom: none;
 }
 
-.timeline-row.break-row {
-  background-color: var(--bg-subtle);
+.event-item:hover {
+  background-color: #FAFBFD;
 }
 
-.time-slot {
+.event-time {
+  padding-top: 0.15rem;
+}
+
+.time-range {
   font-family: var(--font-mono);
   font-size: 0.875rem;
+  font-weight: 700;
+  color: #1E293B;
+  letter-spacing: 0.01em;
+  white-space: nowrap;
+}
+
+.time-sep {
+  color: #CBD5E1;
+  font-weight: 400;
+  margin: 0 0.2rem;
+}
+
+.event-body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.event-header-row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.event-name {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #0F172A;
+  margin: 0;
+  line-height: 1.4;
+}
+
+.event-desc {
+  font-size: 0.84rem;
+  color: #64748B;
+  line-height: 1.6;
+  margin: 0.2rem 0 0 0;
+}
+
+.event-speaker {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.8125rem;
   font-weight: 600;
-  color: var(--text-main);
+  color: var(--accent-teal);
+  background: rgba(13, 148, 136, 0.08);
+  padding: 0.2rem 0.6rem;
+  border-radius: 6px;
+  width: fit-content;
+  margin-top: 0.15rem;
+}
+
+.event-speaker svg {
+  flex-shrink: 0;
+}
+
+/* Event Chips for meaningful milestones */
+.event-chip {
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  font-weight: 700;
+  padding: 0.15rem 0.55rem;
+  border-radius: 4px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  line-height: 1.5;
+}
+
+.event-chip.zoom {
+  background: #E0F2FE;
+  color: #0369A1;
+}
+
+.event-chip.deadline {
+  background: #FEE2E2;
+  color: #B91C1C;
+}
+
+.event-chip.social {
+  background: #FEF3C7;
+  color: #B45309;
+}
+
+.event-chip.special {
+  background: #CCFBF1;
+  color: #0F766E;
+}
+
+.event-chip.presentation {
+  background: #DCFCE7;
+  color: #15803D;
+}
+
+/* Highlighted Special Rows */
+.event-item.featured-social {
+  background: #FFFDF7;
+  border-left: 4px solid #F59E0B;
+}
+
+.event-item.featured-social:hover {
+  background: #FEFCE8;
+}
+
+.event-item.featured-special {
+  background: #F8FDFA;
+  border-left: 4px solid var(--accent-teal);
+}
+
+.event-item.featured-special:hover {
+  background: #F0FDF9;
+}
+
+.event-item.featured-presentation {
+  background: #F6FCF7;
+  border-left: 4px solid #10B981;
+}
+
+.event-item.featured-presentation:hover {
+  background: #EFFDF2;
+}
+
+/* Intermission (Break & Lunch indicator) */
+.schedule-intermission {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.85rem 2.25rem;
+  background: #F8FAFC;
+  border-top: 1px dashed #E2E8F0;
+  border-bottom: 1px dashed #E2E8F0;
+}
+
+.intermission-left {
   display: flex;
   align-items: center;
   gap: 0.5rem;
 }
 
-.time-slot::before {
-  content: '';
-  display: inline-block;
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background-color: var(--accent-teal);
+.intermission-icon {
+  font-size: 1rem;
 }
 
-.timeline-row.break-row .time-slot::before {
-  background-color: var(--border-medium);
-}
-
-.timeline-content {
-  display: flex;
-  flex-direction: column;
-  gap: 0.25rem;
-}
-
-.event-title {
-  font-size: 0.9375rem;
+.intermission-label {
+  font-size: 0.875rem;
   font-weight: 700;
-  color: var(--text-main);
+  color: #334155;
 }
 
-.event-speaker {
-  font-size: 0.8125rem;
-  color: var(--accent-teal);
-  font-weight: 500;
-}
-
-.event-detail {
-  font-size: 0.8125rem;
-  color: var(--text-muted);
-}
-
-.event-type-badge {
+.intermission-time {
   font-family: var(--font-mono);
-  font-size: 0.6875rem;
+  font-size: 0.8125rem;
   font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  padding: 0.25rem 0.625rem;
-  border-radius: var(--radius-sm);
-  background-color: var(--bg-subtle);
-  color: var(--text-muted);
+  color: #94A3B8;
 }
 
-.event-type-badge.session {
-  background-color: var(--accent-light-blue);
-  color: var(--accent-primary);
+.schedule-intermission.subtle {
+  background: #FAFBFD;
+  padding: 0.65rem 2.25rem;
 }
 
-.event-type-badge.keynote {
-  background-color: var(--accent-light-teal);
-  color: var(--accent-teal);
-}
-
-.event-type-badge.social {
-  background-color: #FEF3C7;
-  color: var(--accent-amber);
+.schedule-intermission.subtle .intermission-label {
+  color: #64748B;
+  font-weight: 600;
 }
 
 /* --- Section: Application / Guidelines --- */
@@ -1944,30 +2066,37 @@ ul, ol {
     padding: 1.25rem;
   }
 
-  /* Schedule Stream & Timeline */
+  /* Schedule Stream & Day Cards */
   .schedule-stream {
-    gap: 2rem;
+    gap: 1.75rem;
   }
-  .schedule-day-block {
-    scroll-margin-top: 100px;
+  .schedule-day-card {
+    border-radius: 14px;
   }
-  .day-banner {
-    padding: 1rem 1.25rem;
-    margin-bottom: 1rem;
+  .day-card-header {
+    padding: 1.25rem 1.25rem;
   }
-  .timeline-row {
+  .day-card-meta {
+    gap: 0.5rem;
+  }
+  .day-venue {
+    margin-left: 0;
+    width: 100%;
+    margin-top: 0.25rem;
+  }
+  .day-card-title {
+    font-size: 1.125rem;
+  }
+  .event-item {
     grid-template-columns: 1fr;
     gap: 0.5rem;
-    padding: 1rem 1.25rem;
+    padding: 1.1rem 1.25rem;
   }
-  .timeline-row .time-slot {
-    font-size: 0.8125rem;
+  .schedule-intermission {
+    padding: 0.75rem 1.25rem;
   }
-  .timeline-row .event-title {
-    font-size: 0.9375rem;
-  }
-  .timeline-row .event-type-badge {
-    align-self: flex-start;
+  .schedule-intermission.subtle {
+    padding: 0.6rem 1.25rem;
   }
 
   /* Data & Tech Cards */
