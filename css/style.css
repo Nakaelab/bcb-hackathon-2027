@@ -805,75 +805,6 @@ ul, ol {
 }
 
 /* --- Section: Schedule / Timetable --- */
-.schedule-quick-nav {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.75rem;
-  margin-bottom: 3rem;
-  padding: 0.5rem;
-  background-color: var(--bg-surface);
-  border: 1px solid var(--border-light);
-  border-radius: var(--radius-md);
-  box-shadow: var(--shadow-subtle);
-  position: sticky;
-  top: 76px;
-  z-index: 10;
-}
-
-.schedule-nav-link {
-  flex: 1 1 0;
-  min-width: 140px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 0.75rem 1rem;
-  border-radius: var(--radius-sm);
-  color: var(--text-muted);
-  background-color: transparent;
-  text-decoration: none;
-  border: 1px solid transparent;
-  transition: all var(--transition-fast);
-}
-
-.schedule-nav-link .nav-day-label {
-  font-family: var(--font-mono);
-  font-size: 0.875rem;
-  font-weight: 700;
-  color: var(--text-main);
-  transition: color var(--transition-fast);
-}
-
-.schedule-nav-link .nav-day-date {
-  font-size: 0.75rem;
-  color: var(--text-light);
-  margin-top: 0.2rem;
-  transition: color var(--transition-fast);
-}
-
-.schedule-nav-link:hover {
-  background-color: var(--bg-subtle);
-}
-
-.schedule-nav-link:hover .nav-day-label {
-  color: var(--accent-teal);
-}
-
-.schedule-nav-link.active {
-  background-color: #FFFFFF;
-  border-color: var(--accent-teal);
-  box-shadow: var(--shadow-sm);
-}
-
-.schedule-nav-link.active .nav-day-label {
-  color: var(--accent-teal);
-}
-
-.schedule-nav-link.active .nav-day-date {
-  color: var(--accent-teal);
-  font-weight: 600;
-}
-
 .schedule-stream {
   display: flex;
   flex-direction: column;
@@ -2013,33 +1944,12 @@ ul, ol {
     padding: 1.25rem;
   }
 
-  /* Schedule Quick Nav & Timeline */
-  .schedule-quick-nav {
-    position: sticky;
-    top: 60px;
-    flex-wrap: nowrap;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-    gap: 0.5rem;
-    padding: 0.35rem;
-    margin-bottom: 1.75rem;
-  }
-  .schedule-nav-link {
-    flex-shrink: 0;
-    min-width: 105px;
-    padding: 0.5rem 0.75rem;
-  }
-  .schedule-nav-link .nav-day-label {
-    font-size: 0.8125rem;
-  }
-  .schedule-nav-link .nav-day-date {
-    font-size: 0.6875rem;
-  }
+  /* Schedule Stream & Timeline */
   .schedule-stream {
     gap: 2rem;
   }
   .schedule-day-block {
-    scroll-margin-top: 125px;
+    scroll-margin-top: 100px;
   }
   .day-banner {
     padding: 1rem 1.25rem;
