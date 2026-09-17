@@ -706,7 +706,7 @@ ul, ol {
 
 .past-event-grid {
   display: grid;
-  grid-template-columns: 1fr 1.35fr;
+  grid-template-columns: 1fr 1fr;
   gap: 1.75rem;
   align-items: stretch;
 }
@@ -728,6 +728,10 @@ ul, ol {
   border-color: var(--border-medium);
 }
 
+.past-photo-card-group {
+  grid-column: 1 / -1;
+}
+
 .past-photo-wrap {
   position: relative;
   width: 100%;
@@ -738,7 +742,7 @@ ul, ol {
 }
 
 .past-photo-card-group .past-photo-wrap {
-  aspect-ratio: 2.2 / 1;
+  aspect-ratio: 2.35 / 1;
 }
 
 .past-photo-img {
@@ -924,162 +928,424 @@ ul, ol {
   transform: translate(2px, -2px);
 }
 
-/* --- Section: Schedule / Timetable (Editorial Program Sheet) --- */
-.schedule-timeline-v2 {
-  max-width: 840px;
-  margin: 0 auto;
-  background: #FFFFFF;
-  border: 1px solid #E5E7EB;
-  border-radius: 12px;
-  padding: 2.75rem 3.25rem;
-  box-shadow: 0 4px 20px -2px rgba(15, 23, 42, 0.04);
-}
-
-.timeline-day-group {
-  margin-bottom: 3rem;
-}
-
-.timeline-day-group:last-child {
-  margin-bottom: 0;
-}
-
-.timeline-day-header {
-  display: flex;
-  align-items: baseline;
-  flex-wrap: wrap;
-  gap: 0.75rem 1.25rem;
-  padding-bottom: 0.85rem;
-  margin-bottom: 1.25rem;
-  border-bottom: 2px solid #1F2937;
-}
-
-.day-badge-text {
-  font-family: var(--font-mono);
-  font-size: 0.875rem;
-  font-weight: 800;
-  letter-spacing: 0.05em;
-  color: var(--accent-teal);
-}
-
-.day-date-text {
-  font-size: 1.15rem;
+/* --- Section: Schedule / Timetable (Visual Header Cards Stack) --- */
+.section-lead-catch {
+  font-size: 1.125rem;
   font-weight: 700;
-  color: #111827;
+  color: var(--accent-teal);
+  margin-top: 0.5rem;
+  margin-bottom: 0.35rem;
   letter-spacing: -0.01em;
-  margin: 0;
 }
 
-.day-venue-text {
-  font-size: 0.8125rem;
-  color: #6B7280;
-  margin-left: auto;
+.section-lead-sub {
+  font-size: 0.9375rem;
+  color: var(--text-muted);
+  line-height: 1.6;
 }
 
-/* Timeline Items & Axis */
-.timeline-items {
-  position: relative;
+.sched-cards-stack {
+  max-width: 880px;
+  margin: 2.75rem auto 0;
   display: flex;
   flex-direction: column;
+  gap: 2.5rem;
 }
 
-/* Continuous Axis Line */
-.timeline-items::before {
+.sched-card {
+  background: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  border-radius: 24px;
+  box-shadow: 0 4px 20px -2px rgba(15, 23, 42, 0.05), 0 2px 6px -1px rgba(15, 23, 42, 0.02);
+  overflow: hidden;
+  position: relative;
+  transition: transform var(--transition-base), box-shadow var(--transition-base);
+}
+
+.sched-card:hover {
+  box-shadow: 0 12px 32px -4px rgba(13, 148, 136, 0.1), 0 4px 12px -2px rgba(15, 23, 42, 0.04);
+}
+
+/* Card Header with Photo & Accent Ribbon */
+.sched-card-header {
+  position: relative;
+  min-height: 180px;
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  background: linear-gradient(135deg, #F8FAFC 0%, #F0FDFA 60%, #E6FFFA 100%);
+  border-bottom: 1px solid #E2E8F0;
+  overflow: hidden;
+}
+
+/* Diagonal Accent Ribbon */
+.sched-ribbon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 90px;
+  height: 90px;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 3;
+}
+
+.sched-ribbon::before {
   content: '';
   position: absolute;
-  left: 8px;
-  top: 10px;
-  bottom: 10px;
-  width: 1.5px;
-  background-color: #E5E7EB;
+  top: 14px;
+  left: -32px;
+  width: 120px;
+  height: 6px;
+  background: linear-gradient(90deg, #0D9488 0%, #14B8A6 100%);
+  transform: rotate(-45deg);
+  box-shadow: 0 2px 6px rgba(13, 148, 136, 0.3);
 }
 
-.timeline-row-v2 {
+.sched-header-left {
   position: relative;
-  display: grid;
-  grid-template-columns: 18px 150px 1fr;
-  gap: 1.25rem;
-  padding: 0.85rem 0;
+  z-index: 2;
+  padding: 2.25rem 2.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.75rem;
+  max-width: 58%;
+}
+
+.sched-badge-prep {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 800;
+  color: #0F766E;
+  background: #CCFBF1;
+  padding: 0.35rem 0.85rem;
+  border-radius: 9999px;
+  letter-spacing: 0.06em;
+  width: fit-content;
+}
+
+.sched-card-name {
+  font-size: 1.85rem;
+  font-weight: 800;
+  color: #0F172A;
+  margin: 0;
+  letter-spacing: -0.02em;
+}
+
+.sched-day-callout {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+}
+
+.sched-day-callout .day-word {
+  font-family: var(--font-sans);
+  font-size: 1.4rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  color: #0D9488;
+}
+
+.sched-day-callout .day-digit {
+  font-family: var(--font-sans);
+  font-size: 2.75rem;
+  font-weight: 800;
+  line-height: 1;
+  color: #0F766E;
+}
+
+.sched-header-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+  margin-top: 0.25rem;
+}
+
+.sched-meta-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  color: #475569;
+}
+
+.sched-meta-svg {
+  width: 16px;
+  height: 16px;
+  color: #0D9488;
+  flex-shrink: 0;
+}
+
+/* Header Visual (Photo & Script Text) */
+.sched-header-visual {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 52%;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.sched-header-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  mask-image: linear-gradient(to right, transparent 0%, rgba(0, 0, 0, 0.25) 20%, rgba(0, 0, 0, 1) 55%);
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, rgba(0, 0, 0, 0.25) 20%, rgba(0, 0, 0, 1) 55%);
+}
+
+.sched-script-text {
+  position: absolute;
+  bottom: 1.25rem;
+  right: 1.75rem;
+  font-family: 'Caveat', cursive, sans-serif;
+  font-size: 1.85rem;
+  font-weight: 700;
+  color: #FFFFFF;
+  text-shadow: 0 2px 10px rgba(15, 23, 42, 0.75), 0 1px 3px rgba(15, 23, 42, 0.95);
+  transform: rotate(-5deg);
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+}
+
+/* Timeline Body */
+.sched-timeline {
+  padding: 2.5rem 2.75rem 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  position: relative;
+}
+
+/* タイムラインを貫く一本の美しい直線（コンテナ基準で1pxの狂いもなく完全一直線） */
+.sched-timeline::before {
+  content: '';
+  position: absolute;
+  left: calc(2.75rem + 15px); /* パディング 2.75rem + .sched-axisの幅30pxの半分 */
+  top: 3.25rem; /* 最初のドットの中心 */
+  bottom: 3.75rem; /* 最後のドットの中心 */
+  width: 2px;
+  background-color: #E2E8F0;
+  z-index: 1;
+}
+
+.sched-item {
+  display: flex;
   align-items: flex-start;
-  border-bottom: 1px solid #F3F4F6;
-  transition: background-color 0.15s ease;
-}
-
-.timeline-row-v2:last-child {
-  border-bottom: none;
-}
-
-.timeline-axis-col {
+  gap: 0.75rem;
   position: relative;
+}
+
+/* 軸カラム（幅30pxでドットを完全センタリング） */
+.sched-axis {
+  width: 30px;
+  flex-shrink: 0;
   display: flex;
   justify-content: center;
-  padding-top: 6px;
+  padding-top: 4px; /* 時間ラベルのテキスト行の中心と完全一致 */
+  position: relative;
   z-index: 2;
 }
 
-.timeline-dot {
-  width: 9px;
-  height: 9px;
+.sched-dot {
+  width: 12px;
+  height: 12px;
   border-radius: 50%;
   background: #FFFFFF;
-  border: 2px solid #9CA3AF;
-  transition: all var(--transition-fast);
+  border: 3px solid #0D9488;
+  box-shadow: 0 0 0 2px rgba(13, 148, 136, 0.15);
 }
 
-.timeline-dot.special {
-  border-color: var(--accent-teal);
-  background: var(--accent-teal);
+.sched-dot.dot-party {
+  border-color: #E11D48;
+  box-shadow: 0 0 0 2px rgba(225, 29, 72, 0.15);
 }
 
-.timeline-dot.break-dot {
-  border-color: #D1D5DB;
-  background: #F3F4F6;
-  width: 7px;
-  height: 7px;
-  margin-top: 1px;
+.sched-dot.dot-seminar {
+  border-color: #D97706;
+  box-shadow: 0 0 0 2px rgba(217, 119, 6, 0.15);
 }
 
-.timeline-time-col {
+.sched-dot.dot-presentation {
+  border-color: #0D9488;
+  box-shadow: 0 0 0 2px rgba(13, 148, 136, 0.18);
+}
+
+.sched-dot.dot-break {
+  border-color: #94A3B8;
+  box-shadow: none;
+  width: 10px;
+  height: 10px;
+}
+
+/* 右側コンテンツエリア */
+.sched-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+
+.sched-time-row {
+  display: flex;
+  align-items: center;
+  line-height: 1.4;
+}
+
+.sched-time-label {
   font-family: var(--font-mono);
   font-size: 0.875rem;
   font-weight: 700;
-  color: #374151;
-  white-space: nowrap;
-  padding-top: 1px;
+  color: #1E293B;
+  letter-spacing: 0.02em;
 }
 
-.timeline-desc-col {
+.sched-time-label.text-party {
+  color: #9F1239;
+}
+
+.sched-time-label.text-seminar {
+  color: #92400E;
+}
+
+.sched-time-label.text-presentation {
+  color: #115E59;
+}
+
+/* イベントカード */
+.sched-event-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.85rem;
+  padding: 0.35rem 0.5rem;
+  border-radius: 12px;
+  background: transparent;
+  transition: background-color 0.2s ease;
+}
+
+.sched-icon-badge {
+  width: 34px;
+  height: 34px;
+  border-radius: 10px;
+  background: #F0FDFA;
+  color: #0D9488;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  border: 1px solid #CCFBF1;
+  box-shadow: 0 1px 3px rgba(13, 148, 136, 0.08);
+}
+
+.sched-icon-badge svg {
+  width: 18px;
+  height: 18px;
+}
+
+.sched-event-body {
   display: flex;
   flex-direction: column;
   gap: 0.25rem;
 }
 
-.timeline-event-name {
-  font-size: 0.9375rem;
+.sched-event-title {
+  font-size: 0.975rem;
   font-weight: 700;
-  color: #111827;
-  line-height: 1.45;
+  color: #0F172A;
+  line-height: 1.4;
+  margin: 0;
 }
 
-.timeline-event-name.muted {
-  color: #6B7280;
-  font-weight: 600;
-}
-
-.timeline-event-speaker {
+.sched-speaker-tag {
+  display: inline-block;
   font-size: 0.8125rem;
   font-weight: 600;
-  color: var(--accent-teal);
+  color: #0D9488;
+  background: #F0FDFA;
+  padding: 0.15rem 0.55rem;
+  border-radius: 4px;
+  border: 1px solid #CCFBF1;
+  width: fit-content;
 }
 
-.timeline-event-detail {
-  font-size: 0.8125rem;
-  color: #6B7280;
+.sched-event-desc {
+  font-size: 0.84rem;
+  color: #64748B;
   line-height: 1.55;
+  margin: 0;
 }
 
-.timeline-row-v2.break-row-v2 {
-  padding: 0.5rem 0;
-  opacity: 0.85;
+/* Break Row */
+.badge-break {
+  background: #F1F5F9;
+  border-color: #E2E8F0;
+  color: #64748B;
+}
+
+/* Highlight Cards（懇親会、セミナー昼食会、ハッカソン発表会） */
+.sched-event-card.card-party {
+  background: linear-gradient(135deg, #FFF1F2 0%, #FFE4E6 100%);
+  border: 1px solid #FECDD3;
+  padding: 0.85rem 1.15rem;
+}
+
+.badge-party {
+  background: #FFE4E6;
+  border-color: #FECDD3;
+  color: #E11D48;
+}
+
+.title-party {
+  color: #9F1239;
+}
+
+.desc-party {
+  color: #881337;
+}
+
+.sched-event-card.card-seminar {
+  background: linear-gradient(135deg, #FFFBEB 0%, #FEF3C7 100%);
+  border: 1px solid #FDE68A;
+  padding: 0.85rem 1.15rem;
+}
+
+.badge-seminar {
+  background: #FEF3C7;
+  border-color: #FDE68A;
+  color: #D97706;
+}
+
+.title-seminar {
+  color: #92400E;
+}
+
+.desc-seminar {
+  color: #78350F;
+}
+
+.sched-event-card.card-presentation {
+  background: linear-gradient(135deg, #F0FDFA 0%, #CCFBF1 100%);
+  border: 1px solid #99F6E4;
+  padding: 0.85rem 1.15rem;
+}
+
+.badge-presentation {
+  background: #CCFBF1;
+  border-color: #99F6E4;
+  color: #0F766E;
+}
+
+.title-presentation {
+  color: #115E59;
+}
+
+.desc-presentation {
+  color: #134E4A;
 }
 
 /* --- Section: Application / Guidelines --- */
@@ -1093,35 +1359,171 @@ ul, ol {
 .guide-box {
   background-color: var(--bg-surface);
   border: 1px solid var(--border-light);
-  border-radius: var(--radius-md);
-  padding: 2rem;
+  border-radius: 1.25rem;
+  padding: 0;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
+  box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.05);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
 }
 
-.guide-icon-wrap {
-  width: 44px;
-  height: 44px;
-  background-color: var(--bg-subtle);
-  border-radius: var(--radius-sm);
+.guide-box:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px -4px rgba(13, 148, 136, 0.12);
+  border-color: rgba(13, 148, 136, 0.35);
+}
+
+.guide-visual {
+  position: relative;
+  width: 100%;
+  height: 165px;
+  background-color: #F8FAFC;
+  overflow: hidden;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.guide-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.35s ease;
+}
+
+.guide-box:hover .guide-img {
+  transform: scale(1.03);
+}
+
+.guide-body {
+  padding: 1.75rem 1.85rem 2rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.guide-header {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  margin-bottom: 0.85rem;
+}
+
+.guide-icon-badge {
+  width: 34px;
+  height: 34px;
+  border-radius: 8px;
+  background: #CCFBF1;
+  color: #0F766E;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--accent-teal);
-  margin-bottom: 1.25rem;
+  flex-shrink: 0;
+}
+
+.guide-icon-badge svg {
+  width: 18px;
+  height: 18px;
 }
 
 .guide-title {
-  font-size: 1.125rem;
-  font-weight: 700;
+  font-size: 1.25rem;
+  font-weight: 800;
   color: var(--text-main);
-  margin-bottom: 0.75rem;
+  margin: 0;
+  letter-spacing: -0.01em;
 }
 
 .guide-text {
-  font-size: 0.875rem;
+  font-size: 0.9375rem;
   color: var(--text-muted);
-  line-height: 1.7;
+  line-height: 1.75;
+  margin-bottom: 1.25rem;
+}
+
+.guide-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  margin-top: auto;
+}
+
+.guide-tag {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #0F766E;
+  background: #F0FDFA;
+  border: 1px solid #CCFBF1;
+  padding: 0.25rem 0.65rem;
+  border-radius: 9999px;
+  white-space: nowrap;
+}
+
+/* 参加費・実費 リスト */
+.guide-fee-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.guide-fee-item {
+  display: flex;
+  align-items: baseline;
+  gap: 0.75rem;
+  font-size: 0.875rem;
+  padding-bottom: 0.65rem;
+  border-bottom: 1px dashed var(--border-light);
+}
+
+.guide-fee-item:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.guide-fee-name {
+  font-weight: 700;
+  color: var(--text-main);
+  min-width: 62px;
+  flex-shrink: 0;
+}
+
+.guide-fee-val-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.guide-fee-highlight-free {
+  display: inline-block;
+  color: #059669;
+  background: #DCFCE7;
+  padding: 0.15rem 0.55rem;
+  border-radius: 4px;
+  font-weight: 800;
+  font-size: 0.875rem;
+  width: fit-content;
+}
+
+.guide-fee-price {
+  font-weight: 800;
+  color: var(--text-main);
+  font-size: 0.9375rem;
+}
+
+.guide-fee-desc {
+  font-size: 0.75rem;
+  color: var(--text-light);
+  line-height: 1.45;
+}
+
+.guide-subnote {
+  font-size: 0.75rem;
+  color: var(--text-light);
+  margin: auto 0 0;
+  line-height: 1.5;
 }
 
 
@@ -2080,40 +2482,56 @@ ul, ol {
     aspect-ratio: 2.2 / 1;
   }
 
-  /* Editorial Timeline Responsive */
-  .schedule-timeline-v2 {
-    padding: 1.5rem 1.25rem;
-    border-radius: 8px;
+  /* Vertical Schedule Cards Stack Responsive */
+  /* Visual Schedule Cards Stack Responsive */
+  .sched-cards-stack {
+    margin-top: 1.75rem;
+    gap: 1.75rem;
   }
-  .timeline-day-group {
-    margin-bottom: 2rem;
-  }
-  .timeline-day-header {
+  .sched-card-header {
+    min-height: auto;
     flex-direction: column;
-    gap: 0.25rem;
-    margin-bottom: 0.85rem;
   }
-  .day-venue-text {
-    margin-left: 0;
+  .sched-header-left {
+    max-width: 100%;
+    padding: 1.75rem 1.25rem 1rem;
   }
-  .timeline-row-v2 {
-    grid-template-columns: 14px 1fr;
-    gap: 0.65rem 0.85rem;
-    padding: 0.75rem 0;
+  .sched-header-visual {
+    position: relative;
+    width: 100%;
+    height: 120px;
   }
-  .timeline-items::before {
-    left: 6px;
+  .sched-header-photo {
+    mask-image: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.2) 20%, rgba(0, 0, 0, 1) 50%);
+    -webkit-mask-image: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.2) 20%, rgba(0, 0, 0, 1) 50%);
   }
-  .timeline-axis-col {
-    grid-row: span 2;
-    padding-top: 4px;
+  .sched-script-text {
+    bottom: 0.75rem;
+    right: 1.25rem;
+    font-size: 1.4rem;
   }
-  .timeline-time-col {
-    font-size: 0.8125rem;
-    color: var(--accent-teal);
+  .sched-timeline {
+    padding: 1.75rem 1.25rem 2rem;
+    gap: 1.25rem;
   }
-  .timeline-desc-col {
-    grid-column: 2;
+  .sched-timeline::before {
+    left: calc(1.25rem + 13px);
+    top: 2.25rem;
+    bottom: 2.5rem;
+  }
+  .sched-axis {
+    width: 26px;
+  }
+  .sched-item {
+    gap: 0.5rem;
+  }
+  .sched-event-card {
+    padding: 0.25rem 0.35rem;
+  }
+  .sched-event-card.card-party,
+  .sched-event-card.card-seminar,
+  .sched-event-card.card-presentation {
+    padding: 0.75rem 0.85rem;
   }
 
   /* Data & Tech Cards */
@@ -2127,11 +2545,17 @@ ul, ol {
   /* Guidelines */
   .guide-grid {
     grid-template-columns: 1fr;
-    gap: 1rem;
+    gap: 1.25rem;
     margin-bottom: 2rem;
   }
   .guide-box {
-    padding: 1.25rem;
+    padding: 0;
+  }
+  .guide-visual {
+    height: 150px;
+  }
+  .guide-body {
+    padding: 1.35rem 1.5rem 1.75rem;
   }
 
   /* Venue & Access */
@@ -2298,13 +2722,19 @@ ul, ol {
     font-size: 0.875rem;
   }
   .guide-box {
-    padding: 1rem 1.125rem;
+    padding: 0;
+  }
+  .guide-visual {
+    height: 140px;
+  }
+  .guide-body {
+    padding: 1.25rem 1.15rem 1.35rem;
   }
   .guide-title {
-    font-size: 1rem;
+    font-size: 1.125rem;
   }
   .guide-text {
-    font-size: 0.8125rem;
+    font-size: 0.875rem;
   }
   .venue-card-visual {
     padding: 1rem;

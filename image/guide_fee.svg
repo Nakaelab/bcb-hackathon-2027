@@ -1,0 +1,106 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 180" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg-fee" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F0FDF4"/>
+      <stop offset="100%" stop-color="#DCFCE7"/>
+    </linearGradient>
+    <linearGradient id="green-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#10B981"/>
+      <stop offset="100%" stop-color="#059669"/>
+    </linearGradient>
+    <filter id="fee-shadow" x="-10%" y="-10%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="5" stdDeviation="5" flood-opacity="0.12"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="400" height="180" fill="url(#bg-fee)"/>
+
+  <!-- Sparkling / Festive Confetti Background -->
+  <g opacity="0.35">
+    <path d="M 40 40 L 42 34 L 44 40 L 50 42 L 44 44 L 42 50 L 40 44 L 34 42 Z" fill="#10B981"/>
+    <path d="M 350 35 L 352 29 L 354 35 L 360 37 L 354 39 L 352 45 L 350 39 L 344 37 Z" fill="#F59E0B"/>
+    <path d="M 190 20 L 191 16 L 192 20 L 196 21 L 192 22 L 191 26 L 190 22 L 186 21 Z" fill="#10B981"/>
+    <circle cx="90" cy="25" r="3" fill="#86EFAC"/>
+    <circle cx="310" cy="20" r="3.5" fill="#FDE68A"/>
+    <circle cx="280" cy="150" r="2.5" fill="#10B981"/>
+  </g>
+
+  <!-- Left: BIG 参加費 無料 Glowing Medal Badge -->
+  <g transform="translate(25, 30)" filter="url(#fee-shadow)">
+    <rect width="115" height="115" rx="16" fill="#FFFFFF" stroke="#86EFAC" stroke-width="1.5"/>
+    <rect x="18" y="6" width="79" height="18" rx="9" fill="url(#green-grad)"/>
+    <text x="57.5" y="18" text-anchor="middle" font-family="sans-serif" font-size="8.5" font-weight="800" fill="#FFFFFF" letter-spacing="0.05em">ENTRY FEE</text>
+
+    <!-- ¥0 Symbol -->
+    <text x="57.5" y="62" text-anchor="middle" font-family="'Outfit', sans-serif" font-size="38" font-weight="900" fill="#059669">¥0</text>
+    
+    <!-- Subtext: 参加費無料 -->
+    <rect x="16" y="74" width="83" height="26" rx="13" fill="url(#green-grad)"/>
+    <text x="57.5" y="91" text-anchor="middle" font-family="'Noto Sans JP', sans-serif" font-size="12" font-weight="bold" fill="#FFFFFF">参加費 無料</text>
+  </g>
+
+  <!-- Middle: Japanese Bento & Green Tea Bottle (昼食・お茶無料) -->
+  <g transform="translate(155, 35)" filter="url(#fee-shadow)">
+    <!-- Bento Box Container -->
+    <rect x="0" y="20" width="115" height="75" rx="8" fill="#1E293B" stroke="#334155" stroke-width="1.5"/>
+    <rect x="4" y="24" width="107" height="67" rx="5" fill="#FEF3C7" stroke="#F59E0B" stroke-width="1"/>
+    
+    <!-- Bento compartments -->
+    <line x1="55" y1="24" x2="55" y2="91" stroke="#F59E0B" stroke-width="1.5"/>
+    <line x1="55" y1="57" x2="111" y2="57" stroke="#F59E0B" stroke-width="1.5"/>
+    
+    <!-- Compartment 1: Rice with Umeboshi (Left) -->
+    <rect x="8" y="28" width="43" height="59" rx="3" fill="#FFFFFF"/>
+    <circle cx="29" cy="57" r="5.5" fill="#DC2626"/>
+    <circle cx="29" cy="57" r="2" fill="#EF4444"/>
+    <!-- Sesame seeds -->
+    <circle cx="20" cy="42" r="1" fill="#1E293B"/><circle cx="38" cy="45" r="1" fill="#1E293B"/><circle cx="22" cy="72" r="1" fill="#1E293B"/><circle cx="36" cy="70" r="1" fill="#1E293B"/>
+
+    <!-- Compartment 2: Tamagoyaki & Salmon (Top Right) -->
+    <rect x="60" y="28" width="47" height="25" rx="3" fill="#FFFBEB"/>
+    <rect x="64" y="32" width="16" height="17" rx="3" fill="#FBBF24" stroke="#F59E0B" stroke-width="1"/>
+    <path d="M 84 34 Q 96 30 102 42 Q 94 48 84 34 Z" fill="#F87171"/>
+
+    <!-- Compartment 3: Greens & Edamame (Bottom Right) -->
+    <rect x="60" y="61" width="47" height="26" rx="3" fill="#ECFDF5"/>
+    <circle cx="72" cy="74" r="4.5" fill="#10B981"/>
+    <circle cx="84" cy="72" r="4.5" fill="#34D399"/>
+    <circle cx="96" cy="75" r="4.5" fill="#10B981"/>
+
+    <!-- Japanese Green Tea Bottle -->
+    <g transform="translate(88, -10)">
+      <rect x="6" y="0" width="8" height="6" rx="1" fill="#15803D"/>
+      <path d="M 3 6 L 17 6 L 19 45 L 1 45 Z" fill="#86EFAC" stroke="#16A34A" stroke-width="1"/>
+      <rect x="2" y="16" width="16" height="18" fill="#15803D"/>
+      <text x="10" y="29" text-anchor="middle" font-family="'Noto Sans JP', serif" font-size="8" font-weight="bold" fill="#FFFFFF">お茶</text>
+    </g>
+
+    <!-- Tag Badge: 昼食とお茶 無料 -->
+    <rect x="8" y="102" width="100" height="22" rx="11" fill="#10B981"/>
+    <text x="57.5" y="117" text-anchor="middle" font-family="'Noto Sans JP', sans-serif" font-size="10" font-weight="bold" fill="#FFFFFF">昼食・お茶 無償提供</text>
+  </g>
+
+  <!-- Right: Networking / 懇親会 Clinking Glasses -->
+  <g transform="translate(290, 42)" filter="url(#fee-shadow)">
+    <rect width="90" height="104" rx="12" fill="#FFFFFF" stroke="#BAE6FD" stroke-width="1.5"/>
+    
+    <!-- Clinking glasses icon -->
+    <g transform="translate(18, 14)">
+      <path d="M 10 5 L 22 5 L 19 25 C 18 30 14 30 13 25 Z" fill="#FEF08A" stroke="#F59E0B" stroke-width="1.5" transform="rotate(-12 16 18)"/>
+      <line x1="16" y1="25" x2="16" y2="36" stroke="#F59E0B" stroke-width="2" transform="rotate(-12 16 18)"/>
+      <line x1="10" y1="36" x2="22" y2="36" stroke="#F59E0B" stroke-width="2" stroke-linecap="round" transform="rotate(-12 16 18)"/>
+      
+      <path d="M 30 5 L 42 5 L 39 25 C 38 30 34 30 33 25 Z" fill="#BAE6FD" stroke="#0284C7" stroke-width="1.5" transform="rotate(12 36 18)"/>
+      <line x1="36" y1="25" x2="36" y2="36" stroke="#0284C7" stroke-width="2" transform="rotate(12 36 18)"/>
+      <line x1="30" y1="36" x2="42" y2="36" stroke="#0284C7" stroke-width="2" stroke-linecap="round" transform="rotate(12 36 18)"/>
+      
+      <circle cx="26" cy="6" r="2" fill="#F59E0B"/>
+      <circle cx="23" cy="1" r="1.5" fill="#0284C7"/>
+    </g>
+
+    <text x="45" y="70" text-anchor="middle" font-family="'Noto Sans JP', sans-serif" font-size="11" font-weight="bold" fill="#0F172A">懇親会</text>
+    <rect x="8" y="77" width="74" height="20" rx="10" fill="#F1F5F9"/>
+    <text x="45" y="91" text-anchor="middle" font-family="'Noto Sans JP', sans-serif" font-size="9" font-weight="bold" fill="#475569">初日夜・希望者</text>
+  </g>
+</svg>

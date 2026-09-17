@@ -1,0 +1,104 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 180" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg-target" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F0FDFA"/>
+      <stop offset="100%" stop-color="#CCFBF1"/>
+    </linearGradient>
+    <linearGradient id="teal-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0D9488"/>
+      <stop offset="100%" stop-color="#0F766E"/>
+    </linearGradient>
+    <filter id="drop-shadow" x="-10%" y="-10%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-opacity="0.12"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="400" height="180" fill="url(#bg-target)"/>
+  
+  <!-- Subtle Grid Pattern -->
+  <g opacity="0.18" stroke="#0D9488" stroke-width="1" stroke-dasharray="3 3">
+    <line x1="40" y1="0" x2="40" y2="180"/>
+    <line x1="120" y1="0" x2="120" y2="180"/>
+    <line x1="200" y1="0" x2="200" y2="180"/>
+    <line x1="280" y1="0" x2="280" y2="180"/>
+    <line x1="360" y1="0" x2="360" y2="180"/>
+    <line x1="0" y1="45" x2="400" y2="45"/>
+    <line x1="0" y1="90" x2="400" y2="90"/>
+    <line x1="0" y1="135" x2="400" y2="135"/>
+  </g>
+
+  <!-- Neural Network Synapse Graphic in Background -->
+  <g opacity="0.25" stroke="#0D9488" stroke-width="1.5">
+    <line x1="70" y1="60" x2="110" y2="35"/>
+    <line x1="110" y1="35" x2="150" y2="65"/>
+    <line x1="110" y1="35" x2="80" y2="110"/>
+    <line x1="150" y1="65" x2="180" y2="30"/>
+    <line x1="280" y1="40" x2="320" y2="75"/>
+    <line x1="320" y1="75" x2="360" y2="45"/>
+    <circle cx="70" cy="60" r="4" fill="#0D9488"/>
+    <circle cx="110" cy="35" r="5" fill="#14B8A6"/>
+    <circle cx="150" cy="65" r="4" fill="#0D9488"/>
+    <circle cx="180" cy="30" r="3.5" fill="#0F766E"/>
+    <circle cx="80" cy="110" r="4" fill="#14B8A6"/>
+    <circle cx="280" cy="40" r="4" fill="#0D9488"/>
+    <circle cx="320" cy="75" r="5" fill="#14B8A6"/>
+    <circle cx="360" cy="45" r="4" fill="#0D9488"/>
+  </g>
+
+  <!-- Stylized Young Researchers collaborating -->
+  <g transform="translate(125, 45)" filter="url(#drop-shadow)">
+    <!-- Center Person (Main researcher in teal jacket) -->
+    <g transform="translate(50, 5)">
+      <path d="M 0 65 Q 25 35 50 65 L 50 90 L 0 90 Z" fill="url(#teal-grad)"/>
+      <polygon points="18,52 25,68 32,52" fill="#FFFFFF"/>
+      <rect x="21" y="40" width="8" height="12" fill="#FCD34D" rx="2"/>
+      <circle cx="25" cy="30" r="16" fill="#FCD34D"/>
+      <path d="M 9 30 Q 10 12 25 12 Q 40 12 41 30 Q 32 20 25 22 Q 18 20 9 30 Z" fill="#0F172A"/>
+      <rect x="16" y="26" width="7" height="5" rx="1.5" fill="none" stroke="#1E293B" stroke-width="1.5"/>
+      <rect x="27" y="26" width="7" height="5" rx="1.5" fill="none" stroke="#1E293B" stroke-width="1.5"/>
+      <line x1="23" y1="28" x2="27" y2="28" stroke="#1E293B" stroke-width="1.5"/>
+      <path d="M 18 52 L 25 72 L 32 52" stroke="#99F6E4" stroke-width="1.5" fill="none"/>
+      <rect x="21" y="72" width="8" height="11" rx="1" fill="#FFFFFF" stroke="#0D9488" stroke-width="1"/>
+    </g>
+
+    <!-- Left Person (Student female in navy sweater) -->
+    <g transform="translate(10, 15)">
+      <path d="M 0 60 Q 20 38 40 60 L 40 80 L 0 80 Z" fill="#1E293B"/>
+      <rect x="16" y="36" width="8" height="10" fill="#FED7AA" rx="2"/>
+      <circle cx="20" cy="26" r="14" fill="#FED7AA"/>
+      <path d="M 6 32 C 4 14, 36 14, 34 32 C 34 36, 31 38, 29 34 C 27 24, 13 24, 11 34 C 9 38, 6 36, 6 32 Z" fill="#334155"/>
+    </g>
+
+    <!-- Right Person (Collaborator in slate jacket) -->
+    <g transform="translate(100, 18)">
+      <path d="M 0 58 Q 20 38 40 58 L 40 77 L 0 77 Z" fill="#475569"/>
+      <rect x="16" y="35" width="8" height="10" fill="#FDE68A" rx="2"/>
+      <circle cx="20" cy="26" r="14" fill="#FDE68A"/>
+      <path d="M 7 24 Q 9 10 20 10 Q 31 10 33 24 Q 26 18 20 19 Q 14 18 7 24 Z" fill="#1E293B"/>
+    </g>
+
+    <!-- Collaborative Tablet in Foreground -->
+    <g transform="translate(40, 68)" filter="url(#drop-shadow)">
+      <rect x="0" y="0" width="70" height="35" rx="4" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1.5"/>
+      <line x1="10" y1="8" x2="35" y2="8" stroke="#0D9488" stroke-width="2.5" stroke-linecap="round"/>
+      <line x1="10" y1="15" x2="50" y2="15" stroke="#94A3B8" stroke-width="2" stroke-linecap="round"/>
+      <line x1="10" y1="22" x2="42" y2="22" stroke="#94A3B8" stroke-width="2" stroke-linecap="round"/>
+      <polyline points="45,26 52,19 58,22 64,14" fill="none" stroke="#14B8A6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+  </g>
+
+  <!-- Floating Badge Left: 初学者・若手歓迎 -->
+  <g transform="translate(20, 24)" filter="url(#drop-shadow)">
+    <rect width="124" height="28" rx="14" fill="#FFFFFF" stroke="#99F6E4" stroke-width="1.5"/>
+    <path d="M 14 14 L 16 9 L 18 14 L 23 16 L 18 18 L 16 23 L 14 18 L 9 16 Z" fill="#0D9488"/>
+    <text x="28" y="18.5" font-family="'Noto Sans JP', sans-serif" font-size="11" font-weight="bold" fill="#0F766E">初学者・若手歓迎</text>
+  </g>
+
+  <!-- Floating Badge Right: 定員 40名 -->
+  <g transform="translate(285, 24)" filter="url(#drop-shadow)">
+    <rect width="95" height="28" rx="14" fill="url(#teal-grad)"/>
+    <path d="M 16 11 A 3 3 0 1 1 16 17 A 3 3 0 1 1 16 11 M 12 21 C 12 18, 20 18, 20 21" fill="none" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round"/>
+    <text x="26" y="18.5" font-family="'Noto Sans JP', sans-serif" font-size="11" font-weight="bold" fill="#FFFFFF">定員 40名程度</text>
+  </g>
+</svg>
