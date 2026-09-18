@@ -2651,14 +2651,27 @@ ul, ol {
   .header-inner {
     height: 4rem;
   }
-  .brand-sub {
-    font-size: 0.625rem;
+  .brand-wrapper {
+    gap: 0.5rem;
   }
-  .brand-main {
-    font-size: 0.875rem;
+  .brand-logo-icon {
+    width: 32px;
+    height: 32px;
+  }
+  .brand-acronym {
+    font-size: 1.375rem;
+  }
+  .brand-jp {
+    font-size: 0.75rem;
+  }
+  .brand-en {
+    display: none;
+  }
+  .header-cta-group {
+    gap: 0.5rem;
   }
   .header-cta-group .btn {
-    padding: 0.5rem 0.875rem;
+    padding: 0.45rem 0.85rem;
     font-size: 0.8125rem;
   }
   .site-nav {
@@ -2724,52 +2737,147 @@ ul, ol {
   }
 
   /* About Overview Responsive */
+  .about-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1.75rem !important;
+  }
+  .about-header-divider {
+    margin-bottom: 1.75rem;
+    padding-bottom: 1rem;
+  }
+  .about-section-title {
+    font-size: clamp(1.625rem, 6.5vw, 2.125rem);
+  }
+  .about-prose-body {
+    font-size: 0.96875rem;
+    line-height: 1.85;
+  }
+  .about-prose-body p {
+    margin-bottom: 1.25rem;
+  }
+  .about-organizer-block {
+    margin-top: 1.75rem;
+    padding-top: 1.15rem;
+  }
   .about-overview-card {
-    padding: 1.5rem 1.25rem 1.75rem;
+    margin-top: 0;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 1.5rem 1.25rem 1.65rem;
+    border-radius: 6px;
+  }
+  .overview-card-title {
+    font-size: 1.25rem;
+    margin-bottom: 1.25rem;
+  }
+  .overview-item {
+    padding-bottom: 0.85rem;
+    margin-bottom: 0.85rem;
+  }
+  .overview-item-label {
+    font-size: 0.775rem;
+    margin-bottom: 0.25rem;
+  }
+  .overview-item-value {
+    font-size: 0.96875rem;
+    line-height: 1.4;
+  }
+  .overview-item-sub {
+    font-size: 0.875rem;
+  }
+  .overview-item-sub.fee-note {
+    font-size: 0.8125rem;
   }
 
   /* Activities Block Responsive */
+  .activities-block {
+    margin-top: 3rem;
+    padding-top: 2rem;
+  }
+  .activities-header-divider {
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+  }
+  .activities-title {
+    font-size: clamp(1.625rem, 6.5vw, 2.125rem);
+  }
+  .activities-intro {
+    font-size: 0.96875rem;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.35rem;
+  }
   .activity-step-row {
     flex-direction: column;
     align-items: flex-start;
-    padding: 1.5rem 0;
+    padding: 1.35rem 0;
   }
   .activity-step-side {
     width: 100%;
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
-    gap: 1.25rem;
+    gap: 1rem;
     padding-right: 0;
     border-right: none;
-    border-bottom: 1px dashed #E2E8F0;
-    padding-bottom: 0.85rem;
-    margin-bottom: 1rem;
+    border-bottom: 1px solid #E2E8F0;
+    padding-bottom: 0.75rem;
+    margin-bottom: 0.85rem;
     text-align: left;
   }
   .activity-step-img-wrap {
-    width: 64px;
-    height: 64px;
+    width: 56px;
+    height: 56px;
     margin-bottom: 0;
+    flex-shrink: 0;
+  }
+  .activity-step-label {
+    font-size: 1.125rem;
+    line-height: 1.25;
   }
   .activity-step-content {
     padding-left: 0;
+  }
+  .activity-step-content p {
+    font-size: 0.9375rem;
+    line-height: 1.85;
+  }
+  .activities-welcome-box {
+    margin-top: 1.75rem;
+    padding: 1.15rem 1.15rem;
+  }
+  .activities-welcome-box p {
+    font-size: 0.90625rem;
+    line-height: 1.7;
   }
 
   /* Past Event Highlights Responsive */
   .past-event-block {
     margin-top: 3rem;
-    padding-top: 2.25rem;
+    padding-top: 2rem;
+  }
+  .past-event-head {
+    margin-bottom: 1.5rem;
+  }
+  .past-event-title {
+    font-size: 1.35rem;
+  }
+  .past-event-subtitle {
+    font-size: 0.875rem;
+    line-height: 1.6;
   }
   .past-event-grid {
     grid-template-columns: 1fr;
-    gap: 1.5rem;
+    gap: 1.25rem;
   }
   .past-photo-wrap {
     aspect-ratio: 16 / 10;
   }
-  .past-photo-card-group .past-photo-wrap {
-    aspect-ratio: 16 / 9;
+  .past-photo-info {
+    padding: 0.85rem 1rem 0.95rem;
+  }
+  .past-photo-name {
+    font-size: 0.96875rem;
   }
 
   /* Vertical Schedule Cards Stack Responsive */
@@ -2919,16 +3027,69 @@ ul, ol {
   }
 
   /* Guidelines */
+  .guide-header-divider {
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+  }
+  .guide-section-title {
+    font-size: clamp(1.625rem, 6.5vw, 2.125rem);
+  }
   .guide-grid {
     grid-template-columns: 1fr;
-    gap: 1.5rem;
+    gap: 1.25rem;
     margin-bottom: 2rem;
   }
   .guide-card {
-    padding: 1.75rem 1.5rem 2rem;
+    padding: 1.5rem 1.25rem 1.65rem;
   }
   .guide-card-visual {
-    height: 100px;
+    height: 90px;
+    margin-bottom: 1.15rem;
+  }
+  .guide-card-title {
+    font-size: 1.25rem;
+    margin-bottom: 0.85rem;
+  }
+  .guide-card-text {
+    font-size: 0.90625rem;
+    line-height: 1.75;
+    margin-bottom: 1rem;
+  }
+  .guide-os-note {
+    font-size: 0.8125rem;
+    margin-top: -0.35rem;
+    margin-bottom: 1rem;
+  }
+  .guide-meta-footer {
+    padding-top: 1.15rem;
+    gap: 0.35rem;
+  }
+  .guide-meta-row {
+    font-size: 0.84375rem;
+    flex-wrap: wrap;
+  }
+  .guide-fee-list {
+    gap: 1rem;
+    margin-bottom: 1.15rem;
+  }
+  .guide-fee-row {
+    gap: 0.75rem;
+  }
+  .guide-fee-label {
+    font-size: 0.875rem;
+    min-width: 52px;
+    padding-top: 0.1rem;
+  }
+  .guide-fee-amount {
+    font-size: 1.03125rem;
+  }
+  .guide-fee-sub {
+    font-size: 0.75rem;
+    line-height: 1.45;
+  }
+  .guide-subnote {
+    font-size: 0.75rem;
+    line-height: 1.55;
   }
 
   /* Venue & Access */
@@ -3020,21 +3181,32 @@ ul, ol {
     padding-left: 1.125rem;
     padding-right: 1.125rem;
   }
-  .brand-mark {
-    width: 34px;
-    height: 34px;
-    font-size: 0.75rem;
+  .brand-wrapper {
+    gap: 0.35rem;
   }
-  .brand-sub {
+  .brand-logo-icon {
+    width: 28px;
+    height: 28px;
+  }
+  .brand-acronym {
+    font-size: 1.25rem;
+  }
+  .brand-jp {
+    font-size: 0.7rem;
+    letter-spacing: 0;
+  }
+  .brand-en {
     display: none;
   }
-  .brand-main {
-    font-size: 0.8125rem;
-    line-height: 1.3;
+  .header-cta-group {
+    gap: 0.4rem;
   }
-  .header-cta-group .btn {
-    padding: 0.4375rem 0.75rem;
+  .btn-header-pill {
+    padding: 0.38rem 0.65rem;
     font-size: 0.75rem;
+  }
+  .btn-header-pill .arrow {
+    display: none;
   }
   .hero-heading {
     font-size: clamp(1.35rem, 6.2vw, 1.625rem);
@@ -3075,6 +3247,73 @@ ul, ol {
   }
   .section-tag {
     font-size: 0.75rem;
+  }
+
+  /* About on Small Mobile */
+  .about-grid {
+    gap: 1.35rem !important;
+  }
+  .about-overview-card {
+    padding: 1.25rem 1rem 1.35rem;
+  }
+  .overview-card-title {
+    font-size: 1.15rem;
+    margin-bottom: 1rem;
+  }
+  .overview-item {
+    padding-bottom: 0.75rem;
+    margin-bottom: 0.75rem;
+  }
+  .overview-item-label {
+    font-size: 0.75rem;
+  }
+  .overview-item-value {
+    font-size: 0.90625rem;
+  }
+
+  /* Activities on Small Mobile */
+  .activities-block {
+    margin-top: 2.25rem;
+    padding-top: 1.5rem;
+  }
+  .activity-step-row {
+    padding: 1.15rem 0;
+  }
+  .activity-step-side {
+    gap: 0.75rem;
+    padding-bottom: 0.65rem;
+    margin-bottom: 0.75rem;
+  }
+  .activity-step-img-wrap {
+    width: 48px;
+    height: 48px;
+  }
+  .activity-step-label {
+    font-size: 1rem;
+  }
+  .activity-step-content p {
+    font-size: 0.875rem;
+    line-height: 1.75;
+  }
+  .activities-welcome-box {
+    margin-top: 1.35rem;
+    padding: 1rem;
+  }
+  .activities-welcome-box p {
+    font-size: 0.84375rem;
+    line-height: 1.65;
+  }
+
+  /* Past Event Showcase on Small Mobile */
+  .past-event-block {
+    margin-top: 2.25rem;
+    padding-top: 1.5rem;
+  }
+  .past-event-title {
+    font-size: 1.2rem;
+  }
+  .past-event-grid {
+    gap: 1rem;
   }
   /* Schedule Cards on Small Mobile */
   .sched-card-header {
@@ -3148,30 +3387,59 @@ ul, ol {
 
   /* Guidelines */
   .guide-card {
-    padding: 1.5rem 1.25rem 1.75rem;
+    padding: 1.35rem 1.15rem 1.5rem;
   }
   .guide-card-visual {
-    height: 90px;
-    margin-bottom: 1.15rem;
+    height: 80px;
+    margin-bottom: 0.9rem;
+  }
+  .guide-card-img {
+    max-width: 140px;
+    max-height: 75px;
   }
   .guide-card-title {
-    font-size: 1.25rem;
+    font-size: 1.1875rem;
+    margin-bottom: 0.75rem;
   }
   .guide-card-text {
-    font-size: 0.875rem;
+    font-size: 0.84375rem;
+    line-height: 1.7;
+    margin-bottom: 0.85rem;
+  }
+  .guide-meta-footer {
+    padding-top: 1rem;
   }
   .guide-meta-row {
-    font-size: 0.8125rem;
+    font-size: 0.775rem;
+  }
+  .guide-slash {
+    margin: 0 0.35rem;
+  }
+  .guide-fee-list {
+    gap: 0.85rem;
+    margin-bottom: 1rem;
   }
   .guide-fee-row {
-    gap: 0.75rem;
+    gap: 0.5rem;
   }
   .guide-fee-label {
-    min-width: 52px;
-    font-size: 0.875rem;
+    min-width: 48px;
+    font-size: 0.8125rem;
+  }
+  .guide-badge-free {
+    font-size: 0.75rem;
+    padding: 0.15rem 0.5rem;
   }
   .guide-fee-amount {
-    font-size: 1rem;
+    font-size: 0.9375rem;
+  }
+  .guide-fee-sub {
+    font-size: 0.7rem;
+    line-height: 1.4;
+  }
+  .guide-subnote {
+    font-size: 0.7rem;
+    line-height: 1.5;
   }
   .venue-card-visual {
     padding: 1rem;
