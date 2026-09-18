@@ -857,6 +857,15 @@ ul, ol {
   letter-spacing: -0.01em;
 }
 
+.activity-step-sub {
+  display: block;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: #387B7A;
+  margin-top: 0.25rem;
+  letter-spacing: 0.02em;
+}
+
 .activity-step-content {
   flex: 1;
   padding-left: clamp(1.75rem, 3vw, 2.5rem);
@@ -2808,39 +2817,49 @@ ul, ol {
     padding-bottom: 1.35rem;
   }
   .activity-step-row {
-    flex-direction: column;
-    align-items: flex-start;
+    flex-direction: row;
+    align-items: center;
     padding: 1.35rem 0;
   }
   .activity-step-side {
-    width: 100%;
-    flex-direction: row;
-    justify-content: flex-start;
+    width: 84px;
+    flex-shrink: 0;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    gap: 1rem;
-    padding-right: 0;
-    border-right: none;
-    border-bottom: 1px solid #E2E8F0;
-    padding-bottom: 0.75rem;
-    margin-bottom: 0.85rem;
-    text-align: left;
+    padding-right: 0.85rem;
+    border-right: 1px solid #E2E8F0;
+    border-bottom: none;
+    padding-bottom: 0;
+    margin-bottom: 0;
+    text-align: center;
   }
   .activity-step-img-wrap {
-    width: 56px;
-    height: 56px;
-    margin-bottom: 0;
+    width: 52px;
+    height: 52px;
+    margin-bottom: 0.3rem;
     flex-shrink: 0;
   }
   .activity-step-label {
-    font-size: 1.125rem;
+    font-size: 0.875rem;
     line-height: 1.25;
+    text-align: center;
+  }
+  .activity-step-sub {
+    display: block;
+    font-size: 0.6875rem;
+    font-weight: 600;
+    color: #387B7A;
+    margin-top: 2px;
+    line-height: 1.2;
   }
   .activity-step-content {
-    padding-left: 0;
+    flex: 1;
+    padding-left: 0.85rem;
   }
   .activity-step-content p {
-    font-size: 0.9375rem;
-    line-height: 1.85;
+    font-size: 0.875rem;
+    line-height: 1.8;
   }
   .activities-welcome-box {
     margin-top: 1.75rem;
@@ -3280,19 +3299,29 @@ ul, ol {
     padding: 1.15rem 0;
   }
   .activity-step-side {
-    gap: 0.75rem;
-    padding-bottom: 0.65rem;
-    margin-bottom: 0.75rem;
+    width: 76px;
+    padding-right: 0.65rem;
+    border-right: 1px solid #E2E8F0;
+    border-bottom: none;
+    margin-bottom: 0;
+    gap: 0.2rem;
   }
   .activity-step-img-wrap {
-    width: 48px;
-    height: 48px;
+    width: 46px;
+    height: 46px;
+    margin-bottom: 0.2rem;
   }
   .activity-step-label {
-    font-size: 1rem;
+    font-size: 0.8125rem;
+  }
+  .activity-step-sub {
+    font-size: 0.625rem;
+  }
+  .activity-step-content {
+    padding-left: 0.75rem;
   }
   .activity-step-content p {
-    font-size: 0.875rem;
+    font-size: 0.8125rem;
     line-height: 1.75;
   }
   .activities-welcome-box {
