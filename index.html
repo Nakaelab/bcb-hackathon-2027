@@ -12,7 +12,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=JetBrains+Mono:wght@400;600;700&family=Noto+Sans+JP:wght@400;500;700&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
   
   <!-- Stylesheet -->
-  <link rel="stylesheet" href="css/style.css?v=20260918_mobile_v3">
+  <link rel="stylesheet" href="css/style.css?v=20260918_mouse_v1">
 </head>
 <body>
 
@@ -92,10 +92,27 @@
           </div>
         </div>
 
-        <!-- Right: Photo / Card Graphic -->
+        <!-- Right: DeepLabCut Pose Tracking Card (image/mouse.png) -->
         <div class="hero-right">
-          <div class="hero-visual-card-wrap" title="クリックで拡大">
-            <img src="image/hero_card.webp" alt="学術変革領域A 行動変容生物学ハッカソン キービジュアル" class="hero-visual-card-img" width="1200" height="896" loading="eager">
+          <div class="hero-visual-card-wrap hero-image-wrap" title="クリックで拡大">
+            <div class="hero-visual-topbar">
+              <div class="hero-visual-dots" aria-hidden="true">
+                <span class="dot dot-red"></span>
+                <span class="dot dot-yellow"></span>
+                <span class="dot dot-green"></span>
+              </div>
+              <div class="hero-visual-title">DeepLabCut™ Pose Tracking</div>
+              <div class="hero-visual-status"><span class="status-live-dot" aria-hidden="true"></span><span class="status-live-text">REC</span></div>
+            </div>
+            <div class="hero-visual-img-box">
+              <img src="image/mouse.png" alt="マウス行動追跡解析（DeepLabCut マーカーレス身体部位推定）" class="hero-visual-card-img" width="1442" height="1091" loading="eager">
+              <div class="hero-visual-badge-overlay">
+                <div class="hero-badge-pill">
+                  <span class="hero-badge-tag">マーカーレス行動追跡</span>
+                  <span class="hero-badge-sub">BraiDyn-BC / DeepLabCut Pose Estimation</span>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
