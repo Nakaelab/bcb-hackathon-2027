@@ -224,7 +224,7 @@ function initScrollAnimations() {
  * 7. Photo Lightbox (Hero & Venue photos)
  */
 function initImageLightbox() {
-  const triggers = document.querySelectorAll('.hero-image-wrap, .venue-photo-wrap, .past-photo-wrap');
+  const triggers = document.querySelectorAll('.hero-image-wrap, .venue-photo-wrap, .past-photo-wrap, .about-image-wrap');
   const lightbox = document.getElementById('image-lightbox');
   if (!triggers.length || !lightbox) return;
 
@@ -273,10 +273,9 @@ function initImageLightbox() {
 }
 
 /**
- * 8. Antigravity-Style Ambient Floating Orbs (Hero Section Only)
- * True to antigravity.google: Soft, organic, morphing blurred light spheres
- * that slowly drift, breathe in size and opacity, and gently steer away from the cursor.
- * NO connecting web lines. Clean, modern, atmospheric depth.
+ * 8. Biological Neural Network Constellation (Hero Section)
+ * Renders delicate neural nodes connected with synaptic lines,
+ * echoing the Brain-Behavior neuroscience motif.
  */
 function initHeroParticles() {
   const canvas = document.getElementById('hero-particles-canvas');
@@ -288,25 +287,21 @@ function initHeroParticles() {
   let width = 0;
   let height = 0;
   let animationFrameId = null;
-  let orbs = [];
+  let nodes = [];
 
-  // Mouse tracking with smooth damping
   const mouse = {
     x: null,
     y: null,
     targetX: null,
     targetY: null,
-    radius: 180
+    radius: 140
   };
 
-  // Color palette matching Antigravity & Behavior Change Biology:
-  // Soft Google Blue, Neural Teal, Bio Mint, Lavender
   const palette = [
-    { r: 13, g: 148, b: 136 },  // Neural Teal
-    { r: 37, g: 99, b: 235 },   // Google Blue
-    { r: 16, g: 185, b: 129 },  // Emerald / Bio Mint
-    { r: 99, g: 102, b: 241 },  // Indigo
-    { r: 56, g: 189, b: 248 }   // Cyan Sky
+    { r: 56, g: 189, b: 248 },  // Cyan
+    { r: 96, g: 165, b: 250 },  // Sky Blue
+    { r: 45, g: 175, b: 165 },  // Neural Teal
+    { r: 129, g: 140, b: 248 }  // Indigo Soft
   ];
 
   function resize() {
@@ -314,41 +309,39 @@ function initHeroParticles() {
     const rect = heroSection.getBoundingClientRect();
     width = canvas.width = rect.width;
     height = canvas.height = rect.height;
-    createOrbs();
+    createNodes();
   }
 
-  function createOrbs() {
-    orbs = [];
-    // 12 to 20 large soft luminous floating spheres
-    const count = width < 768 ? 10 : 16;
+  function createNodes() {
+    nodes = [];
+    const count = width < 768 ? 24 : 46;
 
     for (let i = 0; i < count; i++) {
       const color = palette[Math.floor(Math.random() * palette.length)];
-      const baseRadius = (Math.random() * 90 + 60) * (width < 768 ? 0.7 : 1.0);
+      const isHub = Math.random() < 0.2;
+      const baseRadius = isHub ? (Math.random() * 3 + 3.5) : (Math.random() * 2 + 1.8);
 
-      orbs.push({
+      nodes.push({
         x: Math.random() * width,
         y: Math.random() * height,
-        vx: (Math.random() - 0.5) * 0.35,
-        vy: (Math.random() - 0.5) * 0.35,
+        vx: (Math.random() - 0.5) * 0.45,
+        vy: (Math.random() - 0.5) * 0.45,
         baseRadius: baseRadius,
-        currentRadius: baseRadius,
-        radiusPulseSpeed: Math.random() * 0.015 + 0.008,
-        pulsePhase: Math.random() * Math.PI * 2,
+        radius: baseRadius,
         color: color,
-        maxAlpha: Math.random() * 0.22 + 0.12,
-        alphaPulseSpeed: Math.random() * 0.01 + 0.005
+        isHub: isHub,
+        alpha: isHub ? (Math.random() * 0.3 + 0.4) : (Math.random() * 0.25 + 0.25),
+        pulseSpeed: Math.random() * 0.02 + 0.01,
+        pulsePhase: Math.random() * Math.PI * 2
       });
     }
   }
 
-  let time = 0;
+  const maxDist = 135;
 
   function draw() {
     ctx.clearRect(0, 0, width, height);
-    time += 0.02;
 
-    // Smooth mouse damping
     if (mouse.targetX !== null && mouse.targetY !== null) {
       if (mouse.x === null) {
         mouse.x = mouse.targetX;
@@ -359,62 +352,74 @@ function initHeroParticles() {
       }
     }
 
-    // Draw each floating glowing orb with radial gradients
-    for (let i = 0; i < orbs.length; i++) {
-      const orb = orbs[i];
+    // Update positions & draw connections
+    const len = nodes.length;
+    for (let i = 0; i < len; i++) {
+      const n = nodes[i];
+      n.pulsePhase += n.pulseSpeed;
+      n.x += n.vx;
+      n.y += n.vy;
 
-      // Organic subtle breathing motion
-      orb.pulsePhase += orb.radiusPulseSpeed;
-      const radiusOffset = Math.sin(orb.pulsePhase) * (orb.baseRadius * 0.18);
-      orb.currentRadius = orb.baseRadius + radiusOffset;
+      if (n.x < -10) n.x = width + 10;
+      if (n.x > width + 10) n.x = -10;
+      if (n.y < -10) n.y = height + 10;
+      if (n.y > height + 10) n.y = -10;
 
-      const alpha = orb.maxAlpha * (0.8 + 0.2 * Math.sin(time + i));
-
-      // Drift motion
-      orb.x += orb.vx;
-      orb.y += orb.vy;
-
-      // Soft boundary wrap/turnaround with margin
-      const margin = orb.baseRadius;
-      if (orb.x < -margin) orb.x = width + margin;
-      if (orb.x > width + margin) orb.x = -margin;
-      if (orb.y < -margin) orb.y = height + margin;
-      if (orb.y > height + margin) orb.y = -margin;
-
-      // Gentle interactive repulsion from cursor (floating away smoothly)
+      // Mouse gentle influence
       if (mouse.x !== null && mouse.y !== null) {
-        const dx = mouse.x - orb.x;
-        const dy = mouse.y - orb.y;
+        const dx = mouse.x - n.x;
+        const dy = mouse.y - n.y;
         const dist = Math.sqrt(dx * dx + dy * dy);
-        if (dist < mouse.radius + orb.baseRadius) {
-          const force = (mouse.radius + orb.baseRadius - dist) / (mouse.radius + orb.baseRadius);
-          const angle = Math.atan2(dy, dx);
-          orb.x -= Math.cos(angle) * force * 1.5;
-          orb.y -= Math.sin(angle) * force * 1.5;
+        if (dist < mouse.radius) {
+          const force = (mouse.radius - dist) / mouse.radius;
+          n.x -= (dx / dist) * force * 1.2;
+          n.y -= (dy / dist) * force * 1.2;
         }
       }
 
-      // Render radial glow gradient (antigravity-like soft ambient sphere)
-      const grad = ctx.createRadialGradient(
-        orb.x, orb.y, 0,
-        orb.x, orb.y, Math.max(1, orb.currentRadius)
-      );
-      grad.addColorStop(0, `rgba(${orb.color.r}, ${orb.color.g}, ${orb.color.b}, ${alpha})`);
-      grad.addColorStop(0.5, `rgba(${orb.color.r}, ${orb.color.g}, ${orb.color.b}, ${alpha * 0.4})`);
-      grad.addColorStop(1, `rgba(${orb.color.r}, ${orb.color.g}, ${orb.color.b}, 0)`);
+      // Synaptic connection lines between nodes
+      for (let j = i + 1; j < len; j++) {
+        const n2 = nodes[j];
+        const dx = n.x - n2.x;
+        const dy = n.y - n2.y;
+        const dist = Math.sqrt(dx * dx + dy * dy);
 
-      ctx.save();
-      ctx.fillStyle = grad;
+        if (dist < maxDist) {
+          const lineAlpha = (1 - dist / maxDist) * 0.28;
+          ctx.beginPath();
+          ctx.moveTo(n.x, n.y);
+          ctx.lineTo(n2.x, n2.y);
+          ctx.strokeStyle = `rgba(125, 185, 240, ${lineAlpha})`;
+          ctx.lineWidth = 1;
+          ctx.stroke();
+        }
+      }
+    }
+
+    // Draw nodes
+    for (let i = 0; i < len; i++) {
+      const n = nodes[i];
+      const pulse = Math.sin(n.pulsePhase) * 0.5 + 0.5;
+      const currentR = n.baseRadius + pulse * 1.0;
+      const currentA = n.alpha + pulse * 0.15;
+
+      // Hub outer soft glow
+      if (n.isHub) {
+        ctx.beginPath();
+        ctx.arc(n.x, n.y, currentR * 2.8, 0, Math.PI * 2);
+        ctx.fillStyle = `rgba(${n.color.r}, ${n.color.g}, ${n.color.b}, ${currentA * 0.25})`;
+        ctx.fill();
+      }
+
       ctx.beginPath();
-      ctx.arc(orb.x, orb.y, Math.max(1, orb.currentRadius), 0, Math.PI * 2);
+      ctx.arc(n.x, n.y, currentR, 0, Math.PI * 2);
+      ctx.fillStyle = `rgba(${n.color.r}, ${n.color.g}, ${n.color.b}, ${currentA})`;
       ctx.fill();
-      ctx.restore();
     }
 
     animationFrameId = requestAnimationFrame(draw);
   }
 
-  // Mouse tracking inside hero section
   heroSection.addEventListener('mousemove', (e) => {
     const rect = canvas.getBoundingClientRect();
     mouse.targetX = e.clientX - rect.left;
@@ -428,14 +433,12 @@ function initHeroParticles() {
     mouse.y = null;
   });
 
-  // Resize listener with debounce
   let resizeTimeout;
   window.addEventListener('resize', () => {
     clearTimeout(resizeTimeout);
     resizeTimeout = setTimeout(resize, 150);
   });
 
-  // Pause when off-screen for battery/performance
   if ('IntersectionObserver' in window) {
     const heroObserver = new IntersectionObserver((entries) => {
       entries.forEach(entry => {

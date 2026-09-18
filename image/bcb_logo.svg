@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="40" height="40" fill="none">
+  <!-- BCB Neural Polyhedron Logo Icon -->
+  <g stroke="#1e3a8a" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Center spoke lines -->
+    <line x1="24" y1="24" x2="24" y2="4" stroke-width="1.6"/>
+    <line x1="24" y1="24" x2="38.14" y2="9.86" stroke-width="1.6"/>
+    <line x1="24" y1="24" x2="44" y2="24" stroke-width="1.6"/>
+    <line x1="24" y1="24" x2="38.14" y2="38.14" stroke-width="1.6"/>
+    <line x1="24" y1="24" x2="24" y2="44" stroke-width="1.6"/>
+    <line x1="24" y1="24" x2="9.86" y2="38.14" stroke-width="1.6"/>
+    <line x1="24" y1="24" x2="4" y2="24" stroke-width="1.6"/>
+    <line x1="24" y1="24" x2="9.86" y2="9.86" stroke-width="1.6"/>
+    
+    <!-- Outer Octagon -->
+    <polygon points="24,4 38.14,9.86 44,24 38.14,38.14 24,44 9.86,38.14 4,24 9.86,9.86" stroke-width="1.8"/>
+
+    <!-- Inner Octagon -->
+    <polygon points="24,11.5 32.84,15.16 36.5,24 32.84,32.84 24,36.5 15.16,32.84 11.5,24 15.16,15.16" stroke-width="1.5"/>
+
+    <!-- Triangulation trusses -->
+    <line x1="24" y1="11.5" x2="38.14" y2="9.86" stroke-width="1.2" stroke-opacity="0.9"/>
+    <line x1="32.84" y1="15.16" x2="24" y2="4" stroke-width="1.2" stroke-opacity="0.9"/>
+
+    <line x1="32.84" y1="15.16" x2="44" y2="24" stroke-width="1.2" stroke-opacity="0.9"/>
+    <line x1="36.5" y1="24" x2="38.14" y2="9.86" stroke-width="1.2" stroke-opacity="0.9"/>
+
+    <line x1="36.5" y1="24" x2="38.14" y2="38.14" stroke-width="1.2" stroke-opacity="0.9"/>
+    <line x1="32.84" y1="32.84" x2="44" y2="24" stroke-width="1.2" stroke-opacity="0.9"/>
+
+    <line x1="32.84" y1="32.84" x2="24" y2="44" stroke-width="1.2" stroke-opacity="0.9"/>
+    <line x1="24" y1="36.5" x2="38.14" y2="38.14" stroke-width="1.2" stroke-opacity="0.9"/>
+
+    <line x1="24" y1="36.5" x2="9.86" y2="38.14" stroke-width="1.2" stroke-opacity="0.9"/>
+    <line x1="15.16" y1="32.84" x2="24" y2="44" stroke-width="1.2" stroke-opacity="0.9"/>
+
+    <line x1="15.16" y1="32.84" x2="4" y2="24" stroke-width="1.2" stroke-opacity="0.9"/>
+    <line x1="11.5" y1="24" x2="9.86" y2="38.14" stroke-width="1.2" stroke-opacity="0.9"/>
+
+    <line x1="11.5" y1="24" x2="9.86" y2="9.86" stroke-width="1.2" stroke-opacity="0.9"/>
+    <line x1="15.16" y1="15.16" x2="4" y2="24" stroke-width="1.2" stroke-opacity="0.9"/>
+
+    <line x1="15.16" y1="15.16" x2="24" y2="4" stroke-width="1.2" stroke-opacity="0.9"/>
+    <line x1="24" y1="11.5" x2="9.86" y2="9.86" stroke-width="1.2" stroke-opacity="0.9"/>
+  </g>
+
+  <!-- Vertex Node Dots -->
+  <g fill="#1e3a8a">
+    <circle cx="24" cy="4" r="2"/>
+    <circle cx="38.14" cy="9.86" r="2"/>
+    <circle cx="44" cy="24" r="2"/>
+    <circle cx="38.14" cy="38.14" r="2"/>
+    <circle cx="24" cy="44" r="2"/>
+    <circle cx="9.86" cy="38.14" r="2"/>
+    <circle cx="4" cy="24" r="2"/>
+    <circle cx="9.86" cy="9.86" r="2"/>
+
+    <circle cx="24" cy="11.5" r="1.6"/>
+    <circle cx="32.84" cy="15.16" r="1.6"/>
+    <circle cx="36.5" cy="24" r="1.6"/>
+    <circle cx="32.84" cy="32.84" r="1.6"/>
+    <circle cx="24" cy="36.5" r="1.6"/>
+    <circle cx="15.16" cy="32.84" r="1.6"/>
+    <circle cx="11.5" cy="24" r="1.6"/>
+    <circle cx="15.16" cy="15.16" r="1.6"/>
+
+    <circle cx="24" cy="24" r="2.2"/>
+  </g>
+</svg>
