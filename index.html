@@ -105,73 +105,125 @@
     <!-- Section: About -->
     <section class="section" id="about">
       <div class="container">
-        <div class="section-head">
-          <div class="section-tag">01 / Overview</div>
-          <h2 class="section-title">開催趣旨</h2>
+        <div class="about-header-divider">
+          <div class="about-section-tag">01 / OVERVIEW</div>
+          <h2 class="about-section-title">開催趣旨</h2>
         </div>
 
         <div class="about-grid">
-          <div class="text-prose">
-            <p>
-              本ハッカソンは、文部科学省 学術変革領域研究(A)「行動変容生物学」の取り組みとして、研究者を目指す若手（大学院生・学部生・ポスドク等）を対象に開催します。
-            </p>
-            <p>
-              3日間のイベントでは、マウスの行動実験データと対応する神経活動データを包括した「<strong>BraiDyn-BCデータベース</strong>」を用い、行動変容のメカニズムに関する新たな解析手法やツールの利用・開発に取り組みます。
-            </p>
-            <p>
-              チーム（5名程度）ごとに専門のチューターがつきますので、神経科学の初学者も歓迎します。最終日にはチームで作業した内容の発表と質疑応答を行い、主に学術的な視点からフィードバックを行います。
-            </p>
+          <!-- Left Column: Mission Prose & Organizer -->
+          <div class="about-prose-column">
+            <div class="about-prose-body">
+              <p>
+                本ハッカソンは、文部科学省 学術変革領域研究(A)「行動変容生物学」の取り組みとして、研究者を目指す若手（大学院生・学部生・ポスドク等）を対象に開催します。
+              </p>
+              <p>
+                3日間のイベントでは、マウスの行動実験データと対応する神経活動データを包括した「<strong>BraiDyn-BCデータベース</strong>」を用い、行動変容のメカニズムに関する新たな解析手法やツールの利用・開発に取り組みます。
+              </p>
+              <p>
+                チーム（5名程度）ごとに専門のチューターがつきますので、神経科学の初学者も歓迎します。最終日にはチームで作業した内容の発表と質疑応答を行い、主に学術的な視点からフィードバックを行います。
+              </p>
+            </div>
 
-            <div class="quick-summary-box">
-              <div class="summary-item">
-                <strong>主催：</strong>学術変革領域A「行動変容生物学」総括班
-              </div>
-              <div class="summary-item">
-                <strong>日程：</strong>2027年2月20日(土) 11:30 〜 2月22日(月) 18:20
-              </div>
-              <div class="summary-item">
-                <strong>場所：</strong>東京・日本橋ライフサイエンスハブ 8階 LSH-D会議室
-              </div>
-              <div class="summary-item">
-                <strong>定員：</strong>40人程度
-              </div>
-              <div class="summary-item">
-                <strong>参加費：</strong>無料（※懇親会 4,000円）
-              </div>
+            <div class="about-organizer-block">
+              <div class="about-organizer-label">主催</div>
+              <div class="about-organizer-name">学術変革領域A「行動変容生物学」総括班</div>
             </div>
           </div>
 
-          <!-- Visual Photo Card -->
-          <div class="about-visual-card">
-            <div class="about-image-wrap" title="クリックで拡大">
-              <img src="image/about_scene.webp" alt="若手研究者たちの活発なチーム議論・データ解析風景" class="about-photo-img" loading="lazy">
+          <!-- Right Column: Overview Summary Card -->
+          <aside class="about-overview-card" aria-label="開催概要">
+            <h3 class="overview-card-title">開催概要</h3>
+            <div class="overview-items-list">
+              <div class="overview-item">
+                <div class="overview-item-label">日程</div>
+                <div class="overview-item-value">2027年2月20日(土)–22日(月)</div>
+                <div class="overview-item-sub">初日 11:30 ／ 最終日 18:20</div>
+              </div>
+
+              <div class="overview-item">
+                <div class="overview-item-label">会場</div>
+                <div class="overview-item-value">東京・日本橋ライフサイエンスハブ</div>
+                <div class="overview-item-sub">8階 LSH-D会議室</div>
+              </div>
+
+              <div class="overview-item">
+                <div class="overview-item-label">定員</div>
+                <div class="overview-item-value">40人程度</div>
+              </div>
+
+              <div class="overview-item">
+                <div class="overview-item-label">参加費</div>
+                <div class="overview-item-value">無料</div>
+                <div class="overview-item-sub fee-note">※懇親会 4,000円</div>
+              </div>
             </div>
-          </div>
+          </aside>
         </div>
 
         <!-- Activities Block: 作業内容 -->
         <div class="activities-block" id="activities">
-          <div class="activities-header">
-            <span class="section-tag">Work & Challenge</span>
-            <h3 class="activities-main-title">作業内容</h3>
+          <div class="activities-header-divider">
+            <div class="activities-tag">— WORK &amp; CHALLENGE</div>
+            <h3 class="activities-title">作業内容</h3>
           </div>
 
-          <div class="activities-prose">
+          <div class="activities-intro">
             <p>
-              学術変革領域A・行動変容生物学の総括班で作成したマウスの大規模な神経活動と行動のデータベース「<a href="https://app.notion.com/1e972fb17ad1470b911aa108fb8c0713?pvs=21" target="_blank" rel="noopener noreferrer" class="link-inline">BraiDyn-BC（Brain Dynamics and Behavior Change）データベース ↗</a>」を利用したデータ解析を行っていただく予定です。具体的に解析したい内容がある場合は、チューターと相談の上で補助します。ない場合でも、こういったことに興味があるということを参加登録で記入していただければ、こちらでチーム編成を行いテーマを設定いたしますので、気軽にご参加ください。
+              学術変革領域A・行動変容生物学の総括班で作成したマウスの大規模な神経活動と行動のデータベース「<a href="https://app.notion.com/1e972fb17ad1470b911aa108fb8c0713?pvs=21" target="_blank" rel="noopener noreferrer" class="activities-intro-link">BraiDyn-BC（Brain Dynamics and Behavior Change）データベース</a>」を利用したデータ解析を行っていただく予定です。具体的に解析したい内容がある場合は、チューターと相談の上で補助します。ない場合でも、こういったことに興味があるということを参加登録で記入していただければ、こちらでチーム編成を行いテーマを設定いたしますので、気軽にご参加ください。
             </p>
-            <p>
-              具体的には、動画データから身体キーポイントを抽出するDeepLabCut、1光子Ca<sup>2+</sup>イメージングの動画像の位置合わせを行うMesoNet、神経活動データの標準フォーマットのNeurodata Without Boaders(NWB)の取り扱い、行動タスクの分析方法、神経活動や行動との関連の解析法などが挙げられます。これらのテーマに関して1日目にチュートリアル発表を行います。
-            </p>
-            <p>
-              2日目には、現場の研究者たちを交えて「研究者のキャリアとは？」をテーマに、キャリアパスや研究現場のリアルについて語り合う企画を予定しています。今後の進路として研究活動に興味がある方には、リアルな経験談や実際的な話を聞く良い機会になると思います。
-            </p>
-            <p>
-              最終日にはチームで作業した内容をまとめて、10-15分程度の発表や質疑応答を行っていただく予定です。運営委員からの点数的な評価は行いませんが、主に学術的な視点からフィードバックを行う予定です。また、参加者からの質問も歓迎しますので、盛り上げていただければと思います。
-            </p>
-            <p>
-              全体として今回のハッカソンは経験者だけでなく初学者を歓迎しますので、神経科学に興味のある方は奮ってご参加ください。
-            </p>
+          </div>
+
+          <div class="activities-steps-list">
+            <!-- Step 1: 1日目 チュートリアル -->
+            <div class="activity-step-row">
+              <div class="activity-step-side">
+                <div class="activity-step-img-wrap">
+                  <img src="image/activity_tutorial.jpg" alt="1日目のイラスト" class="activity-step-img" loading="lazy" width="120" height="120">
+                </div>
+                <h4 class="activity-step-label">1日目</h4>
+              </div>
+              <div class="activity-step-content">
+                <p>
+                  具体的には、動画データから身体キーポイントを抽出する<strong>DeepLabCut</strong>、1光子<strong>Ca<sup>2+</sup></strong>イメージングの動画像の位置合わせを行う<strong>MesoNet</strong>、神経活動データの標準フォーマットの<strong>Neurodata Without Boaders(NWB)</strong>の取り扱い、行動タスクの分析方法、神経活動や行動との関連の解析法などが挙げられます。これらのテーマに関して<strong>1日目</strong>にチュートリアル発表を行います。
+                </p>
+              </div>
+            </div>
+
+            <!-- Step 2: 2日目 キャリア相談 -->
+            <div class="activity-step-row">
+              <div class="activity-step-side">
+                <div class="activity-step-img-wrap">
+                  <img src="image/activity_career.jpg" alt="2日目 キャリア企画のイラスト" class="activity-step-img" loading="lazy" width="120" height="120">
+                </div>
+                <h4 class="activity-step-label">2日目</h4>
+              </div>
+              <div class="activity-step-content">
+                <p>
+                  2日目には、現場の研究者たちを交えて<strong>「研究者のキャリアとは？」</strong>をテーマに、キャリアパスや研究現場のリアルについて語り合う企画を予定しています。今後の進路として研究活動に興味がある方には、リアルな経験談や実際的な話を聞く良い機会になると思います。
+                </p>
+              </div>
+            </div>
+
+            <!-- Step 3: 最終日 成果発表 -->
+            <div class="activity-step-row">
+              <div class="activity-step-side">
+                <div class="activity-step-img-wrap">
+                  <img src="image/activity_presentation.jpg" alt="最終日 発表・質疑応答のイラスト" class="activity-step-img" loading="lazy" width="120" height="120">
+                </div>
+                <h4 class="activity-step-label">最終日</h4>
+              </div>
+              <div class="activity-step-content">
+                <p>
+                  最終日にはチームで作業した内容をまとめて、<strong>10-15分程度</strong>の発表や質疑応答を行っていただく予定です。運営委員からの点数的な評価は行いませんが、主に学術的な視点からフィードバックを行う予定です。また、参加者からの質問も歓迎しますので、盛り上げていただければと思います。
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Welcome Box -->
+          <div class="activities-welcome-box">
+            <p>全体として今回のハッカソンは経験者だけでなく初学者を歓迎しますので、神経科学に興味のある方は奮ってご参加ください。</p>
           </div>
         </div>
 
@@ -194,9 +246,6 @@
               </div>
               <div class="past-photo-info">
                 <h4 class="past-photo-name">全体講義・導入セッション</h4>
-                <p class="past-photo-text">
-                  専門講師によるチュートリアルや導入講義を実施。初学者でもスムーズに解析を始められるよう、基礎から丁寧にレクチャーが行われました。
-                </p>
               </div>
             </div>
 
@@ -208,9 +257,6 @@
               </div>
               <div class="past-photo-info">
                 <h4 class="past-photo-name">グループワーク・解析開発</h4>
-                <p class="past-photo-text">
-                  各チームに分かれ、PCやホワイトボードを囲んで活発にディスカッション。チューターのサポートを受けながら、アイデア創出から実装・検証を進めました。
-                </p>
               </div>
             </div>
 
@@ -222,9 +268,6 @@
               </div>
               <div class="past-photo-info">
                 <h4 class="past-photo-name">第1回ハッカソン 参加者集合写真</h4>
-                <p class="past-photo-text">
-                  多様な大学・研究機関から約40名の若手が集結。チーム開発や成果発表会を通じて、所属を超えた活発な交流と学術的ネットワークが生まれました。
-                </p>
               </div>
             </div>
           </div>
@@ -819,93 +862,91 @@
     <!-- Section: Guidelines -->
     <section class="section" id="guidelines">
       <div class="container">
-        <div class="section-head">
-          <div class="section-tag">04 / Guidelines</div>
-          <h2 class="section-title">参加案内</h2>
+        <div class="guide-header-divider">
+          <div class="guide-section-tag">— 04 / GUIDELINES</div>
+          <h2 class="guide-section-title">参加案内</h2>
         </div>
 
         <div class="guide-grid">
           <!-- Card 1: 対象者 -->
-          <div class="guide-box">
-            <div class="guide-visual">
-              <img src="image/guide_target.svg" alt="対象者：若手研究者・大学院生・初学者歓迎" class="guide-img" loading="lazy">
+          <div class="guide-card">
+            <div class="guide-card-visual">
+              <img src="image/guide_target.webp" alt="対象者：若手研究者・大学院生・初学者歓迎" class="guide-card-img" loading="lazy" width="400" height="300">
             </div>
-            <div class="guide-body">
-              <div class="guide-header">
-                <span class="guide-icon-badge" aria-hidden="true">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
-                </span>
-                <h3 class="guide-title">対象者</h3>
-              </div>
-              <p class="guide-text">
+            <div class="guide-card-body">
+              <h3 class="guide-card-title">対象者</h3>
+              <p class="guide-card-text">
                 神経活動や行動データ解析に興味のある若手（大学院生・学部生を含む）やポスドク。定員40名程度。初学者も歓迎します。
               </p>
-              <div class="guide-tags">
-                <span class="guide-tag">大学院生・学部生</span>
-                <span class="guide-tag">ポスドク</span>
-                <span class="guide-tag">初学者歓迎</span>
-                <span class="guide-tag">定員40名程度</span>
+              <div class="guide-meta-footer">
+                <div class="guide-meta-row">
+                  <span>大学院生・学部生</span>
+                  <span class="guide-slash">／</span>
+                  <span>ポスドク</span>
+                </div>
+                <div class="guide-meta-row">
+                  <span>初学者歓迎</span>
+                  <span class="guide-slash">／</span>
+                  <span>定員40名程度</span>
+                </div>
               </div>
             </div>
           </div>
 
-          <!-- Card 2: 環境・持参物 -->
-          <div class="guide-box">
-            <div class="guide-visual">
-              <img src="image/guide_env.svg" alt="環境・持参物：ノートPCとPython・Google Colaboratory" class="guide-img" loading="lazy">
+          <!-- Card 2: 環境・持ち物 -->
+          <div class="guide-card">
+            <div class="guide-card-visual">
+              <img src="image/guide_env.webp" alt="環境・持ち物：ノートPCとPython・Google Colaboratory" class="guide-card-img" loading="lazy" width="400" height="300">
             </div>
-            <div class="guide-body">
-              <div class="guide-header">
-                <span class="guide-icon-badge" aria-hidden="true">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="2" y1="20" x2="22" y2="20"></line></svg>
-                </span>
-                <h3 class="guide-title">環境・持参物</h3>
-              </div>
-              <p class="guide-text">
+            <div class="guide-card-body">
+              <h3 class="guide-card-title">環境・持ち物</h3>
+              <p class="guide-card-text">
                 WiFiでGoogle Colaboratoryが動くノートPC（Windows, Mac, Linux）をご持参ください。使用言語はPythonです。
               </p>
-              <div class="guide-tags">
-                <span class="guide-tag">ノートPC持参</span>
-                <span class="guide-tag">Python</span>
-                <span class="guide-tag">Google Colab</span>
-                <span class="guide-tag">WiFi完備</span>
+              <p class="guide-os-note">対応OS：Windows / macOS / Linux</p>
+              <div class="guide-meta-footer">
+                <div class="guide-meta-row">
+                  <span>ノートPC持参</span>
+                  <span class="guide-slash">／</span>
+                  <span>Python</span>
+                </div>
+                <div class="guide-meta-row">
+                  <span>Google Colab</span>
+                  <span class="guide-slash">／</span>
+                  <span>WiFi完備</span>
+                </div>
               </div>
             </div>
           </div>
 
           <!-- Card 3: 参加費・実費 -->
-          <div class="guide-box">
-            <div class="guide-visual">
-              <img src="image/guide_fee.svg" alt="参加費・実費：参加費無料・昼食弁当とお茶提供" class="guide-img" loading="lazy">
+          <div class="guide-card">
+            <div class="guide-card-visual">
+              <img src="image/guide_fee.webp" alt="参加費・実費：参加費無料・昼食弁当とお茶提供" class="guide-card-img" loading="lazy" width="400" height="300">
             </div>
-            <div class="guide-body">
-              <div class="guide-header">
-                <span class="guide-icon-badge" aria-hidden="true">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M16 8h-6a2 2 0 1 0 0 4h4a2 2 0 1 1 0 4H8"></path><line x1="12" y1="6" x2="12" y2="8"></line><line x1="12" y1="16" x2="12" y2="18"></line></svg>
-                </span>
-                <h3 class="guide-title">参加費・実費</h3>
+            <div class="guide-card-body">
+              <h3 class="guide-card-title">参加費・実費</h3>
+              <div class="guide-fee-list">
+                <div class="guide-fee-row">
+                  <span class="guide-fee-label">参加費</span>
+                  <span class="guide-badge-free">無料</span>
+                </div>
+                <div class="guide-fee-row">
+                  <span class="guide-fee-label">昼食代</span>
+                  <div class="guide-fee-val-block">
+                    <span class="guide-badge-free">無料</span>
+                    <div class="guide-fee-sub">（1日目希望者のお弁当、2・3日目昼食とお茶を無償提供）</div>
+                  </div>
+                </div>
+                <div class="guide-fee-row">
+                  <span class="guide-fee-label">懇親会費</span>
+                  <div class="guide-fee-val-block">
+                    <strong class="guide-fee-amount">4,000円</strong>
+                    <div class="guide-fee-sub">（初日夜・希望者のみ／ケータリング＋ソフトドリンク代）</div>
+                  </div>
+                </div>
               </div>
-              <ul class="guide-fee-list">
-                <li class="guide-fee-item">
-                  <span class="guide-fee-name">参加費</span>
-                  <strong class="guide-fee-highlight-free">無料</strong>
-                </li>
-                <li class="guide-fee-item">
-                  <span class="guide-fee-name">昼食代</span>
-                  <div class="guide-fee-val-wrap">
-                    <strong class="guide-fee-highlight-free">無料</strong>
-                    <span class="guide-fee-desc">（1日目希望者のお弁当、2・3日目昼食とお茶を無償提供）</span>
-                  </div>
-                </li>
-                <li class="guide-fee-item">
-                  <span class="guide-fee-name">懇親会費</span>
-                  <div class="guide-fee-val-wrap">
-                    <strong class="guide-fee-price">4,000円</strong>
-                    <span class="guide-fee-desc">（初日夜・希望者のみ / ケータリング＋ソフトドリンク代）</span>
-                  </div>
-                </li>
-              </ul>
-              <p class="guide-subnote">※アルコール類、および旅費・宿泊費等は各自負担となります</p>
+              <p class="guide-subnote">※アルコール類、および旅費・宿泊費等は各自負担となります。</p>
             </div>
           </div>
         </div>
