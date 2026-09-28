@@ -234,7 +234,11 @@ function initImageLightbox() {
 
   function openLightbox(src, caption) {
     if (lightboxImg) lightboxImg.src = src;
-    if (lightboxCaption) lightboxCaption.textContent = caption || '';
+    if (lightboxCaption) {
+      const cleanCaption = (caption && caption.trim()) || '';
+      lightboxCaption.textContent = cleanCaption;
+      lightboxCaption.style.display = cleanCaption ? 'block' : 'none';
+    }
     lightbox.classList.add('active');
     lightbox.setAttribute('aria-hidden', 'false');
     document.body.style.overflow = 'hidden';
@@ -250,7 +254,10 @@ function initImageLightbox() {
     trigger.addEventListener('click', () => {
       const img = trigger.querySelector('img');
       if (img) {
-        openLightbox(img.src, img.alt);
+        const isHero = trigger.classList.contains('hero-visual-card-wrap') || trigger.classList.contains('hero-image-wrap');
+        const noCaption = isHero || trigger.hasAttribute('data-no-caption');
+        const caption = noCaption ? '' : (img.alt || '');
+        openLightbox(img.src, caption);
       }
     });
   });

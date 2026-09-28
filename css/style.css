@@ -2560,6 +2560,10 @@ ul, ol {
   border-radius: 999px;
 }
 
+.lightbox-caption:empty {
+  display: none !important;
+}
+
 .lightbox-close {
   position: absolute;
   top: -40px;
