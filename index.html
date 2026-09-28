@@ -12,7 +12,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=JetBrains+Mono:wght@400;600;700&family=Noto+Sans+JP:wght@400;500;700&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
   
   <!-- Stylesheet -->
-  <link rel="stylesheet" href="css/style.css?v=20260928_nocaption_v1">
+  <link rel="stylesheet" href="css/style.css?v=20260928_update_v2">
 </head>
 <body>
 
@@ -33,7 +33,7 @@
         <a href="#top" class="nav-link active">ホーム</a>
         <a href="#about" class="nav-link">開催概要</a>
         <a href="#schedule" class="nav-link">プログラム</a>
-        <a href="#data-tech" class="nav-link">データベース</a>
+        <a href="#data-tech" class="nav-link">データベースとツール</a>
         <a href="#guidelines" class="nav-link">参加案内</a>
         <a href="#faq" class="nav-link">よくある質問</a>
       </nav>
@@ -149,12 +149,13 @@
               <div class="overview-item">
                 <div class="overview-item-label">定員</div>
                 <div class="overview-item-value">40人程度</div>
+                <div class="overview-item-sub">※先着順ではありません（応募多数時は選考）</div>
               </div>
 
               <div class="overview-item">
                 <div class="overview-item-label">参加費</div>
-                <div class="overview-item-value">無料</div>
-                <div class="overview-item-sub fee-note">※懇親会 4,000円</div>
+                <div class="overview-item-value">無料（本編）</div>
+                <div class="overview-item-sub fee-note">※懇親会費 4,000円（参加希望者のみ）</div>
               </div>
             </div>
           </aside>
@@ -278,18 +279,17 @@
     <section class="section tech-section" id="data-tech">
       <div class="container">
         <div class="section-head">
-          <div class="section-tag">02 / Resources</div>
-          <h2 class="section-title">データベース・リソース</h2>
+          <div class="section-tag">02 / Resources &amp; Tools</div>
+          <h2 class="section-title">利用するデータベースとツール</h2>
         </div>
 
         <div class="tech-grid">
           <!-- BraiDyn-BC Database -->
           <div class="tech-card">
             <span class="tech-tag">Database</span>
-            <h3 class="tech-name">BraiDyn-BC Database</h3>
-            <div class="tech-sub">行動変容生物学 公式データベース</div>
+            <h3 class="tech-name">BraiDyn-BCデータベース</h3>
             <p class="tech-desc">
-              マウスの学習行動と全脳神経活動を包括した大規模マルチモーダルデータセットです。仕様やデータ構造の詳細をご確認いただけます。
+              大規模な神経活動、ビデオ計測を含む行動実験データを包括したリソースです。
             </p>
             <div class="tech-action">
               <a href="https://nakaelab.github.io/braidyn-bc-database/index.html" target="_blank" rel="noopener noreferrer" class="tech-btn">
@@ -303,9 +303,8 @@
           <div class="tech-card">
             <span class="tech-tag">GitHub</span>
             <h3 class="tech-name">BraiDyn-BC GitHub</h3>
-            <div class="tech-sub">解析コード・公式リポジトリ</div>
             <p class="tech-desc">
-              行動変容生物学ハッカソンおよび関連解析パイプライン、各種オープンソースツール群が公開されている公式GitHubオーガニゼーションです。
+              ハッカソンで利用する解析コードや公式パイプラインのリポジトリです。
             </p>
             <div class="tech-action">
               <a href="https://github.com/BraiDyn-BC" target="_blank" rel="noopener noreferrer" class="tech-btn">
@@ -319,9 +318,8 @@
           <div class="tech-card">
             <span class="tech-tag">Tutorials</span>
             <h3 class="tech-name">チュートリアル資料</h3>
-            <div class="tech-sub">Google Drive 共有フォルダ</div>
             <p class="tech-desc">
-              事前学習用チュートリアルコード、Google Colaboratoryノートブック、解説スライド、サンプルデータなどの配布資料一式を格納しています。
+              事前学習用コード、Google Colabノートブック、解説スライド等の配布資料一式です。
             </p>
             <div class="tech-action">
               <a href="https://drive.google.com/drive/folders/1f5MBwx0tfmJQgbwJ24MVGnka4QZQzfJI" target="_blank" rel="noopener noreferrer" class="tech-btn">
@@ -333,11 +331,10 @@
 
           <!-- Dataset Paper (Nature Scientific Data) -->
           <div class="tech-card">
-            <span class="tech-tag">Nature Article</span>
+            <span class="tech-tag">Paper</span>
             <h3 class="tech-name">データ論文</h3>
-            <div class="tech-sub">Nature Scientific Data (2025)</div>
             <p class="tech-desc">
-              本ハッカソンで活用する広域Ca2+イメージングと行動変容データを詳細に解説した、Nature Scientific Data誌掲載の公式データ論文です。
+              本ハッカソンで活用するCa²⁺イメージングと行動変容データを詳述した公式原著論文（Nature Scientific Data）です。
             </p>
             <div class="tech-action">
               <a href="https://www.nature.com/articles/s41597-025-05482-y" target="_blank" rel="noopener noreferrer" class="tech-btn">
@@ -875,7 +872,7 @@
             <div class="guide-card-body">
               <h3 class="guide-card-title">対象者</h3>
               <p class="guide-card-text">
-                神経活動や行動データ解析に興味のある若手（大学院生・学部生を含む）やポスドク。定員40名程度。初学者も歓迎します。
+                神経活動や行動データ解析に興味のある若手（大学院生・学部生を含む）やポスドク。定員40名程度。初学者も歓迎します。※先着順ではありません。応募者多数の場合は選考を行います。
               </p>
               <div class="guide-meta-footer">
                 <div class="guide-meta-row">
@@ -886,7 +883,7 @@
                 <div class="guide-meta-row">
                   <span>初学者歓迎</span>
                   <span class="guide-slash">／</span>
-                  <span>定員40名程度</span>
+                  <span>応募多数時は選考</span>
                 </div>
               </div>
             </div>
@@ -924,10 +921,10 @@
               <img src="image/guide_fee.webp" alt="参加費・実費：参加費無料・昼食弁当とお茶提供" class="guide-card-img" loading="lazy" width="400" height="300">
             </div>
             <div class="guide-card-body">
-              <h3 class="guide-card-title">参加費・実費</h3>
+              <h3 class="guide-card-title">参加費・懇親会費</h3>
               <div class="guide-fee-list">
                 <div class="guide-fee-row">
-                  <span class="guide-fee-label">参加費</span>
+                  <span class="guide-fee-label">ハッカソン参加費</span>
                   <span class="guide-badge-free">無料</span>
                 </div>
                 <div class="guide-fee-row">
@@ -941,11 +938,11 @@
                   <span class="guide-fee-label">懇親会費</span>
                   <div class="guide-fee-val-block">
                     <strong class="guide-fee-amount">4,000円</strong>
-                    <div class="guide-fee-sub">（初日夜・希望者のみ／ケータリング＋ソフトドリンク代）</div>
+                    <div class="guide-fee-sub">（初日夜・参加希望者のみお支払い／ケータリング＋ソフトドリンク代）</div>
                   </div>
                 </div>
               </div>
-              <p class="guide-subnote">※アルコール類、および旅費・宿泊費等は各自負担となります。</p>
+              <p class="guide-subnote">※懇親会への参加は任意です。参加希望者のみ懇親会費をお支払いいただきます。<br>※アルコール類、および旅費・宿泊費等は各自負担となります。</p>
             </div>
           </div>
         </div>
@@ -999,11 +996,10 @@
             </div>
             <div class="venue-amenities">
               <div class="amenity-chip">高速Wi-Fi完備</div>
-              <div class="amenity-chip">全席電源完備</div>
               <div class="amenity-chip">プロジェクター・スクリーン</div>
             </div>
             <div style="margin-top: 1.25rem; font-size: 0.875rem; color: var(--text-muted); line-height: 1.6;">
-              ※会場内は飲食可能です。1日目の夜には同会場にて懇親会（会費4,000円 / ケータリング＋ソフトドリンク）を行います。
+              ※会場内は飲食可能です。1日目の夜には同会場にて懇親会（会費4,000円 / 参加希望者のみ / ケータリング＋ソフトドリンク）を行います。
             </div>
           </div>
         </div>
@@ -1141,11 +1137,21 @@
 
           <div class="faq-item">
             <button class="faq-question" aria-expanded="false">
-              <span>参加費はいくらですか？</span>
+              <span>参加者の決定は先着順ですか？</span>
               <span class="faq-icon">+</span>
             </button>
             <div class="faq-answer">
-              ハッカソン本編への参加費は<strong>無料</strong>です。初日夜に開催される懇親会に参加される場合のみ、懇親会費として4,000円（ケータリング＋ソフトドリンク代 / 学部生・一般一律）を申し受けます。また、1日目の希望者のみの昼食（お弁当）および2日目・3日目の昼食（お弁当・お茶）はすべて事務局より無料で提供されます。※アルコール類、および旅費・宿泊費等は各自ご負担となります。
+              先着順ではありません。定員（40名程度）を超える応募があった場合は選考を行います。
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>参加費や懇親会費はいくらですか？</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              ハッカソン本編への参加費は<strong>無料</strong>です。初日夜に開催される懇親会への参加を希望される方のみ、懇親会費として4,000円（ケータリング＋ソフトドリンク代 / 学部生・一般一律）をお支払いいただきます（懇親会への参加は任意です）。また、1日目の希望者のお弁当および2日目・3日目の昼食（お弁当・お茶）はすべて事務局より無料で提供されます。※アルコール類、および旅費・宿泊費等は各自ご負担となります。
             </div>
           </div>
         </div>
@@ -1158,7 +1164,7 @@
         <div class="cta-banner">
           <h2 class="cta-title">参加申し込み（現地開催）</h2>
           <p class="cta-subtitle">
-            定員40名程度。以下のGoogleフォームよりお申し込みください。
+            定員40名程度（先着順ではありません。応募者多数の場合は選考を行います）。以下のGoogleフォームよりお申し込みください。
           </p>
           <div class="cta-buttons">
             <a href="https://docs.google.com/forms/d/e/1FAIpQLSc7IbZWw1OOKyFQO5wRhYY0eBot87R7iCw_VYpoqSRFM22U4A/viewform" target="_blank" rel="noopener noreferrer" class="btn btn-teal btn-cta-main">
@@ -1186,7 +1192,7 @@
           <h4>メニュー</h4>
           <div class="footer-links">
             <a href="#about">開催趣旨</a>
-            <a href="#data-tech">データベース・リソース</a>
+            <a href="#data-tech">利用するデータベースとツール</a>
             <a href="#schedule">日程</a>
             <a href="#guidelines">参加案内</a>
             <a href="#venue">会場アクセス</a>
