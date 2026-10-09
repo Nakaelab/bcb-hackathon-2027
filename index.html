@@ -12,7 +12,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=JetBrains+Mono:wght@400;600;700&family=Noto+Sans+JP:wght@400;500;700&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
   
   <!-- Stylesheet -->
-  <link rel="stylesheet" href="css/style.css?v=20260928_update_v2">
+  <link rel="stylesheet" href="css/style.css?v=20261009_deadline_v4">
 </head>
 <body>
 
@@ -20,11 +20,9 @@
   <header class="site-header" role="banner">
     <div class="container header-inner">
       <a href="#top" class="brand-wrapper" aria-label="トップページへ">
-        <img src="image/bcb_logo.svg" alt="BCB Logo" class="brand-logo-icon" width="38" height="38">
-        <span class="brand-acronym">BCB</span>
         <div class="brand-text">
-          <span class="brand-jp">行動変容生物学</span>
-          <span class="brand-en">Biology of Behavioral Change</span>
+          <span class="brand-jp">行動変容生物学ハッカソン</span>
+          <span class="brand-en">Biology of Behavioral Change Hackathon</span>
         </div>
       </a>
 
@@ -89,6 +87,10 @@
               <span>参加登録フォーム</span>
               <span class="arrow">→</span>
             </a>
+            <div class="hero-deadline">
+              <svg class="hero-deadline-icon" viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+              <span class="hero-deadline-text">締め切り：<strong class="hero-deadline-date">2027/1/22</strong></span>
+            </div>
           </div>
         </div>
 
@@ -117,7 +119,7 @@
                 本ハッカソンは、文部科学省 学術変革領域研究(A)「行動変容生物学」の取り組みとして、研究者を目指す若手（大学院生・学部生・ポスドク等）を対象に開催します。
               </p>
               <p>
-                3日間のイベントでは、マウスの行動実験データと対応する神経活動データを包括した「<strong>BraiDyn-BCデータベース</strong>」を用い、行動変容のメカニズムに関する新たな解析手法やツールの利用・開発に取り組みます。
+                3日間のイベントでは、マウスの行動実験データと対応する神経活動データを包括した「<strong>BraiDyn-BCデータベース</strong>」を用います。ハッカソンでは、神経科学データの取り扱い、行動解析、機械学習技術の応用など、多岐にわたるテーマに挑戦することができます。専門家によるチュートリアルを通じて、参加者は最新の研究手法や技術についての理解を深めながら、実践的なデータ解析スキルを磨いていただきます。チーム単位での協働作業を通じて、参加者は学際的な視点を養い、複雑な生物学的問題に対するアプローチを学べるでしょう。
               </p>
               <p>
                 チーム（5名程度）ごとに専門のチューターがつきますので、神経科学の初学者も歓迎します。最終日にはチームで作業した内容の発表と質疑応答を行い、主に学術的な視点からフィードバックを行います。
@@ -170,52 +172,89 @@
 
           <div class="activities-intro">
             <p>
-              学術変革領域A・行動変容生物学の総括班で作成したマウスの大規模な神経活動と行動のデータベース「<a href="https://app.notion.com/1e972fb17ad1470b911aa108fb8c0713?pvs=21" target="_blank" rel="noopener noreferrer" class="activities-intro-link">BraiDyn-BC（Brain Dynamics and Behavior Change）データベース</a>」を利用したデータ解析を行っていただく予定です。具体的に解析したい内容がある場合は、チューターと相談の上で補助します。ない場合でも、こういったことに興味があるということを参加登録で記入していただければ、こちらでチーム編成を行いテーマを設定いたしますので、気軽にご参加ください。
+              学術変革領域A・行動変容生物学の総括班で作成したマウスの大規模な神経活動と行動のデータベース「<a href="https://app.notion.com/1e972fb17ad1470b911aa108fb8c0713?pvs=21" target="_blank" rel="noopener noreferrer" class="activities-intro-link">BraiDyn-BC（Brain Dynamics and Behavior Change）データベース</a>」を利用したデータ解析を行っていただきます。事前準備から本番3日間の大まかな流れは以下の通りです。
             </p>
           </div>
 
           <div class="activities-steps-list">
-            <!-- Step 1: 1日目 チュートリアル -->
+            <!-- Step 0: 事前準備 -->
             <div class="activity-step-row">
               <div class="activity-step-side">
-                <div class="activity-step-img-wrap">
-                  <img src="image/activity_tutorial.jpg" alt="1日目のイラスト" class="activity-step-img" loading="lazy" width="120" height="120">
+                <div class="activity-step-icon-wrap icon-prep" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" width="34" height="34" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                    <line x1="8" y1="21" x2="16" y2="21"></line>
+                    <line x1="12" y1="17" x2="12" y2="21"></line>
+                    <polygon points="10 7 15 10 10 13 10 7" fill="currentColor"></polygon>
+                  </svg>
                 </div>
-                <h4 class="activity-step-label">1日目<span class="activity-step-sub">チュートリアル</span></h4>
+                <h4 class="activity-step-label">事前準備<span class="activity-step-sub">事前学習</span></h4>
               </div>
               <div class="activity-step-content">
                 <p>
-                  具体的には、動画データから身体キーポイントを抽出する<strong>DeepLabCut</strong>、1光子<strong>Ca<sup>2+</sup></strong>イメージングの動画像の位置合わせを行う<strong>MesoNet</strong>、神経活動データの標準フォーマットの<strong>Neurodata Without Boaders(NWB)</strong>の取り扱い、行動タスクの分析方法、神経活動や行動との関連の解析法などが挙げられます。これらのテーマに関して<strong>1日目</strong>にチュートリアル発表を行います。
+                  ハッカソンに向けた基礎知識の共有と、研究の「問い」の立て方を学びます。データベース構造やColabチュートリアルコードを解説。（※参加できない方向けに後日YouTube公開）
                 </p>
               </div>
             </div>
 
-            <!-- Step 2: 2日目 キャリア相談 -->
+            <!-- Step 1: 1日目 -->
             <div class="activity-step-row">
               <div class="activity-step-side">
-                <div class="activity-step-img-wrap">
-                  <img src="image/activity_career.jpg" alt="2日目 キャリア企画のイラスト" class="activity-step-img" loading="lazy" width="120" height="120">
+                <div class="activity-step-icon-wrap icon-day1" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" width="34" height="34" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                    <circle cx="9" cy="7" r="4"></circle>
+                    <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                    <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                  </svg>
                 </div>
-                <h4 class="activity-step-label">2日目<span class="activity-step-sub">キャリア座談</span></h4>
+                <h4 class="activity-step-label">1日目<span class="activity-step-sub">チーム分け＆開発</span></h4>
               </div>
               <div class="activity-step-content">
                 <p>
-                  2日目には、現場の研究者たちを交えて<strong>「研究者のキャリアとは？」</strong>をテーマに、キャリアパスや研究現場のリアルについて語り合う企画を予定しています。今後の進路として研究活動に興味がある方には、リアルな経験談や実際的な話を聞く良い機会になると思います。
+                  会場にてチームを結成し、早速テーマ設定とデータ解析をスタート。夜には懇親会で交流を深めます。
                 </p>
               </div>
             </div>
 
-            <!-- Step 3: 最終日 成果発表 -->
+            <!-- Step 2: 2日目 -->
             <div class="activity-step-row">
               <div class="activity-step-side">
-                <div class="activity-step-img-wrap">
-                  <img src="image/activity_presentation.jpg" alt="最終日 発表・質疑応答のイラスト" class="activity-step-img" loading="lazy" width="120" height="120">
+                <div class="activity-step-icon-wrap icon-day2" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" width="34" height="34" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="16 18 22 12 16 6"></polyline>
+                    <polyline points="8 6 2 12 8 18"></polyline>
+                    <line x1="14" y1="4" x2="10" y2="20"></line>
+                  </svg>
                 </div>
-                <h4 class="activity-step-label">最終日<span class="activity-step-sub">成果発表</span></h4>
+                <h4 class="activity-step-label">2日目<span class="activity-step-sub">WBAI企画＆集中開発</span></h4>
               </div>
               <div class="activity-step-content">
                 <p>
-                  最終日にはチームで作業した内容をまとめて、<strong>10-15分程度</strong>の発表や質疑応答を行っていただく予定です。運営委員からの点数的な評価は行いませんが、主に学術的な視点からフィードバックを行う予定です。また、参加者からの質問も歓迎しますので、盛り上げていただければと思います。
+                  全脳アーキテクチャ・イニシアティブ企画（セミナー）を挟みつつ、チームで集中して解析・開発を進めます。
+                </p>
+              </div>
+            </div>
+
+            <!-- Step 3: 3日目 -->
+            <div class="activity-step-row">
+              <div class="activity-step-side">
+                <div class="activity-step-icon-wrap icon-day3" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" width="34" height="34" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M2 3h20"></path>
+                    <path d="M21 3v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V3"></path>
+                    <path d="m12 16 4 5"></path>
+                    <path d="m12 16-4 5"></path>
+                    <line x1="7" y1="10" x2="7" y2="12"></line>
+                    <line x1="12" y1="8" x2="12" y2="12"></line>
+                    <line x1="17" y1="6" x2="17" y2="12"></line>
+                  </svg>
+                </div>
+                <h4 class="activity-step-label">3日目<span class="activity-step-sub">スライド作成＆発表</span></h4>
+              </div>
+              <div class="activity-step-content">
+                <p>
+                  成果をまとめるスライド作成に集中し、最後は各チームによる発表会とフィードバックを実施します。
                 </p>
               </div>
             </div>
@@ -390,7 +429,7 @@
                 </div>
                 <div class="sched-content">
                   <div class="sched-time-row">
-                    <span class="sched-time-label">13:00 — 16:00</span>
+                    <span class="sched-time-label">13:00 — 15:30</span>
                   </div>
                   <div class="sched-event-card">
                     <span class="sched-icon-badge" aria-hidden="true">
@@ -574,7 +613,7 @@
                     </span>
                     <div class="sched-event-body">
                       <h4 class="sched-event-title title-party">懇親会（ケータリング交流会）</h4>
-                      <p class="sched-event-desc desc-party">会場内での立食交流会。研究者・チューター・参加者同士で自由に語り合いましょう。（会費 4,000円 / ケータリング・ソフトドリンク付、アルコール類は実費負担）</p>
+                      <p class="sched-event-desc desc-party">会場内での立食交流会。研究者・チューター・参加者同士で自由に語り合いましょう。（会費 4,000円 / ケータリング・ソフトドリンク付）</p>
                     </div>
                   </div>
                 </div>
@@ -644,15 +683,15 @@
                       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8h1a4 4 0 0 1 0 8h-1"></path><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path><line x1="6" y1="1" x2="6" y2="4"></line><line x1="10" y1="1" x2="10" y2="4"></line><line x1="14" y1="1" x2="14" y2="4"></line></svg>
                     </span>
                     <div class="sched-event-body">
-                      <h4 class="sched-event-title title-seminar">昼食会（田和辻 Lunch on Seminar）</h4>
-                      <span class="sched-speaker-tag">田和辻 可昌（全脳アーキテクチャ・イニシアティブ）</span>
-                      <p class="sched-event-desc desc-seminar">昼食を取りながら先端トピックについての講演を聴講します。</p>
+                      <h4 class="sched-event-title title-seminar">昼食会（全脳アーキテクチャ・イニシアティブ Lunch on Seminar）</h4>
+                      <span class="sched-speaker-tag">全脳アーキテクチャ・イニシアティブ（WBAI）</span>
+                      <p class="sched-event-desc desc-seminar">昼食を取りながら先端トピック（全脳AI・神経情報処理）についての講演を聴講します。</p>
                     </div>
                   </div>
                 </div>
               </div>
 
-              <!-- Item: 田和辻企画 hands-on. -->
+              <!-- Item: 全脳アーキテクチャ・イニシアティブ企画 -->
               <div class="sched-item">
                 <div class="sched-axis">
                   <span class="sched-dot dot-seminar"></span>
@@ -666,9 +705,9 @@
                       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
                     </span>
                     <div class="sched-event-body">
-                      <h4 class="sched-event-title title-seminar">田和辻企画 hands-on.</h4>
-                      <span class="sched-speaker-tag">田和辻 可昌（全脳アーキテクチャ・イニシアティブ）</span>
-                      <p class="sched-event-desc desc-seminar">実践的なハンズオンセッションを実施します。解析手法やツールへの理解をさらに深めます。</p>
+                      <h4 class="sched-event-title title-seminar">全脳アーキテクチャ・イニシアティブ企画</h4>
+                      <span class="sched-speaker-tag">全脳アーキテクチャ・イニシアティブ（WBAI）</span>
+                      <p class="sched-event-desc desc-seminar">全脳アーキテクチャ・イニシアティブによる特別企画セッション。解析手法やツールへの理解をさらに深めます。</p>
                     </div>
                   </div>
                 </div>
@@ -689,7 +728,7 @@
                     </span>
                     <div class="sched-event-body">
                       <h4 class="sched-event-title">チーム作業</h4>
-                      <p class="sched-event-desc">ハンズオンの知見も取り入れながら、チーム開発と検証を深めます。</p>
+                      <p class="sched-event-desc">セッションの知見も取り入れながら、チームで集中して解析アルゴリズムの実装と仮説検証を深めます。</p>
                     </div>
                   </div>
                 </div>
@@ -873,19 +912,6 @@
               <h3 class="guide-card-title">対象者</h3>
               <p class="guide-card-text">
                 神経活動や行動データ解析に興味のある若手（大学院生・学部生を含む）やポスドク。定員40名程度。初学者も歓迎します。※先着順ではありません。応募者多数の場合は選考を行います。
-              </p>
-              <div class="guide-meta-footer">
-                <div class="guide-meta-row">
-                  <span>大学院生・学部生</span>
-                  <span class="guide-slash">／</span>
-                  <span>ポスドク</span>
-                </div>
-                <div class="guide-meta-row">
-                  <span>初学者歓迎</span>
-                  <span class="guide-slash">／</span>
-                  <span>応募多数時は選考</span>
-                </div>
-              </div>
             </div>
           </div>
 
@@ -900,18 +926,6 @@
                 WiFiでGoogle Colaboratoryが動くノートPC（Windows, Mac, Linux）をご持参ください。使用言語はPythonです。
               </p>
               <p class="guide-os-note">対応OS：Windows / macOS / Linux</p>
-              <div class="guide-meta-footer">
-                <div class="guide-meta-row">
-                  <span>ノートPC持参</span>
-                  <span class="guide-slash">／</span>
-                  <span>Python</span>
-                </div>
-                <div class="guide-meta-row">
-                  <span>Google Colab</span>
-                  <span class="guide-slash">／</span>
-                  <span>WiFi完備</span>
-                </div>
-              </div>
             </div>
           </div>
 
@@ -942,7 +956,7 @@
                   </div>
                 </div>
               </div>
-              <p class="guide-subnote">※懇親会への参加は任意です。参加希望者のみ懇親会費をお支払いいただきます。<br>※アルコール類、および旅費・宿泊費等は各自負担となります。</p>
+              <p class="guide-subnote">※懇親会への参加は任意です。参加希望者のみ懇親会費をお支払いいただきます。</p>
             </div>
           </div>
         </div>
@@ -1102,15 +1116,6 @@
             </div>
           </div>
 
-          <div class="faq-item">
-            <button class="faq-question" aria-expanded="false">
-              <span>1人での参加や、あらかじめ決まった共同作業者との参加はできますか？</span>
-              <span class="faq-icon">+</span>
-            </button>
-            <div class="faq-answer">
-              どちらも可能です。事前アンケートの興味関心をもとに5名程度のチームをこちらで編成します。あらかじめ共同作業者がいる場合は、参加登録時に記入をお願いします。
-            </div>
-          </div>
 
           <div class="faq-item">
             <button class="faq-question" aria-expanded="false">
@@ -1148,7 +1153,7 @@
               <span class="faq-icon">+</span>
             </button>
             <div class="faq-answer">
-              ハッカソンへの参加費は<strong>無料</strong>です。初日夜に開催される懇親会への参加を希望される方のみ、懇親会費として4,000円（ケータリング＋ソフトドリンク代 / 学部生・一般一律）をお支払いいただきます（懇親会への参加は任意です）。また、1日目の希望者のお弁当および2日目・3日目の昼食（お弁当・お茶）はすべて事務局より無料で提供されます。※アルコール類、および旅費・宿泊費等は各自ご負担となります。
+              ハッカソンへの参加費は<strong>無料</strong>です。初日夜に開催される懇親会への参加を希望される方のみ、懇親会費として4,000円（ケータリング＋ソフトドリンク代 / 学部生・一般一律）をお支払いいただきます（懇親会への参加は任意です）。また、1日目の希望者のお弁当および2日目・3日目の昼食（お弁当・お茶）はすべて事務局より無料で提供されます。
             </div>
           </div>
         </div>
@@ -1226,6 +1231,6 @@
   </div>
 
   <!-- Scripts -->
-  <script src="js/main.js?v=20260928_nocaption_v1"></script>
+  <script src="js/main.js?v=20261009_faq_independent"></script>
 </body>
 </html>

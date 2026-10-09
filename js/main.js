@@ -73,7 +73,7 @@ function initNavigation() {
 
 
 /**
- * 4. FAQ Accordion
+ * 4. FAQ Accordion (Independent open/close)
  */
 function initFaqAccordion() {
   const faqItems = document.querySelectorAll('.faq-item');
@@ -85,16 +85,7 @@ function initFaqAccordion() {
     questionBtn.addEventListener('click', () => {
       const isOpen = item.classList.contains('active');
 
-      // Optional: Close other FAQs for cleaner reading
-      faqItems.forEach(otherItem => {
-        if (otherItem !== item) {
-          otherItem.classList.remove('active');
-          const otherBtn = otherItem.querySelector('.faq-question');
-          if (otherBtn) otherBtn.setAttribute('aria-expanded', 'false');
-        }
-      });
-
-      // Toggle current
+      // Toggle current item independently without closing others
       if (isOpen) {
         item.classList.remove('active');
         questionBtn.setAttribute('aria-expanded', 'false');
