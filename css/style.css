@@ -855,109 +855,164 @@ ul, ol {
   color: #245857;
 }
 
-/* Steps List */
+/* Steps List (Mockup Layout Reproduction) */
 .activities-steps-list {
+  position: relative;
   display: flex;
   flex-direction: column;
+  background-color: #FFFFFF;
+  border-radius: 18px;
+  border: 1px solid #E2E8F0;
+  box-shadow: 0 4px 24px -4px rgba(15, 23, 42, 0.05);
+  overflow: hidden;
+}
+
+.activities-steps-list::before {
+  content: "";
+  position: absolute;
+  top: 2.75rem;
+  bottom: 2.75rem;
+  left: 28px;
+  width: 2px;
+  background-color: #E2E8F0;
+  z-index: 1;
 }
 
 .activity-step-row {
   display: flex;
   align-items: center;
-  border-bottom: 1px solid #E2E8F0;
-  padding: clamp(1.75rem, 3vw, 2.25rem) 0;
+  border-bottom: 1px solid #EEF2F6;
+  padding: clamp(1.5rem, 2.8vw, 2.25rem) clamp(1.25rem, 2.5vw, 2rem) clamp(1.5rem, 2.8vw, 2.25rem) 1rem;
+  transition: background-color var(--transition-fast);
+  position: relative;
 }
 
-.activity-step-side {
-  width: 175px;
+.activity-step-row:last-child {
+  border-bottom: none;
+}
+
+.activity-step-row:hover {
+  background-color: #FAFCFD;
+}
+
+/* Timeline dot on continuous vertical track */
+.activity-step-timeline {
+  position: relative;
+  width: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   flex-shrink: 0;
+  z-index: 2;
+}
+
+.activity-timeline-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  box-shadow: 0 0 0 4px #FFFFFF;
+  transition: transform var(--transition-fast);
+}
+
+.activity-step-row:hover .activity-timeline-dot {
+  transform: scale(1.2);
+}
+
+.activity-timeline-dot.dot-prep {
+  background-color: #8DA2FB;
+}
+
+.activity-timeline-dot.dot-day1 {
+  background-color: #48BB78;
+}
+
+.activity-timeline-dot.dot-day2 {
+  background-color: #6366F1;
+}
+
+.activity-timeline-dot.dot-day3 {
+  background-color: #EAB308;
+}
+
+/* Left block: Illustration + Step Headings */
+.activity-step-left {
   display: flex;
-  flex-direction: column;
+  align-items: center;
+  gap: clamp(1rem, 2vw, 1.5rem);
+  width: clamp(260px, 32vw, 320px);
+  flex-shrink: 0;
+  padding-left: 0.5rem;
+}
+
+.activity-step-ill-wrap {
+  width: 120px;
+  height: 80px;
+  display: flex;
   align-items: center;
   justify-content: center;
-  padding-right: 2rem;
-  border-right: 1px solid #E2E8F0;
-  text-align: center;
+  flex-shrink: 0;
 }
 
-.activity-step-icon-wrap,
-.activity-step-img-wrap {
-  width: 72px;
-  height: 72px;
-  border-radius: 16px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 0.65rem;
-  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
-}
-
-.activity-step-icon-wrap svg {
-  display: block;
-}
-
-.activity-step-row:hover .activity-step-icon-wrap {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 14px rgba(15, 23, 42, 0.08);
-}
-
-.icon-prep {
-  background: #EFF6FF;
-  border: 1px solid #BFDBFE;
-  color: #1D4ED8;
-}
-
-.icon-day1 {
-  background: #F0FDF4;
-  border: 1px solid #BBF7D0;
-  color: #15803D;
-}
-
-.icon-day2 {
-  background: #F5F3FF;
-  border: 1px solid #DDD6FE;
-  color: #6D28D9;
-}
-
-.icon-day3 {
-  background: #FFFBEB;
-  border: 1px solid #FDE68A;
-  color: #B45309;
-}
-
-.activity-step-img {
-  width: 100%;
-  height: 100%;
+.activity-step-ill {
+  max-width: 100%;
+  max-height: 100%;
   object-fit: contain;
   display: block;
+  filter: drop-shadow(0 2px 4px rgba(15, 23, 42, 0.04));
+  transition: transform var(--transition-smooth);
 }
 
-.activity-step-label {
-  font-size: 1.0625rem;
+.activity-step-row:hover .activity-step-ill {
+  transform: translateY(-2px) scale(1.03);
+}
+
+.activity-step-heading {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.35rem;
+  flex-shrink: 0;
+}
+
+.activity-step-title {
+  font-size: 1.25rem;
   font-weight: 800;
   color: #0F172A;
   margin: 0;
-  line-height: 1.35;
-  letter-spacing: -0.01em;
+  line-height: 1.25;
+  letter-spacing: -0.015em;
 }
 
 .activity-step-sub {
   display: block;
-  font-size: 0.8125rem;
-  font-weight: 600;
+  font-size: 0.875rem;
+  font-weight: 700;
   color: #387B7A;
-  margin-top: 0.25rem;
-  letter-spacing: 0.02em;
+  margin: 0;
+  line-height: 1.3;
+  letter-spacing: 0.01em;
 }
 
+/* Subtle vertical divider */
+.activity-step-divider {
+  width: 1px;
+  height: 58px;
+  background-color: #E2E8F0;
+  margin: 0 clamp(1rem, 2vw, 1.75rem);
+  flex-shrink: 0;
+  align-self: center;
+}
+
+/* Right block: Description paragraph */
 .activity-step-content {
   flex: 1;
-  padding-left: clamp(1.75rem, 3vw, 2.5rem);
+  display: flex;
+  align-items: center;
 }
 
 .activity-step-content p {
-  font-size: 1.03125rem;
-  line-height: 1.95;
+  font-size: 0.96875rem;
+  line-height: 1.9;
   color: #334155;
   margin: 0;
   letter-spacing: 0.01em;
@@ -2909,52 +2964,44 @@ ul, ol {
     margin-bottom: 1.5rem;
     padding-bottom: 1.35rem;
   }
+  .activities-steps-list::before {
+    left: 22px;
+    top: 2rem;
+    bottom: 2rem;
+  }
   .activity-step-row {
-    flex-direction: row;
-    align-items: center;
-    padding: 1.35rem 0;
+    flex-wrap: wrap;
+    padding: 1.25rem 1rem 1.25rem 0.5rem;
+    gap: 0.85rem 0;
   }
-  .activity-step-side {
-    width: 84px;
-    flex-shrink: 0;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding-right: 0.85rem;
-    border-right: 1px solid #E2E8F0;
-    border-bottom: none;
-    padding-bottom: 0;
-    margin-bottom: 0;
-    text-align: center;
+  .activity-step-timeline {
+    width: 32px;
   }
-  .activity-step-icon-wrap,
-  .activity-step-img-wrap {
-    width: 52px;
-    height: 52px;
-    border-radius: 12px;
-    margin-bottom: 0.3rem;
-    flex-shrink: 0;
+  .activity-timeline-dot {
+    width: 10px;
+    height: 10px;
   }
-  .activity-step-icon-wrap svg {
-    width: 26px;
-    height: 26px;
+  .activity-step-left {
+    width: calc(100% - 32px);
+    gap: 0.85rem;
+    padding-left: 0.25rem;
   }
-  .activity-step-label {
-    font-size: 0.875rem;
-    line-height: 1.25;
-    text-align: center;
+  .activity-step-ill-wrap {
+    width: 90px;
+    height: 60px;
+  }
+  .activity-step-title {
+    font-size: 1.125rem;
   }
   .activity-step-sub {
-    display: block;
-    font-size: 0.6875rem;
-    font-weight: 600;
-    color: #387B7A;
-    margin-top: 2px;
-    line-height: 1.2;
+    font-size: 0.8125rem;
+  }
+  .activity-step-divider {
+    display: none;
   }
   .activity-step-content {
-    flex: 1;
-    padding-left: 0.85rem;
+    width: 100%;
+    padding: 0 0 0 32px;
   }
   .activity-step-content p {
     font-size: 0.875rem;
@@ -3167,6 +3214,7 @@ ul, ol {
   .guide-card-title {
     font-size: 1.25rem;
     margin-bottom: 0.85rem;
+    text-align: center;
   }
   .guide-card-text {
     font-size: 0.90625rem;
@@ -3394,36 +3442,33 @@ ul, ol {
     margin-top: 2.25rem;
     padding-top: 1.5rem;
   }
+  .activities-steps-list::before {
+    left: 18px;
+    top: 1.5rem;
+    bottom: 1.5rem;
+  }
   .activity-step-row {
-    padding: 1.15rem 0;
+    padding: 1.125rem 0.75rem 1.125rem 0.25rem;
   }
-  .activity-step-side {
-    width: 76px;
-    padding-right: 0.65rem;
-    border-right: 1px solid #E2E8F0;
-    border-bottom: none;
-    margin-bottom: 0;
-    gap: 0.2rem;
+  .activity-step-timeline {
+    width: 26px;
   }
-  .activity-step-icon-wrap,
-  .activity-step-img-wrap {
-    width: 46px;
-    height: 46px;
-    border-radius: 10px;
-    margin-bottom: 0.2rem;
+  .activity-step-left {
+    width: calc(100% - 26px);
+    gap: 0.65rem;
   }
-  .activity-step-icon-wrap svg {
-    width: 22px;
-    height: 22px;
+  .activity-step-ill-wrap {
+    width: 72px;
+    height: 52px;
   }
-  .activity-step-label {
-    font-size: 0.8125rem;
+  .activity-step-title {
+    font-size: 1.0625rem;
   }
   .activity-step-sub {
-    font-size: 0.625rem;
+    font-size: 0.75rem;
   }
   .activity-step-content {
-    padding-left: 0.75rem;
+    padding: 0 0 0 26px;
   }
   .activity-step-content p {
     font-size: 0.8125rem;
@@ -3534,6 +3579,7 @@ ul, ol {
   .guide-card-title {
     font-size: 1.1875rem;
     margin-bottom: 0.75rem;
+    text-align: center;
   }
   .guide-card-text {
     font-size: 0.84375rem;
