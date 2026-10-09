@@ -867,22 +867,11 @@ ul, ol {
   overflow: hidden;
 }
 
-.activities-steps-list::before {
-  content: "";
-  position: absolute;
-  top: 2.75rem;
-  bottom: 2.75rem;
-  left: 28px;
-  width: 2px;
-  background-color: #E2E8F0;
-  z-index: 1;
-}
-
 .activity-step-row {
   display: flex;
   align-items: center;
   border-bottom: 1px solid #EEF2F6;
-  padding: clamp(1.5rem, 2.8vw, 2.25rem) clamp(1.25rem, 2.5vw, 2rem) clamp(1.5rem, 2.8vw, 2.25rem) 1rem;
+  padding: clamp(1.5rem, 2.8vw, 2.25rem) clamp(1.5rem, 3vw, 2.5rem);
   transition: background-color var(--transition-fast);
   position: relative;
 }
@@ -895,45 +884,6 @@ ul, ol {
   background-color: #FAFCFD;
 }
 
-/* Timeline dot on continuous vertical track */
-.activity-step-timeline {
-  position: relative;
-  width: 36px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-  z-index: 2;
-}
-
-.activity-timeline-dot {
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  box-shadow: 0 0 0 4px #FFFFFF;
-  transition: transform var(--transition-fast);
-}
-
-.activity-step-row:hover .activity-timeline-dot {
-  transform: scale(1.2);
-}
-
-.activity-timeline-dot.dot-prep {
-  background-color: #8DA2FB;
-}
-
-.activity-timeline-dot.dot-day1 {
-  background-color: #48BB78;
-}
-
-.activity-timeline-dot.dot-day2 {
-  background-color: #6366F1;
-}
-
-.activity-timeline-dot.dot-day3 {
-  background-color: #EAB308;
-}
-
 /* Left block: Illustration + Step Headings */
 .activity-step-left {
   display: flex;
@@ -941,7 +891,7 @@ ul, ol {
   gap: clamp(1rem, 2vw, 1.5rem);
   width: clamp(260px, 32vw, 320px);
   flex-shrink: 0;
-  padding-left: 0.5rem;
+  padding-left: 0;
 }
 
 .activity-step-ill-wrap {
@@ -2964,34 +2914,22 @@ ul, ol {
     margin-bottom: 1.5rem;
     padding-bottom: 1.35rem;
   }
-  .activities-steps-list::before {
-    left: 22px;
-    top: 2rem;
-    bottom: 2rem;
-  }
   .activity-step-row {
     flex-wrap: wrap;
-    padding: 1.25rem 1rem 1.25rem 0.5rem;
+    padding: 1.35rem 1.25rem;
     gap: 0.85rem 0;
   }
-  .activity-step-timeline {
-    width: 32px;
-  }
-  .activity-timeline-dot {
-    width: 10px;
-    height: 10px;
-  }
   .activity-step-left {
-    width: calc(100% - 32px);
-    gap: 0.85rem;
-    padding-left: 0.25rem;
+    width: 100%;
+    gap: 1rem;
+    padding-left: 0;
   }
   .activity-step-ill-wrap {
-    width: 90px;
-    height: 60px;
+    width: 95px;
+    height: 65px;
   }
   .activity-step-title {
-    font-size: 1.125rem;
+    font-size: 1.15rem;
   }
   .activity-step-sub {
     font-size: 0.8125rem;
@@ -3001,10 +2939,10 @@ ul, ol {
   }
   .activity-step-content {
     width: 100%;
-    padding: 0 0 0 32px;
+    padding: 0.35rem 0 0 0;
   }
   .activity-step-content p {
-    font-size: 0.875rem;
+    font-size: 0.90625rem;
     line-height: 1.8;
   }
   .activities-welcome-box {
@@ -3442,24 +3380,18 @@ ul, ol {
     margin-top: 2.25rem;
     padding-top: 1.5rem;
   }
-  .activities-steps-list::before {
-    left: 18px;
-    top: 1.5rem;
-    bottom: 1.5rem;
-  }
   .activity-step-row {
-    padding: 1.125rem 0.75rem 1.125rem 0.25rem;
-  }
-  .activity-step-timeline {
-    width: 26px;
+    padding: 1.15rem 1rem;
+    gap: 0.75rem 0;
   }
   .activity-step-left {
-    width: calc(100% - 26px);
-    gap: 0.65rem;
+    width: 100%;
+    gap: 0.85rem;
+    padding-left: 0;
   }
   .activity-step-ill-wrap {
-    width: 72px;
-    height: 52px;
+    width: 78px;
+    height: 54px;
   }
   .activity-step-title {
     font-size: 1.0625rem;
@@ -3468,10 +3400,11 @@ ul, ol {
     font-size: 0.75rem;
   }
   .activity-step-content {
-    padding: 0 0 0 26px;
+    width: 100%;
+    padding: 0.25rem 0 0 0;
   }
   .activity-step-content p {
-    font-size: 0.8125rem;
+    font-size: 0.84375rem;
     line-height: 1.75;
   }
   .activities-welcome-box {
