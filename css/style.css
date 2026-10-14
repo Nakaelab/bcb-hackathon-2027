@@ -703,6 +703,14 @@ ul, ol {
   margin-top: 2.75rem;
   padding-top: 1.5rem;
   border-top: 1px solid #E2E8F0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.about-organizer-item {
+  display: flex;
+  flex-direction: column;
 }
 
 .about-organizer-label {
@@ -716,6 +724,25 @@ ul, ol {
   font-size: 1rem;
   font-weight: 700;
   color: #0F172A;
+  line-height: 1.5;
+}
+
+.about-organizer-link {
+  color: inherit;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  transition: color var(--transition-fast);
+}
+
+.about-organizer-link:hover {
+  color: var(--accent-teal);
+}
+
+.about-organizer-link .external-icon-sm {
+  flex-shrink: 0;
+  stroke: var(--accent-teal);
 }
 
 /* Right Column: Overview Card */
@@ -2039,6 +2066,14 @@ a.sched-speaker-tag:hover {
   border: 1px solid var(--border-light);
   border-radius: var(--radius-md);
   padding: 1.75rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.host-box:hover {
+  border-color: var(--border-medium);
 }
 
 .host-role {
@@ -2054,7 +2089,56 @@ a.sched-speaker-tag:hover {
   font-size: 1.125rem;
   font-weight: 700;
   color: var(--text-main);
-  line-height: 1.4;
+  line-height: 1.45;
+}
+
+.host-link {
+  color: inherit;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  transition: color var(--transition-fast);
+}
+
+.host-link:hover {
+  color: var(--accent-teal);
+}
+
+.host-external-icon {
+  flex-shrink: 0;
+  stroke: var(--accent-teal);
+  transition: transform var(--transition-fast);
+}
+
+.host-link:hover .host-external-icon {
+  transform: translate(2px, -2px);
+}
+
+.host-logo-wrap {
+  margin-top: 1.25rem;
+  padding-top: 1rem;
+  border-top: 1px dashed var(--border-light);
+  display: flex;
+  align-items: center;
+}
+
+.host-logo-link {
+  display: inline-block;
+  line-height: 0;
+}
+
+.host-logo-img {
+  max-height: 38px;
+  width: auto;
+  object-fit: contain;
+  opacity: 0.9;
+  transition: opacity var(--transition-fast), transform var(--transition-fast);
+}
+
+.host-logo-img:hover {
+  opacity: 1;
+  transform: scale(1.02);
 }
 
 .members-grid {
