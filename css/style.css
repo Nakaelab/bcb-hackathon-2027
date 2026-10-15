@@ -2148,15 +2148,21 @@ a.sched-speaker-tag:hover {
 }
 
 .member-card {
+  display: flex;
+  flex-direction: column;
   background-color: var(--bg-surface);
   border: 1px solid var(--border-light);
   border-radius: var(--radius-sm);
   padding: 1.25rem;
-  transition: border-color var(--transition-fast);
+  text-decoration: none;
+  color: inherit;
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast), transform var(--transition-fast);
 }
 
 .member-card:hover {
-  border-color: var(--border-medium);
+  border-color: var(--accent-teal);
+  box-shadow: 0 4px 16px rgba(13, 148, 136, 0.08);
+  transform: translateY(-2px);
 }
 
 .member-role {
@@ -2173,11 +2179,45 @@ a.sched-speaker-tag:hover {
   font-weight: 700;
   color: var(--text-main);
   margin-bottom: 0.25rem;
+  transition: color var(--transition-fast);
+}
+
+.member-card:hover .member-name {
+  color: var(--accent-teal);
 }
 
 .member-affil {
   font-size: 0.8125rem;
   color: var(--text-muted);
+}
+
+.member-rm-footer {
+  margin-top: 0.875rem;
+  padding-top: 0.625rem;
+  border-top: 1px dashed var(--border-light);
+  display: flex;
+  align-items: center;
+}
+
+.member-rm-badge {
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  font-weight: 600;
+  color: var(--accent-teal);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  transition: color var(--transition-fast);
+}
+
+.member-rm-icon {
+  flex-shrink: 0;
+  stroke: var(--accent-teal);
+  transition: transform var(--transition-fast);
+}
+
+.member-card:hover .member-rm-icon {
+  transform: translate(2px, -2px);
 }
 
 /* --- Contact Form Embed --- */
